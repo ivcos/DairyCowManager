@@ -1,0 +1,15 @@
+
+/* Corodinated Fonts across for all form elements. Pg. 548*/
+
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+nav{
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
