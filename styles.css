@@ -1,7 +1,60 @@
 
+/* Makes sizing form elements more consistent */
+html {
+	box-sizing: border-box;
+	}
+*, *:before, *:after {
+	box-sizing: inherit;
+	}
+
+/* Basic Font Styling*/
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 100%;
+	margin: 2em 10%;
+	line-height: 1;
+	}
+
+h2 {
+    font-size: 1.2em;
+    margin: 0 0 1.5em 0;
+    }
+em {
+    font-size: .8em;
+    color: rgba(0,0,0,.4);
+    }
+
+    /* ========= CLEARING OUT LIST STYLES ========= */
+ul { 
+    list-style-type: none;
+     margin: 0;
+     padding: 0;
+       }
+/* ========= ADDING SPACE BELOW LIST ITEMS IN FORM 
+(EXCEPT FOR CHECKBOXES AND RADIO BUTTONS) ========= */
+
+ul li {
+	margin-bottom: 1em; 
+}
+
+/* ========= FORM DIMENSIONS AND STYLING =========  */
+
+form {
+	max-width: 40em;
+	border: 1px solid #666;
+	border-radius: 10px;
+	background-color:#f2f5d5;
+	padding: 1em;
+	}
+
+li {
+        /* the label and input become flex items within each list item */
+        /* Wrapping is turned on so labels stack above inputs on narrow viewports */
+      display: flex;
+      flex-wrap: wrap;
+  }
+
 /* Corodinated Fonts across for all form elements. Pg. 548*/
-
-
 button, input, select, textarea {
     font-family: inherit;
     font-size: 100%;
@@ -9,7 +62,35 @@ button, input, select, textarea {
 
 nav{
     list-style-type: none;
-    display: inline;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 1.0em;
+}
+/* ========= Moving nav from vertical to horizonatal ========= */
+nav li {
+    display: inline-block;
     margin: 0;
     padding: 0;
 }
+
+
+/* ========= ADDING SPACE BELOW LIST ITEMS IN FORM 
+(EXCEPT FOR CHECKBOXES AND RADIO BUTTONS) ========= */
+
+ul li {
+	margin-bottom: 1em; 
+}
+#colors ul li, #features ul li {
+	margin-bottom: 0;
+} 
+
+/* ========= FORM DIMENSIONS AND STYLING =========  */
+
+form {
+	max-width: 40em;
+	border: 1px solid #666;
+	border-radius: 10px;
+	background-color:#f2f5d5;
+	padding: 1em;
+	}
