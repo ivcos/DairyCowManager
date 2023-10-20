@@ -80,7 +80,7 @@ button, input, select, textarea {
 
 nav{
     list-style-type: none;
-    display: inline-block;
+    display: flex;
     margin: 0;
     padding: 0;
     font-size: 1.0em;
