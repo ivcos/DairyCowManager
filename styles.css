@@ -8,6 +8,20 @@ html {
 	box-sizing: inherit;
 	}
 
+header {
+	border: #04699d 1px solid;
+		background-color: #fff; /* Background color of the header */
+        color: #666; /* Text color for the header */
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+	}
+.logo img {
+		max-width: 200px; /* Set the maximum width of the logo */
+        height: auto; /* Maintain aspect ratio */
+}
+
 /* Basic Font Styling*/
 body {
 	font-family: Verdana, Geneva, sans-serif;
@@ -22,7 +36,7 @@ h2 {
     margin: 0 0 1.5em 0;
     }
 em {
-    font-size: .8em;
+    font-size: 0.8em;
     color: rgba(0,0,0,.4);
     }
 
@@ -145,4 +159,15 @@ input[type="submit"] {
 	font-size: inherit;
 	flex: 0 1 8em;
 	margin: 0 auto;
+}
+
+/*  ========= Styling Specific to Index.html  ========= */
+.slurryTankInformation {
+    margin: 0;
+    padding: 0;
+    font-size: 2.0em;
+}
+.slurryTankInformation li {
+	margin: 0;
+	padding: 0;
 }
