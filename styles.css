@@ -1,73 +1,82 @@
-
 /* Makes sizing form elements more consistent. border-box is helpful
 for specifying widthd in percentages. */
 html {
-	box-sizing: border-box;
-	}
-*, *:before, *:after {
-	box-sizing: inherit;
-	}
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
+body {
+  line-height: 1.4; /* Advised on HTML/CSS Course */
+}
 header {
-	border: #04699d 1px solid;
-		background-color: #fff; /* Background color of the header */
-        color: #666; /* Text color for the header */
-        padding: 10px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-	}
+  border: #04699d 1px solid;
+  background-color: #f7f7f7; /* Background color of the header */
+  color: #666; /* Text color for the header */
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+p {
+  font-size: 1em;
+  font-family: sans-serif;
+  line-height: 1.5; /* No units required as it is 1.5 the font size. */
+}
 .logo img {
-		max-width: 200px; /* Set the maximum width of the logo */
-        height: auto; /* Maintain aspect ratio */
+  max-width: 200px; /* Set the maximum width of the logo */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Basic Font Styling*/
 body {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 100%;
-	margin: 2em 10%;
-	line-height: 1;
-	}
-	
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 100%;
+  margin: 2em 10%;
+  line-height: 1;
+}
 
 h2 {
-    font-size: 1.2em;
-    margin: 0 0 1.5em 0;
-    }
+  font-size: 1.2em;
+  margin: 0 0 1.5em 0;
+}
 em {
-    font-size: 0.8em;
-    color: rgba(0,0,0,.4);
-    }
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.4);
+}
 
-    /* ========= CLEARING OUT LIST STYLES ========= */
-ul { 
-    list-style-type: none;
-     margin: 0;
-     padding: 0;
-       }
+/* ========= CLEARING OUT LIST STYLES ========= */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 /* ========= ADDING SPACE BELOW LIST ITEMS IN FORM 
 (EXCEPT FOR CHECKBOXES AND RADIO BUTTONS) ========= */
 
 ul li {
-	margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
 
 /* ========= FORM DIMENSIONS AND STYLING =========  */
 
 form {
-	max-width: 40em;
-	border: 1px solid #666;
-	border-radius: 10px;
-	background-color:#f2f5d5;
-	padding: 1em;
-	}
+  max-width: 40em;
+  border: 1px solid #666;
+  border-radius: 10px;
+  background-color: #f2f5d5;
+  padding: 1em;
+}
 
 /* ========= FLEXBOX ALIGNMENT STYLES ============ */
 
 li {
-    /* the label and input become flex items within each list item */
-    /* Wrapping is turned on so labels stack above inputs on narrow viewports */
+  /* the label and input become flex items within each list item */
+  /* Wrapping is turned on so labels stack above inputs on narrow viewports */
   display: flex;
   flex-wrap: wrap;
 }
@@ -78,96 +87,109 @@ label {
   margin-right: 1em;
   margin-bottom: 4px;
   color: #04699d;
-
 }
 
-input, textarea, fieldset {
-	/* form inputs and fieldsets are fully flexible to fill the available width */
-	flex: 1 1 20em;
+input,
+textarea,
+fieldset {
+  /* form inputs and fieldsets are fully flexible to fill the available width */
+  flex: 1 1 20em;
 }
 
 /* Corodinated Fonts across for all form elements. Pg. 548*/
-button, input, select, textarea {
-    font-family: inherit;
-    font-size: 100%;
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
 }
 
-nav{
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    font-size: 1.0em;
+nav {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
 }
 /* ========= Moving nav from vertical to horizonatal ========= */
 nav li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
-
 
 /* ========= ADDING SPACE BELOW LIST ITEMS IN FORM 
 (EXCEPT FOR CHECKBOXES AND RADIO BUTTONS) ========= */
 
 ul li {
-	margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
-#colors ul li, #features ul li {
-	margin-bottom: 0;
-} 
+#colors ul li,
+#features ul li {
+  margin-bottom: 0;
+}
 
 /* ========= FORM DIMENSIONS AND STYLING =========  */
 
 form {
-	max-width: 40em;
-	border: 1px solid #666;
-	border-radius: 10px;
-	background-color:#f2f5d5;
-	padding: 1em;
-	}
+  max-width: 40em;
+  border: 1px solid #666;
+  border-radius: 10px;
+  background-color: #f2f5d5;
+  padding: 1em;
+}
 
 /*  ========= FORM WIDGET STYLES  ========= */
 /* Fonts are set to "inherit" the font-family of the document.*/
 input.textinput {
-	height: 2em;
-	border: 1px solid rgba(0,0,0,.3);
-	padding-left: 6px;
-	font-family: inherit;
-	font-size: .875em;
+  height: 2em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding-left: 6px;
+  font-family: inherit;
+  font-size: 0.875em;
 }
 textarea {
-	display: block;
-	height: 5em;
-	border: 1px solid rgba(0,0,0,.3);
-	padding-left: 6px;
-	font-family: inherit; 
-	font-size: .875em;
-	line-height: 1.25;
-	overflow: auto;
-	resize: none;
+  display: block;
+  height: 5em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding-left: 6px;
+  font-family: inherit;
+  font-size: 0.875em;
+  line-height: 1.25;
+  overflow: auto;
+  resize: none;
 }
 
 input[type="submit"] {
-	/* I've changed the style of the button and set its side margins to "auto" so it is 
+  /* I've changed the style of the button and set its side margins to "auto" so it is 
 	always centered in the width of the form */
-	width: 10em;
-	height: 2em;
-	background: white;
-	border: 1px solid #04699d;
-	border-radius: 4px;
-	font-size: inherit;
-	flex: 0 1 8em;
-	margin: 0 auto;
+  width: 10em;
+  height: 2em;
+  background: white;
+  border: 1px solid #04699d;
+  border-radius: 4px;
+  font-size: inherit;
+  flex: 0 1 8em;
+  margin: 0 auto;
 }
 
 /*  ========= Styling Specific to Index.html  ========= */
 .slurryTankInformation {
-    margin: 0;
-    padding: 0;
-    font-size: 2.0em;
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
 }
 .slurryTankInformation li {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+}
+/*  ========= Styling Specific to Contact Us page  ========= */
+#registration-page {
+  height: 100%;
+  background: #78a7ba;
+  border: #04699d 1px solid;
+}
+main {
+  height: 50%;
 }
