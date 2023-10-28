@@ -10,10 +10,15 @@
     <div id="wrapper">
       <header>
         <div class="logo">
-          <img src="images/FarmAILogo1.png" alt="The FarMAI logo" />
+          <img
+            src="images/FarmAILogo1.png"
+            width="100"
+            height="60"
+            alt="The FarMAI logo"
+          />
         </div>
         <h1>Giving Farmers Control of Their Farm Data</h1>
-        <nav>
+        <nav class="secondary-nav">
           <!-- Add your navigation links here -->
           <ul>
             <li class="header_nav"><a href="ContactUs.html">Contact Us</a></li>
@@ -24,13 +29,14 @@
           </ul>
         </nav>
       </header>
-      <nav>
+      <nav class="primary-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="Herd Management.html">Herd Management</a></li>
           <li><a href="AgriIoT.html">AgriIoT</a></li>
           <li><a href="Farm Alerts.html">Farm Alerts</a></li>
           <li><a href="SlurryManagement.html">Slurry Management</a></li>
+          <li><a href="WinterFodderManagement.html">Slurry Management</a></li>
           <!-- Add your navigation links here -->
           <!--<li><a href="ContactUs.html">Contact Us</a></li> -->
           <!--<li><a href="AboutUs.html">About Us</a></li> -->
@@ -91,6 +97,18 @@
           in milk production will be detected on a per milking basis.
         </p>
         <h2>Farm Alerts</h2>
+            <p>Farmers are notified in real-time of events based on:
+            <ul>
+                <li>Weather</li>
+                <li>Animal Health</li>
+                <li>Animal Performance</li>
+                <li>Risk of Hoose</li>
+                <li>Animal Feed</li>
+                <li>Animal Winter Fodder</li>
+                <li>Animal Milk Production</li>
+                <li>Animal Slurry Levels</li>
+                <li>On Farm Weather Conditions</li>
+            </p>
         <h2>Slurry Management</h2>
         <p>
           Slurry Management is important for every farmer. The FarMAI
@@ -98,16 +116,30 @@
           farmer will be able to see the slurry levels in the tanks and will be
           alerted when the slurry levels are too high. Included are;
         </p>
-        <ul class="slurryTankInformation">
-          <li>Slurry Storage Capacity Calculator from Teagasc</li>
-          <li>% Fill Capacity of Slurry Tank</li>
-          <li>Fill volume of Slurry Tank</li>
-          <li>
+        <ol class="slurryTankInformation">
+          <li class="slurryTankInformationListItem">
+            Slurry Storage Capacity Calculator from Teagasc
+          </li>
+          <li class="slurryTankInformationListItem">
+            % Fill Capacity of Slurry Tank
+          </li>
+          <li class="slurryTankInformationListItem">
+            Fill volume of Slurry Tank
+          </li>
+          <li class="slurryTankInformationListItem">
             Predicted Fill Date of Slurry Tank based on tank specific Machine
             Learning Algorithm
           </li>
-          <li>Slurry Tank Level Alerts</li>
-        </ul>
+          <li class="slurryTankInformationListItem">
+            Slurry Tank Level Alerts
+          </li>
+        </ol>
+        <h2>Winter Fodder Management</h2>
+        <p>Farmers should complete a winter fodder budget to evaluate the silage in the
+            yard compared to the silage required for the winter. When completing the winter fodder
+            budget, it is important to give a buffer of 4 to 6 weeks in case of early winter or late turnout
+
+        </p>
       </main>
       <footer></footer>
     </div>

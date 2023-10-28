@@ -8,7 +8,11 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
+/* Advised on HTML/CSS Course to reset all margins and padding*/
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   line-height: 1.4; /* Advised on HTML/CSS Course */
 }
@@ -16,7 +20,7 @@ header {
   border: #04699d 1px solid;
   background-color: #f7f7f7; /* Background color of the header */
   color: #666; /* Text color for the header */
-  padding: 10px 0;
+  padding: 20px 0 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -26,6 +30,7 @@ p {
   font-size: 1em;
   font-family: sans-serif;
   line-height: 1.5; /* No units required as it is 1.5 the font size. */
+  margin-bottom: 15px;
 }
 .logo img {
   max-width: 200px; /* Set the maximum width of the logo */
@@ -48,19 +53,28 @@ em {
   font-size: 0.8em;
   color: rgba(0, 0, 0, 0.4);
 }
-
+ul,
+ol {
+  margin-left: 50px;
+}
+#wrapper {
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+  width: 800px;
+}
 /* ========= CLEARING OUT LIST STYLES ========= */
-ul {
+/* ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
+} */
 /* ========= ADDING SPACE BELOW LIST ITEMS IN FORM 
 (EXCEPT FOR CHECKBOXES AND RADIO BUTTONS) ========= */
 
-ul li {
+/* ul li {
   margin-bottom: 1em;
-}
+} */
 
 /* ========= FORM DIMENSIONS AND STYLING =========  */
 
@@ -77,8 +91,8 @@ form {
 li {
   /* the label and input become flex items within each list item */
   /* Wrapping is turned on so labels stack above inputs on narrow viewports */
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
+  /* flex-wrap: wrap; */
 }
 label {
   /* labels are fixed at 8ems wide with a little margin to keep them 
@@ -176,13 +190,23 @@ input[type="submit"] {
 
 /*  ========= Styling Specific to Index.html  ========= */
 .slurryTankInformation {
-  margin: 0;
+  display: list-item;
+  margin-left: 50px;
   padding: 0;
-  font-size: 2em;
+  font-size: 1em;
+  list-style-type: decimal;
 }
-.slurryTankInformation li {
-  margin: 0;
-  padding: 0;
+
+.slurryTankInformationListItem {
+  /* margin-bottom: 10px 0px 10px 0px;
+  padding: 0; */
+  display: list-item;
+  list-style: decimal;
+  margin-bottom: 10px;
+}
+
+.slurryTankInformationListItem:last-child {
+  margin-bottom: 0px;
 }
 /*  ========= Styling Specific to Contact Us page  ========= */
 #registration-page {
