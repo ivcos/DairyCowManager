@@ -1,152 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RegisterCow</title>
-    <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-    <div id = "wrapper">
-    <header>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
         <h1>Animal Registration onto System</h1>
-    </header>
-    
-    <nav>
+      </header>
+
+      <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Herd Management.html">Herd Management</a></li>
-            <li><a href="AgriIoT.html">AgriIoT</a></li>
-            <li><a href="Farm Alerts.html">Farm Alerts</a></li>
-            <li><a href="SlurryManagement.html">Slurry Management</a></li>
-            <li><a href="WinterFodderManagement.html">Slurry Management</a></li>
-            <!-- Add your navigation links here -->
-            <!--<li><a href="ContactUs.html">Contact Us</a></li> -->
-            <!--<li><a href="AboutUs.html">About Us</a></li> -->
-          </ul>
-    </nav>
-    <main>
-        <h2>Register Animal onto Cow Manager</h2>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Herd Management.html">Herd Management</a></li>
+          <li><a href="AgriIoT.html">AgriIoT</a></li>
+          <li><a href="Farm Alerts.html">Farm Alerts</a></li>
+          <li><a href="SlurryManagement.html">Slurry Management</a></li>
+          <li><a href="WinterFodderManagement.html">Fodder Management</a></li>
+          <!-- Add your navigation links here -->
+          <!--<li><a href="ContactUs.html">Contact Us</a></li> -->
+          <!--<li><a href="AboutUs.html">About Us</a></li> -->
+        </ul>
+      </nav>
+      <main>
+        <h2>Register Animal onto Cow Manager Test</h2>
         <!-- Add a Button Option here to slect between Registering Birth or new Animal
             Effectively display a different form on the same HTML page! -->
-            <button onclick="toggleForm('Calving Form')">Register Birth</button>
-            <button onclick="toggleForm('New Animal Form')">Register Animal</button>
-        <form id="Calving Form" action="" method="post" style="display: none;">
+        <button onclick="toggleForm('Calving Form')">Register Birth</button>
+        <button onclick="toggleForm('New Animal Form')">Register Animal</button>
+        <form id="Calving Form" action="" method="post" style="display: none">
+          <ul>
+            <li>
+              <label for="form_cow_tag_nbr">Calf Tag:</label
+              ><input type="text" id="form_cow_tag_nbr" class="textinput" />
+            </li>
+            <li>
+              <label for="form_date_of_birth">Animal Date of Birth:</label
+              ><input type="text" id="form_date_of_birth" class="textinput" />
+            </li>
+            <li>
+              <label for="form_mother_tag">Mother's Tag:</label
+              ><input type="text" id="form_mother_tag" class="textinput" />
+            </li>
+            <li>
+              <label for="form-text"
+                >Animal:
+                <details></details
+              ></label>
+              <textarea
+                name="form-text"
+                maxlength="600"
+                id="form-text"
+                placeholder="Add information on animal over lifetime of animal"
+              ></textarea>
+            </li>
+            <li>
+              <label for="Sex">Sex of Animal:</label>
+              <fieldset id="Sex">
+                <legend>Sex</legend>
+                <ul>
+                  <li>
+                    <label
+                      ><input type="radio" name="Sex" value="male" />
+                      Male</label
+                    >
+                  </li>
+                  <li>
+                    <label
+                      ><input type="radio" name="Sex" value="female" />
+                      Female</label
+                    >
+                  </li>
+                </ul>
+              </fieldset>
+            </li>
 
-        <ul>
-            <li><label for="form_cow_tag_nbr">Calf Tag:</label><input type="text" id="form_cow_tag_nbr" class="textinput"></li>
-            <li><label for="form_date_of_birth">Animal Date of Birth:</label><input type="text" id="form_date_of_birth" class="textinput"></li>
-            <li><label for="form_mother_tag">Mother's Tag:</label><input type="text" id="form_mother_tag" class="textinput"></li>
-            <li><label for="form-text">Animal: <Details> </Details></label> <textarea name="form-text" maxlength="600" id="form-text" placeholder="Add information on animal over lifetime of animal"></textarea></li>
             <li>
-            <label for="Sex">Sex of Animal:</label>
-            <fieldset id="Sex">
-            <legend>Sex</legend>
-            <ul>
-                <li><label><input type="radio" name="Sex" value="male"> Male</label> </li>
-                <li><label><input type="radio" name="Sex" value="female"> Female</label> </li>
-            </ul>
-            </fieldset>
-            <li>
-                <label for="Breed">Breed:</label>
-                <select name="Breed" id="Breed">
-                    <option>Freisin</option>
-                    <option>Hereford</option>
-                    <option>Angus</option>
-                    <option>Charlois</option>
-                </select>
+              <label for="Breed">Breed:</label>
+              <select name="Breed" id="Breed">
+                <option>Freisin</option>
+                <option>Hereford</option>
+                <option>Angus</option>
+                <option>Charlois</option>
+              </select>
             </li>
             <li>
-                <label for="AI">AI:</label>
-                    <select AI="AI" id="AI">
-                        <option>BYZ201</option>
-                        <option>ABC202</option>
-                        <option>JZX405</option>
-                        <option>Bull</option>
-                    </select>
+              <label for="AI">AI:</label>
+              <select AI="AI" id="AI">
+                <option>BYZ201</option>
+                <option>ABC202</option>
+                <option>JZX405</option>
+                <option>Bull</option>
+              </select>
             </li>
             <li>
-                <label for="Sire">Sire:</label>
-                    <select Sire="Sire" id="Sire">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+              <label for="Sire">Sire:</label>
+              <select Sire="Sire" id="Sire">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
             </li>
             <li>
-                <label for="Alive/Dead">Alive/Dead:</label>
-                    <select Sire="live/Dead" id="live/Dead">
-                        <option>Alive</option>
-                        <option>Dead</option>
-                    </select>
+              <label for="Alive/Dead">Alive/Dead:</label>
+              <select Sire="live/Dead" id="live/Dead">
+                <option>Alive</option>
+                <option>Dead</option>
+              </select>
             </li>
-            <li class="buttons"><input type="submit" value="Submit Calf Date"></li>
-        </ul>
-    </form> 
-    <form id="New Animal Form" action="" method="post" style="display: none;">
+            <li class="buttons">
+              <input type="submit" value="Submit Calf Date" />
+            </li>
+          </ul>
+        </form>
+        <form
+          id="New Animal Form"
+          action=""
+          method="post"
+          style="display: none"
+        >
+          <ul>
+            <li>
+              <label for="form_cow_tag_nbr">Calf Tag:</label
+              ><input type="text" id="form_cow_tag_nbr" class="textinput" />
+            </li>
+            <li>
+              <label for="form_date_of_birth">Animal Date of Birth:</label
+              ><input type="text" id="form_date_of_birth" class="textinput" />
+            </li>
+            <li>
+              <label for="form_mother_tag">Mother's Tag:</label
+              ><input type="text" id="form_mother_tag" class="textinput" />
+            </li>
+            <li>
+              <label for="form-text"
+                >Animal:
+                <details></details
+              ></label>
+              <textarea
+                name="form-text"
+                maxlength="600"
+                id="form-text"
+                placeholder="Add information on animal over lifetime of animal"
+              ></textarea>
+            </li>
+            <li>
+              <label for="Sex">Sex of Animal:</label>
+              <fieldset id="Sex">
+                <legend>Sex</legend>
+                <ul>
+                  <li>
+                    <label
+                      ><input type="radio" name="Sex" value="male" />
+                      Male</label
+                    >
+                  </li>
+                  <li>
+                    <label
+                      ><input type="radio" name="Sex" value="female" />
+                      Female</label
+                    >
+                  </li>
+                </ul>
+              </fieldset>
+            </li>
 
-        <ul>
-            <li><label for="form_cow_tag_nbr">Calf Tag:</label><input type="text" id="form_cow_tag_nbr" class="textinput"></li>
-            <li><label for="form_date_of_birth">Animal Date of Birth:</label><input type="text" id="form_date_of_birth" class="textinput"></li>
-            <li><label for="form_mother_tag">Mother's Tag:</label><input type="text" id="form_mother_tag" class="textinput"></li>
-            <li><label for="form-text">Animal: <Details> </Details></label> <textarea name="form-text" maxlength="600" id="form-text" placeholder="Add information on animal over lifetime of animal"></textarea></li>
             <li>
-            <label for="Sex">Sex of Animal:</label>
-            <fieldset id="Sex">
-            <legend>Sex</legend>
-            <ul>
-                <li><label><input type="radio" name="Sex" value="male"> Male</label> </li>
-                <li><label><input type="radio" name="Sex" value="female"> Female</label> </li>
-            </ul>
-            </fieldset>
-            <li>
-                <label for="Breed">Breed:</label>
-                <select name="Breed" id="Breed">
-                    <option>Freisin</option>
-                    <option>Hereford</option>
-                    <option>Angus</option>
-                    <option>Charlois</option>
-                </select>
+              <label for="Breed">Breed:</label>
+              <select name="Breed" id="Breed">
+                <option>Freisin</option>
+                <option>Hereford</option>
+                <option>Angus</option>
+                <option>Charlois</option>
+              </select>
             </li>
             <li>
-                <label for="AI">AI:</label>
-                    <select AI="AI" id="AI">
-                        <option>BYZ201</option>
-                        <option>ABC202</option>
-                        <option>JZX405</option>
-                        <option>Bull</option>
-                    </select>
+              <label for="AI">AI:</label>
+              <select AI="AI" id="AI">
+                <option>BYZ201</option>
+                <option>ABC202</option>
+                <option>JZX405</option>
+                <option>Bull</option>
+              </select>
             </li>
             <li>
-                <label for="Sire">Sire:</label>
-                    <select Sire="Sire" id="Sire">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+              <label for="Sire">Sire:</label>
+              <select Sire="Sire" id="Sire">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
             </li>
             <li>
-                <label for="Alive/Dead">Alive/Dead:</label>
-                    <select Sire="live/Dead" id="live/Dead">
-                        <option>Alive</option>
-                        <option>Dead</option>
-                    </select>
+              <label for="Alive/Dead">Alive/Dead:</label>
+              <select Sire="live/Dead" id="live/Dead">
+                <option>Alive</option>
+                <option>Dead</option>
+              </select>
             </li>
-            <li class="buttons"><input type="submit" value="Submit Calf Date"></li>
-        </ul>
-    </form> 
-    </main>
-    <footer></footer>
+            <li class="buttons">
+              <input type="submit" value="Submit Calf Date" />
+            </li>
+          </ul>
+        </form>
+        <h6>testH6</h6>
+      </main>
+      <footer></footer>
     </div>
-</body>
-<script>
+  </body>
+  <script>
     function toggleForm(formId) {
-        var form = document.getElementById(formId);
-        if (form.style.display === "none") {
-            form.style.display = "block";
-        } else {
-            form.style.display = "none";
-        }
+      var form = document.getElementById(formId);
+      if (form.style.display === "none") {
+        form.style.display = "block";
+      } else {
+        form.style.display = "none";
+      }
     }
-</script>
+  </script>
 </html>

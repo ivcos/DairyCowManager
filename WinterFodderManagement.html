@@ -4,14 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WinterFodderManagement</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="js/WinterFodderManagement.js"></script>
   </head>
   <body>
     <div id="wrapper">
       <header>
         <div class="logo">
-          <img src="images/FarmAILogo1.png" alt="The FarMAI logo" />
+          <img
+            src="images/FarmAILogo1.png"
+            width="100"
+            height="60"
+            alt="The FarMAI logo"
+          />
         </div>
         <h1>Giving Farmers Control of Their Farm Data</h1>
+        <nav class="secondary-nav">
+          <!-- Add your navigation links here -->
+          <ul>
+            <li class="header_nav"><a href="ContactUs.html">Contact Us</a></li>
+            <li class="header_nav"><a href="AboutUs.html">About Us</a></li>
+            <li class="header_nav">
+              <a href="WeatherForecast.html">Weather Forecast</a>
+            </li>
+          </ul>
+        </nav>
       </header>
       <nav>
         <ul>
@@ -20,21 +37,38 @@
           <li><a href="AgriIoT.html">AgriIoT</a></li>
           <li><a href="Farm Alerts.html">Farm Alerts</a></li>
           <li><a href="SlurryManagement.html">Slurry Management</a></li>
-          <li><a href="WinterFodderManagement.html">Slurry Management</a></li>
+          <li>
+            <a href="WinterFodderManagement.html">Winter Fodder Management</a>
+          </li>
           <!-- Add your navigation links here -->
           <!--<li><a href="ContactUs.html">Contact Us</a></li> -->
           <!--<li><a href="AboutUs.html">About Us</a></li> -->
         </ul>
       </nav>
       <main>
-        <h2>Farm Weather Station</h2>
+        <h2>Winter Fodder Budget Calculator</h2>
 
-        <h2>Slurry Tank Monitor</h2>
-
-        <h2>Milk</h2>
-
-        <h2>Feed</h2>
-        <p></p>
+        <p>
+          This tool will help you to calculate the amount of fodder you will
+          need for the winter period based on the number of cattle being hosued over the winter.
+           It will also help you to calculate the
+          amount of fodder you will need to purchase to make up any shortfall.
+          </p>
+          <p>Enter the data into the Form below and click the Calculate button.</p>
+          <div class="silageCalc">
+            <div id="Container_Dairy_Cows_Silage">
+              <label for="nbr_dairy_cows">Number of Dairy Cows:</label>
+              <input type="text" id="nbr_dairy_cows" class="silage_label">
+              <span id="nbr_dairy_cows_message">Enter Number of Dairys</span><br/>
+            </div>
+            <!-- <div class="Calve_Silage">
+            <label for="nbr_calves">Number of Calves(0 - 1 year):</label>
+            <input type="text" id="nbr_calves" >
+            <span id="nbr_calves_nessage">Enter Number Number of Calves(0 - 1 year)</span><br/>
+            </div> -->
+          </div>
+        </form>
+        <h2></h2>
       </main>
       <footer></footer>
     </div>
