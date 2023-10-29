@@ -3,6 +3,7 @@ for specifying widthd in percentages. */
 /* Have the Page settings on Top */
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 * {
   box-sizing: inherit;
@@ -18,6 +19,8 @@ body {
   font-size: 100%;
   margin: 2em 10%;
   line-height: 1.4; /* Advised on HTML/CSS Course */
+  height: 100%;
+  background-color: #eeecec;
 }
 
 header {
@@ -64,6 +67,7 @@ h6 {
   margin-right: auto; */
   margin: 0 auto;
   width: 98%;
+  height: 100%;
 }
 /* ========= CLEARING OUT LIST STYLES ========= */
 ul {
@@ -127,6 +131,7 @@ nav {
   margin: 0;
   padding: 0;
   font-size: 1em;
+  background-color: #fff;
 }
 /* ========= Moving nav from vertical to horizonatal ========= */
 nav li {
@@ -222,13 +227,54 @@ main {
 }
 
 /*  ========= Styling Specific to Winter Fodder Management  ========= */
-#Container_Dairy_Cows_Silage {
+
+.silageCalc {
+  /* display: block; */
+  /* flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;  */
+  margin: 50px;
+  /* border: #04699d 1px solid; */
+  background-color: #fff;
+}
+
+.Container_Silage {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px;
+  /* border: #04699d 1px solid; */
+  height: auto;
+  width: 98%;
+}
+
+.input_silage {
+  max-width: 100px;
+  height: 50px;
+}
+.label_silage {
+  max-width: 100px;
+  height: 50px;
+  font-size: 90%;
+  padding-bottom: 20px;
+  /* margin: 10px; */
+}
+.span_silage {
+  font-size: 90%;
+}
+
+.Container_Silage_Calculation button {
+  width: 100%;
+  display: block;
+}
+
+.Container_Silage_Calculation {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
-}
-
-.silage_label {
-  max-width: 200px;
+  /* justify-content: space-around;
+  margin: 20px;
+  border: #04699d 1px solid;
+  height: auto; */
 }

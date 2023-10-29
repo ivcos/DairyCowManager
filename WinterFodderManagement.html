@@ -50,25 +50,84 @@
 
         <p>
           This tool will help you to calculate the amount of fodder you will
-          need for the winter period based on the number of cattle being hosued over the winter.
-           It will also help you to calculate the
-          amount of fodder you will need to purchase to make up any shortfall.
-          </p>
-          <p>Enter the data into the Form below and click the Calculate button.</p>
-          <div class="silageCalc">
-            <div id="Container_Dairy_Cows_Silage">
-              <label for="nbr_dairy_cows">Number of Dairy Cows:</label>
-              <input type="text" id="nbr_dairy_cows" class="silage_label">
-              <span id="nbr_dairy_cows_message">Enter Number of Dairys</span><br/>
-            </div>
-            <!-- <div class="Calve_Silage">
-            <label for="nbr_calves">Number of Calves(0 - 1 year):</label>
-            <input type="text" id="nbr_calves" >
-            <span id="nbr_calves_nessage">Enter Number Number of Calves(0 - 1 year)</span><br/>
-            </div> -->
+          need for the winter period based on the number of cattle being hosued
+          over the winter. It will also help you to calculate the amount of
+          fodder you will need to purchase to make up any shortfall.
+        </p>
+        <p>
+          Enter the data into the Form below and click the Calculate button.
+        </p>
+        <div class="silageCalc">
+          <div class="Container_Silage">
+            <label for="nbr_dairy_cows" class="label_silage"
+              >Number of Dairy Cows:</label
+            >
+            <input type="text" id="nbr_dairy_cows" class="input_silage" />
+            <span id="nbr_dairy_cows_message" class="span_silage"
+              >Enter Number of Dairy Cows</span
+            >
+            <br />
           </div>
-        </form>
-        <h2></h2>
+          <div class="Container_Silage">
+            <label for="nbr_of_weeks_incl_buffer" class="label_silage"
+            >Number of Weeks Including Buffer:</label
+            >
+            <input
+              type="text"
+              id="nbr_of_weeks_incl_buffer"
+              class="input_silage"/>
+            <span id="nbr_of_weeks_incl_buffer_message" class="span_silage">Enter No. Weeks</span>
+            </div>
+          
+          <div class="Container_Silage">
+            <label for="nbr_calves" class="label_silage"
+              >Number of Calves(0-1 year):</label
+            >
+            <input type="text" id="nbr_calves" class="input_silage" />
+            <span id="nbr_calves_nessage" class="span_silage"
+              >Enter Number of Calves(0 - 1 year)</span
+            ><br />
+          </div>
+          <div class="Container_Silage">
+            <label for="nbr_heifers" class="label_silage"
+              >Number of Heifers(1-2 year):</label
+            >
+            <input type="text" id="nbr_heifers" class="input_silage" />
+            <span id="nbr_heifers_messageessage" class="span_silage"
+              >Enter Number of Heifers(1-2 year)</span
+            ><br />
+          </div>
+          <div class="Container_Silage">
+            <label for="nbr_2YearPlus" class="label_silage"
+              >Number of Dry Cows:</label
+            >
+            <input type="text" id="nbr_2YearPlus" class="input_silage" />
+            <span id="nbr_2YearPlus_message" class="span_silage"
+              >Enter Number of animals 2+Years</span
+            ><br />
+          </div>
+          <div class="Container_Silage">
+            <button id="calculate_silage" class="button_silage">
+              Calculate Number of Silage Bales Required
+            </button>
+            </div>
+          <div class="Container_Silage">
+            <label for="Silage_baless_calculated" class="label_silage"
+              >Number of Silage Bales Required:</label
+           />
+            <span id="nbr_silage_message" class="span_silage"
+              >Result</span
+            ><br />
+          </div>
+        </div>
+        
+        <h2>Winter Fodder Budget Calculation Assumptions</h2>
+        <ul>
+          <li>Assumes 0.4 tonnes of silage per Dairy Cow per week</li>
+          <li>Assumes 0.35 tonnes of silage 0-1 Year Old per week</li>
+          <li>Assumes 0.175 tonnes of silage 1-2 Year Old per week</li>
+          <li>Assumes 0.325 tonnes of silage per 2+Year per week</li>
+        </ul>
       </main>
       <footer></footer>
     </div>
