@@ -4,9 +4,7 @@ for specifying widthd in percentages. */
 html {
   box-sizing: border-box;
 }
-*,
-*:before,
-*:after {
+* {
   box-sizing: inherit;
 }
 /* Advised on HTML/CSS Course to reset all margins and padding*/
@@ -31,7 +29,7 @@ header {
   align-items: center;
   justify-content: space-around;
 }
-
+/* Smaller Headings */
 p {
   font-size: 1em;
   font-family: sans-serif;
@@ -65,7 +63,7 @@ h6 {
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
-  width: 800px;
+  width: 98%;
 }
 /* ========= CLEARING OUT LIST STYLES ========= */
 ul {
