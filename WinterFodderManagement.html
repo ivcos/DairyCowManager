@@ -59,14 +59,38 @@
         </p>
         <div class="silageCalc">
           <div class="Container_Silage">
+            <div style="text-align:left-justify;">
             <label for="nbr_dairy_cows" class="label_silage"
-              >Number of Dairy Cows:</label
+              >Dairy Cows:</label
             >
+            </div>
             <input type="text" id="nbr_dairy_cows" class="input_silage" />
             <span id="nbr_dairy_cows_message" class="span_silage"
-              >Enter Number of Dairy Cows</span
+              >Enter No. of Dairy Cows</span
             >
             <br />
+          </div>
+          <div class="Container_Silage">
+            <div style="text-align:left">
+            <label for="nbr_of_weeks_incl_buffer" class="label_silage"
+            >Weeks incl. Buffer:</label
+            >
+            </div>
+            <input
+              type="text"
+              id="nbr_of_weeks_incl_buffer"
+              class="input_silage"/>
+            <span id="nbr_of_weeks_incl_buffer_message" class="span_silage">Enter No. Weeks</span>
+            </div>
+          
+          <div class="Container_Silage">
+            <label for="nbr_calves" class="label_silage"
+              >Calves(0-1 year):</label
+            >
+            <input type="text" id="nbr_calves" class="input_silage" />
+            <span id="nbr_calves_nessage" class="span_silage"
+              >Enter Number of Calves(0 - 1 year)</span
+            ><br />
           </div>
           <div class="Container_Silage">
             <label for="nbr_of_weeks_incl_buffer" class="label_silage"
@@ -78,19 +102,9 @@
               class="input_silage"/>
             <span id="nbr_of_weeks_incl_buffer_message" class="span_silage">Enter No. Weeks</span>
             </div>
-          
-          <div class="Container_Silage">
-            <label for="nbr_calves" class="label_silage"
-              >Number of Calves(0-1 year):</label
-            >
-            <input type="text" id="nbr_calves" class="input_silage" />
-            <span id="nbr_calves_nessage" class="span_silage"
-              >Enter Number of Calves(0 - 1 year)</span
-            ><br />
-          </div>
           <div class="Container_Silage">
             <label for="nbr_heifers" class="label_silage"
-              >Number of Heifers(1-2 year):</label
+              >(1-2 year):</label
             >
             <input type="text" id="nbr_heifers" class="input_silage" />
             <span id="nbr_heifers_messageessage" class="span_silage"
@@ -110,13 +124,21 @@
             <button id="calculate_silage" class="button_silage">
               Calculate Number of Silage Bales Required
             </button>
-            </div>
+          </div>
           <div class="Container_Silage">
             <label for="Silage_baless_calculated" class="label_silage"
               >Number of Silage Bales Required:</label
            />
             <span id="nbr_silage_message" class="span_silage"
               >Result</span
+            ><br />
+          </div>
+          <div class="Container_Silage">
+            <label for="Average_Silage_bales_per_day_calculated" class="label_silage"
+              >Average Number of Silage Bales per Day</label
+           />
+            <span id="nbr_silage_message" class="span_silage"
+              >Average Number of Silage Bales per Day</span
             ><br />
           </div>
         </div>
