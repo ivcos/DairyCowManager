@@ -254,24 +254,27 @@ main {
 }
 
 .input_silage {
-  max-width: 100px;
+  max-width: 80px;
   height: 50px;
 }
 .label_silage {
   max-width: 200px;
   /* height: 50px; */
   font-size: 80%;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   font-weight: bold;
+  color: #04699d;
   /* text-justify: left-align; */
   /* margin: 10px; */
 }
 .span_silage {
-  font-size: 90%;
+  font-size: 80%;
+  color: #04699d;
+  font-weight: bold;
 }
 
 .Container_Silage_Calculation button {
-  width: 100%;
+  width: 80%;
   display: block;
 }
 
@@ -283,4 +286,23 @@ main {
   margin: 20px;
   border: #04699d 1px solid;
   height: auto; */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  /* width: 200px; */
+  margin-bottom: 20px;
+}
+
+.grid-item {
+  background-color: #3498db;
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  font-size: 90%;
 }
