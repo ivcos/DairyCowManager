@@ -29,7 +29,7 @@ function calculateFodderRequired(event) {
     "silage_required_calves"
   ).value;
   console.log("Silage Required for Calves" + silageRequiredCalves);
-  silageRequiredCalves = nbr01Year * nbrOfDaysSilageRequiredCalves * 0.047;
+  silageRequiredCalves = nbr01Year * nbrOfDaysSilageRequiredCalves * 0.024;
   console.log("Silage Required for Calves: " + silageRequiredCalves);
   document.getElementById("silage_required_calves").value =
     silageRequiredCalves;
@@ -46,7 +46,7 @@ function calculateFodderRequired(event) {
     "silage_required_heifers"
   ).value;
   console.log("Silage Required for Heifers" + silageRequiredHeifers);
-  silageRequiredHeifers = nbr12Year * nbrDaysSilageRequiredHeifers * 0.024;
+  silageRequiredHeifers = nbr12Year * nbrDaysSilageRequiredHeifers * 0.043;
   console.log("Silage Required for Heifers: " + silageRequiredHeifers);
   document.getElementById("silage_required_heifers").value =
     silageRequiredHeifers;
