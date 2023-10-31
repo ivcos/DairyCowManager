@@ -306,3 +306,20 @@ main {
   overflow: hidden;
   font-size: 90%;
 }
+
+.flex-container {
+  /* Flexbox */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+
+  margin: 20px;
+  border: #04699d 1px solid;
+  height: auto;
+  background-color: #fff;
+}
+
+.flex-container button {
+  margin-bottom: 20px;
+}
