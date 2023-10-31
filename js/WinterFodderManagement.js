@@ -69,6 +69,24 @@ function calculateFodderRequired(event) {
     silageRequired2Plus;
 }
 
+function clearForm(event) {
+  // Clear the Cow Input data
+  document.getElementById("nbr_dairy_cows").value = "";
+  // document.getElementById("nbr_days_dairy_cows").value = "";
+  document.getElementById("silage_required_dairy_cows").value = "";
+  // Clear the Calves Input data
+  document.getElementById("nbr_calves").value = "";
+  // document.getElementById("nbr_days_dairy_calves").value = "";
+  document.getElementById("silage_required_calves").value = "";
+  // Clear the Heifers Input data
+  document.getElementById("nbr_heifers").value = "";
+  // document.getElementById("nbr_days_heifers").value = "";
+  document.getElementById("silage_required_heifers").value = "";
+  // Clear the 2+ Input data
+  document.getElementById("nbr_2YearPlus").value = "";
+  // document.getElementById("nbr_days_2YearPlus").value = "";
+  document.getElementById("silage_required_2YearPlus").value = "";
+}
 function onDOMLoaded() {
   document
     .querySelector("#calculate_silage")
@@ -76,46 +94,11 @@ function onDOMLoaded() {
       calculateFodderRequired(event);
       console.log("Item 1");
     });
+  document.querySelector("#Clear").addEventListener("click", function (event) {
+    clearForm(event);
+    console.log("Form Cleared");
+  }); // <-- added closing parenthesis here//
 }
 
 // Attach the onDOMLoaded function to the DOMContentLoaded event
 document.addEventListener("DOMContentLoaded", onDOMLoaded);
-
-// //Standard for all pages
-
-// // function calculateFodderRequired(event) {
-// //   // get User entries for all fields
-// //   let numberDairyCows = document.getElementById("nbr_dairy_cows").value;
-// //   console.log("Number of Dairy Cows: " + numberDairyCows);
-// // }
-
-// window.onload = function () {
-//   // The load event gets fired when the page loads. DomContentLoded event
-//   //is ReadableByteStreamController. See MDND
-//   //https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
-
-//   function init() {
-//     console.info("DOM Loaded");
-
-//     // document
-//     //   .getElementsByClassName("button-silage-calculation")
-//     //   .addEventListener("click", function (event) {
-//     //     calculateFodderRequired(event);
-//     //   });
-//     // document.querySelector("#clear").addEventListener("click", function(event){
-//     //   clearForm(event);
-//     // });
-//     // document.querySelector("#subtotal").addEventListener("input", function(event){
-//     //   validateSubtotal(event);
-//     //   console.log(event.target.value);
-//     // });
-
-//     if (document.readyState === "loading") {
-//       // Loading hasn't finished yet
-//       document.addEventListener("DOMContentLoaded", init);
-//     } else {
-//       // `DOMContentLoaded` has already fired
-//       init();
-//     }
-//   }
-// };
