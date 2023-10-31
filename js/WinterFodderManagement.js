@@ -1,5 +1,6 @@
 function calculateFodderRequired(event) {
-  // get User entries for Dairy Cows
+  // get User entries for Dairy Cows and validate each entry.
+  // Number of days should not be greater than 365 and numbers of animals should not be greater than 10000
   let nbrDairyCows = document.getElementById("nbr_dairy_cows").value;
   console.log("Number of Dairy Cows: " + nbrDairyCows);
   let nbrOfDaysSilageRequired = document.getElementById(
