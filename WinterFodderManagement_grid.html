@@ -71,7 +71,10 @@
           <div class="grid-item">Silage Reqd. Tonnes</div>
           <div class="grid-item">Dairy Cows</div>
           <div class="grid-item">
-            <input type="number" id="nbr_dairy_cows" class="input_silage" />
+            <input type="number" id="nbr_dairy_cows" min="0"
+            oninput="validity.valid||(value='');" //
+            <--https://www.tutorialspoint.com/how-to-allow-only-positive-numbers-in-the-input-number-type#:~:text=Using%20the%20HTML%20Input%20%27min%27%20Attribute&text=If%20the%20min%20attribute%20value,only%20positive%20numbers%20are%20allowed.
+            // class="input_silage" />
           </div>
           <div class="grid-item">
             <input
@@ -93,7 +96,9 @@
           </div> -->
           <div class="grid-item">0-1 year</div>
           <div class="grid-item">
-            <input type="number" id="nbr_calves" class="input_silage" />
+            <input type="number" id="nbr_calves" min="0"
+            oninput="validity.valid||(value='');" // <-- only allows 0 and
+            positive values// class="input_silage" />
           </div>
           <div class="grid-item">
             <input
@@ -112,7 +117,9 @@
           </div>
           <div class="grid-item">1-2 year</div>
           <div class="grid-item">
-            <input type="number" id="nbr_heifers" class="input_silage" />
+            <input type="number" id="nbr_heifers" min="0"
+            oninput="validity.valid||(value='');" // <-- only allows 0 and
+            positive values// class="input_silage" />
           </div>
           <div class="grid-item">
             <input
@@ -131,7 +138,9 @@
           </div>
           <div class="grid-item">2+Years</div>
           <div class="grid-item">
-            <input type="number" id="nbr_2YearPlus" class="input_silage" />
+            <input type="number" id="nbr_2YearPlus" min="0"
+            oninput="validity.valid||(value='');" // <-- only allows 0 and
+            positive values// class="input_silage" />
           </div>
           <div class="grid-item">
             <input
