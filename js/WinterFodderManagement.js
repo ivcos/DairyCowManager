@@ -67,6 +67,19 @@ function calculateFodderRequired(event) {
   console.log("Silage Required for 2+Year: " + silageRequired2Plus);
   document.getElementById("silage_required_2YearPlus").value =
     silageRequired2Plus;
+  //Calcualte the Total Silage Required
+  let totalSilageRequired =
+    silageRequiredDairyCows +
+    silageRequiredCalves +
+    silageRequiredHeifers +
+    silageRequired2Plus;
+  console.log("Total Silage Required: " + totalSilageRequired);
+  document.getElementById("total_silage_required_tonnes").value =
+    totalSilageRequired;
+  //Calcualte the Total Bales Silage Required
+  console.log(`Total  Bales of Silage Required: ${totalSilageRequired * 0.8}`);
+  document.getElementById("total_silage_bales_required").value =
+    totalSilageRequired * 0.8;
 }
 
 function clearForm(event) {
