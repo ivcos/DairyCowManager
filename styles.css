@@ -312,14 +312,29 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  /* Have a gap between the two flex-item buttons */
+  gap: 10px;
 
-  margin: 20px;
-  border: #04699d 1px solid;
+  /* margin: 20px; */
+  /* border: #04699d 1px solid; */
   height: auto;
-  background-color: #fff;
+  background-color: #eeecec;
 }
 
 .flex-container button {
   margin-bottom: 20px;
+  padding: 20px;
+  /* gap: 30px; */
+}
+
+.flex-container p {
+  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.button-silage-calculation {
+  /* Having all the elements expand to fill the emtpy space */
+  flex-grow: 1;
 }

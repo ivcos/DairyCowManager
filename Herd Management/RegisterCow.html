@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RegisterCow</title>
     <link rel="stylesheet" href="../styles.css" />
+    <script src="../js/RegisterCowandCalf.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -26,11 +27,24 @@
         </ul>
       </nav>
       <main>
-        <h2>Register Animal onto Cow Manager Test</h2>
+        <h2>
+          Register Animal/Register Birth/ Update Animal Information/Search for
+          Animal
+        </h2>
         <!-- Add a Button Option here to slect between Registering Birth or new Animal
             Effectively display a different form on the same HTML page! -->
-        <button onclick="toggleForm('Calving Form')">Register Birth</button>
-        <button onclick="toggleForm('New Animal Form')">Register Animal</button>
+        <div class="flex-container">
+          <div>
+            <button id="register_birth" onclick="toggleForm('Calving Form')">
+              Register Birth
+            </button>
+          </div>
+          <div>
+            <button id="register_animal" onclick="toggleForm('New Animal Form')">
+              Register Animal
+            </button>
+          </div>
+        
         <form id="Calving Form" action="" method="post" style="display: none">
           <ul>
             <li>
@@ -211,7 +225,7 @@
       <footer></footer>
     </div>
   </body>
-  <script>
+  <<!-- script>
     function toggleForm(formId) {
       var form = document.getElementById(formId);
       if (form.style.display === "none") {
@@ -220,5 +234,5 @@
         form.style.display = "none";
       }
     }
-  </script>
+  </script -->>
 </html>
