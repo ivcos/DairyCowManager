@@ -222,6 +222,7 @@ form {
   border-radius: 10px;
   background-color: #f2f5d5;
   padding: 1em;
+  display:none;
 }
 
 /*  ========= FORM WIDGET STYLES  ========= */

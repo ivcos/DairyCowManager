@@ -35,17 +35,17 @@
             Effectively display a different form on the same HTML page! -->
         <div class="flex-container">
           <div>
-            <button id="register_birth" onclick="toggleForm('Calving Form')">
+            <button id="register_birth" onclick="registerBirth">
               Register Birth
             </button>
           </div>
           <div>
-            <button id="register_animal" onclick="toggleForm('New Animal Form')">
+            <button id="register_animal" onclick="registerAnimal">
               Register Animal
             </button>
           </div>
         
-        <form id="Calving Form" action="" method="post" style="display: none">
+        <form id="calving_form" action="" method="post" >
           <ul>
             <li>
               <label for="form_cow_tag_nbr">Calf Tag:</label
@@ -53,11 +53,15 @@
             </li>
             <li>
               <label for="form_date_of_birth">Animal Date of Birth:</label
-              ><input type="text" id="form_date_of_birth" class="textinput" />
+              ><input type="date" id="form_date_of_birth" class="textinput" />
             </li>
             <li>
               <label for="form_mother_tag">Mother's Tag:</label
               ><input type="text" id="form_mother_tag" class="textinput" />
+            </li>
+            <li>
+              <label for="form_mother_tag">Mother's FreezeBand:</label
+              ><input type="text" id="form_mother_freezeband" class="textinput" />
             </li>
             <li>
               <label for="form-text"
@@ -108,25 +112,37 @@
                 <option>ABC202</option>
                 <option>JZX405</option>
                 <option>Bull</option>
+                <option>Auto Populate from AI Data</option>
+                
               </select>
             </li>
             <li>
               <label for="Sire">Sire:</label>
               <select Sire="Sire" id="Sire">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
+                <option>Freisin Bull</option>
+                <option>Hereford Bull </option>
+                <option>N/A</option>
               </select>
             </li>
             <li>
-              <label for="Alive/Dead">Alive/Dead:</label>
-              <select Sire="live/Dead" id="live/Dead">
+              <label for="alive_dead">Alive/Dead:</label>
+              <select Sire="alive_dead" id="alive_dead">
                 <option>Alive</option>
                 <option>Dead</option>
               </select>
             </li>
+            <li>
+              <label for="difficult_calving">Difficulty Calving</label>
+              <select Sire="difficult_calving" id="difficult_calving">
+                <option>Needed Assistance</option>
+                <option>Vet Assistancee</option>
+                <option>No Trouble Calving</option>
+              </select>
+            </li>
             <li class="buttons">
-              <input type="submit" value="Submit Calf Date" />
+              <input type="submit" id="submit_calf_data" value="Submit Calf Date" />
+              <input type="submit" id="clear_calf_data"value="Clear/Reset Form"/>
+              <input type="submit" id="cancel_calf_data" value="Cancel/Close Form"/>
             </li>
           </ul>
         </form>
@@ -216,8 +232,15 @@
               </select>
             </li>
             <li class="buttons">
-              <input type="submit" value="Submit Calf Date" />
+              <input type="submit" id="submit_calf_data" value="Submit Calf Date" />
+              <input type="submit" id="clear_calf_data"value="Clear/Reset Form"/>
+              <input type="submit" id="cancel_calf_data" value="Cancel/Close Form"/>
             </li>
+            <!-- <input type="submit" value="Clear/Reset Form"/>
+            </li>
+          </li>
+          <input type="submit" value="Cancel/Close Form"/>
+          </li> -->
           </ul>
         </form>
         <h6>testH6</h6>
