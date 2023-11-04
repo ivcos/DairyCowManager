@@ -7,12 +7,10 @@ FONT SIZE SYSTEM (PX)
 
 */
 
-
-
-
 /* Makes sizing form elements more consistent. border-box is helpful
 for specifying widthd in percentages. */
 /* Have the Page settings on Top */
+/* GENERAL STYLES */
 html {
   box-sizing: border-box;
   height: 100%;
@@ -52,6 +50,9 @@ p {
   /* font-family: sans-serif; */
   line-height: 1.5; /* No units required as it is 1.5 the font size. */
   margin-bottom: 15px;
+  overflow: hidden;
+  /* Recommended that lines should not be longer than 75 characters */
+  max-width: 75ch;
 }
 .logo img {
   max-width: 200px; /* Set the maximum width of the logo */
@@ -63,12 +64,17 @@ h1 {
   font-size: 1.6em;
   margin: 0 0 1.5em 0;
   font-size: 36px;
-  letter-spacing: -2px ;
+  letter-spacing: -1px ;
+  color:#013301;
   /* /36  44 / 52 /62 */
 }
 h2 {
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
   margin: 0 0 1.5em 0;
+  font-size: 36px;
+  letter-spacing: -2px;
+  color:#013301
+  /* 24 / 30/ 36 */
 }
 em {
   font-size: 0.8em;
@@ -90,6 +96,10 @@ h6 {
   /* height: 100%; */
 }
 
+footer {
+  margin-bottom:48px;
+  font-size: 14px;
+}
 /* ========= CLEARING OUT LIST STYLES ========= */
 ul {
   list-style-type: none;
