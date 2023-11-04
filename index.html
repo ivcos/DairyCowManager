@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CowHealth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div id="wrapper">
-      <header>
+      <header class="main_header">
         <div class="logo">
           <img
             src="images/FarmAILogo1.png"
-            width="100"
-            height="60"
+            width="120"
+            height="72"
             alt="The FarMAI logo"
           />
         </div>
-        <h1>Giving Farmers Control of Their Farm Data</h1>
+        <h1>Farmers Controling Their Data</h1>
         <nav class="secondary-nav">
           <!-- Add your navigation links here -->
           <ul>
@@ -44,18 +47,18 @@
         </ul>
       </nav>
       <main>
-        <img src="images/CowImage2.png" alt="The FarMAI logo" />
-        <img src="images/calfimage.png" alt="The FarMAI logo" />
+        <div class="images-box">
+          <img src="images/calfimage.png" alt="The FarMAI logo" />
+      </div>
         <p title="objective">
           FarMAI is the first tool that give control back to the farmer. The
           farmer owns the <em>data</em> about their herd, <em>data</em> about
-          their land, <em>data</em> about their farm practices,
-          <em>data</em> about the way the farmer protects the environment. There
-          is huge value in this <em>data</em>. The farmer can use this
+          their land, <em>data</em> about their farm practices, <em>about the time they work on the farm</em>
+          <em>data</em> about the way the farmer protects the environment.  The farmer can use this
           <em>data</em> to show the consumer that they as custodians of the
-          environment are taking care of the environment, thier naimals and
+          environment are taking care of the environment, their naimals and
           providing the consumer with a quality product. While also providing a
-          livlihood for the farmer and their family.
+          livelihood for the farmer and their family.
         </p>
 
         <p>
@@ -72,20 +75,26 @@
           the farmer to make better decisions on the farm.
         </p>
         <h2>Herd Management</h2>
-        <p>
-          Having all the information about the cows health in one place will
-          help the farmer to make better but also provide better care of the
-          cows. The farmer will be able to see the cows health history and
-          administer the correct medication to the cow and take the correct
-          action to help the cow.
-        </p>
+        <div class="home-page-flexbox">
+          <p>
+            Having all the information about the cows health in one place will
+            help the farmer to make better but also provide better care of the
+            cows. The farmer will be able to see the cows health history and
+            administer the correct medication to the cow and take the correct
+            action to help the cow.
+          </p>
+          <img src="images/IMG_20231022_155731.jpg" alt="Picture of Cows graxing" width=""297" height="396"/>
+        </div>
         <h3>Cow Profit Monitor</h3>
+        <div class="home-page-flexbox">
         <p>
           With all the inputs available, the cows are rated on their
           performance. On a continual basis, our application makes the decision
           easier for the farmer. The farmer will be able to see which cows are
           making a profit and which
         </p>
+        <img src="images/CowImage2.png" alt="The FarMAI logo"  />
+        </div>
         <h2>AgriIoT</h2>
         <p>
           Our tool also takes external information into account. Initially, we
