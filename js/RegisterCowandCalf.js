@@ -29,16 +29,30 @@ function registerBirth(event) {
 }
 
 function submitAnimalFormData(event) {
-  //Data it not stored for the moment but we will generate a message and also
-  //clear the form as well after the message is displayed
-  //Change color of button as well
+  //Data it not stored for the moment,
+  // 1. Change button color to green and
+  // 2.generate a message and also
+  //3.clear the form as well after the message is displayed
+  //4. Change color of button back to grey
   console.log("Entering the function submitAnimalFormData");
+  //Display message to user that form has been submitted successfully
+  let message = document.getElementById("message");
+  message.style.display = "block";
+  //Clear the form input data and remove the mesaage again
+  document.getElementById("calving_form").reset();
+}
+
+function clearFormData(event) {
+  console.log("Entering the clearFormData");
+  //Clear the form input data and remove the mesaage again
+  document.getElementById("calving_form").reset();
 }
 
 function onDOMLoaded() {
   document
     .querySelector("#register_birth")
     .addEventListener("click", function (event) {
+      event.preventDefault(); //
       registerBirth(event);
       console.log("Item 1: Register Birth");
     });
@@ -46,9 +60,19 @@ function onDOMLoaded() {
   document
     .querySelector("#submit_calf_data")
     .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 2: Submiting Calf Data");
       submitAnimalFormData(event);
       console.log("Item 2: Submiting Calf Data");
-      console.log("Item 2: Submitted Calf Data");
+    });
+
+  document
+    .querySelector("#clear_reset_data")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 3: Clearing Form Data");
+      clearFormData(event);
+      console.log("Item 3: Clearing Form Data");
     });
 }
 

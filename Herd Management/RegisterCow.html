@@ -130,6 +130,13 @@
                 <option>Alive</option>
                 <option>Dead</option>
               </select>
+              <li>
+                <label for="Twins">Twin:</label>
+                <select Twins="Twins" id="Twins">
+                  <option>No</option>
+                  <option>Yes</option>
+                </select>
+              </li>
             </li>
             <li>
               <label for="difficult_calving">Difficulty Calving</label>
@@ -141,10 +148,16 @@
             </li>
             <li class="buttons">
               <input type="submit" id="submit_calf_data" value="Submit Calf Date" />
-              <input type="submit" id="clear_calf_data"value="Clear/Reset Form"/>
-              <input type="submit" id="cancel_calf_data" value="Cancel/Close Form"/>
+              <input type="submit" id="clear_reset_data"value="Clear/Reset Form"/>
+              <input type="submit" class="cancel_data" value="Cancel/Close Form"/>
             </li>
           </ul>
+          <div id="message" style="display: none;">
+          <p class="form_submission_msg">
+            Data submitted successfully!
+          </p>
+          </div>
+        </div>
         </form>
         <form
           id="New Animal Form"
@@ -226,9 +239,16 @@
             </li>
             <li>
               <label for="Alive/Dead">Alive/Dead:</label>
-              <select Sire="live/Dead" id="live/Dead">
+              <select Alive/Dead ="live/Dead" id="live/Dead">
                 <option>Alive</option>
                 <option>Dead</option>
+              </select>
+            </li>
+            <li>
+              <label for="Twins">Twin:</label>
+              <select Twins="Twins" id="Twins">
+                <option>No</option>
+                <option>Yes</option>
               </select>
             </li>
             <li class="buttons">
