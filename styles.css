@@ -1,9 +1,32 @@
-/* SCALING SYTEM (PX) 
+/*
+---- 01 TYPOGRAPHY sUYSTEM
 
+- SPACING SYTEM (px) 
 2 /4 / 8/ 12 / 16 /24 /32 /48 / 64/ 80/ 96 /128
-FONT SIZE SYSTEM (PX)
-
+- FONT SIZE SYSTEM (px)
 10 /12 /14 /16 /18 /24 /30/ 36 /44 / 52 /62 /74 / 86 /98
+
+- FONT-WEIGHTS
+Default: 400
+- LINE HEIGHTS
+DEFAULT:1 
+
+--- 02 COLOURS
+
+- Primary:
+- Tints:
+- Shades:
+- Accents
+- Greys:
+-# 555
+
+
+---05 Shadows
+
+---06 BORDER RADIUS
+
+---07 SPACING SYSTEM
+2 /4 / 8/ 12 / 16 /24 /32 /48 / 64/ 80/ 96 /128
 
 */
 
@@ -190,7 +213,12 @@ textarea {
   gap:20px;
 }
 
-.home-page-flexbox {
+.row {
+  /* DEFAULT 
+  flex-grow:0;
+  flex-shrink:1;
+  flex-basis:auto;
+  */
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
@@ -402,9 +430,19 @@ main {
 }
 
 /* #total_silage_required_tonnes {
-  /* padding-bottom: 50px; */
-  max-width: 200px;
-} */
+  padding-bottom: 50px; */
+  /* max-width: 200px; */
+}
 
 
 /* Specific style for RegisgerCow.html */
+.buttonfx:hover {
+  background-color: #04699d;
+  color:white
+}
+ 
+.btn_register_cow:hover {
+  background-color: #75cf89;
+  color:white;
+  cursor: pointer;
+}

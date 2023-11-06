@@ -1,23 +1,36 @@
-// function toggleForm(formId) {
-//   let allForms = document.getElementsByClassName("form");
-//   // console.log("all forms[0]" + allForms[0].attributes.style.display);
-//   // console.log("all forms[1]" + allForms[1].attributes.style.display);
-//   console.log(allForms[0]);
-//   console.log(allForms[1]);
-//   let test = document.getElementById(formId);
-//   console.log(test);
-//   console.log("Entering toggle Form");
-//   console.log(test.style.display);
-//   if (test.style.display === "none") {
-//     test.style.display = "block";
-//   } else {
-//     test.style.display = "none";
-//   }
-// }
+// Get today's date
+function formatDate() {
+  console.log("Entering formatDate");
+  let today = new Date(); //get the current date and time
+  console.log("Today's date", today);
+  let dd = today.getDate();
+  let mm = today.getMonth() + 1; //January is 0!
+  // let yyyy = today.getFullYear();
+  let yyyy = today.getFullYear();
+  if (dd < 10) {
+    dd = "0" + dd;
+  }
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
+
+  today = yyyy + "-" + mm + "-" + dd;
+  console.log("Today's date", today);
+  return today;
+}
+// Function to get the current date and populate the date field in the form
+function getTodayDate() {
+  console.log("Entering getTodayDate");
+  let dateFormInput = document.getElementById("form_date_of_birth");
+  dateFormInput.value = formatDate();
+  console.log("Date Form Input", dateFormInput);
+}
 
 // Function Display Form for Register Birth and also allow user to input data
 function registerBirth(event) {
   console.log("Entering registerBirth");
+  // console.log("Set the default date to today's date");
+  // let today = getTodayDate();
   // Change display from none to block for the register birth form
   let formElement = document.getElementById("calving_form");
   let formElementStyle = window.getComputedStyle(formElement);
@@ -26,6 +39,25 @@ function registerBirth(event) {
   //Now change the display to block so Form is Displayed
   formElement.style.display = "block";
   console.log("Display after change", formElementStyleDisplay);
+  let today = getTodayDate();
+  console.log("Today's date", today);
+}
+
+// Add a function that checks that at least one of the radio fields is selected
+function validateRadioButtons() {
+  console.log("Entering validateRadioButtons");
+  let radios = document.getElementsByName("Choose");
+  console.log("Radios", radios);
+  console.log(radios.length);
+  if (radios.length > 0) {
+    for (let i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
 }
 
 function submitAnimalFormData(event) {
@@ -35,17 +67,44 @@ function submitAnimalFormData(event) {
   //3.clear the form as well after the message is displayed
   //4. Change color of button back to grey
   console.log("Entering the function submitAnimalFormData");
+  // radioBoxChecked = validateRadioButtons();
+  // console.log("Radio Box Checked", radioBoxChecked);
+  //Validate the Form Data inputted
   //Display message to user that form has been submitted successfully
+  let formCowTagNbr = document.getElementById("form_cow_tag_nbr");
+  let formDateBirth = document.getElementById("form_date_of_birth");
+  let formCalfTagNbr = document.getElementById("form_mothers_tag");
+  console.log(formCalfTagNbr);
   let message = document.getElementById("message");
-  message.style.display = "block";
+  if (
+    formCowTagNbr.value.trim() === "" ||
+    formDateBirth.value.trim() === "" ||
+    formCalfTagNbr.value.trim() === ""
+    // radioBoxChecked === false
+  ) {
+    message.textContent = "Please enter all the required fields";
+    message.style.display = "block";
+  } else {
+    message.textContent = "Form Submitted Successfully";
+    message.style.display = "block";
+  }
   //Clear the form input data and remove the mesaage again
-  document.getElementById("calving_form").reset();
+  // document.getElementById("calving_form").reset();
+  // message.textContent = "";
 }
 
 function clearFormData(event) {
   console.log("Entering the clearFormData");
   //Clear the form input data and remove the mesaage again
   document.getElementById("calving_form").reset();
+  message.style.display = "none";
+  let today = getTodayDate();
+  console.log("Today's date", today);
+}
+
+function closeForm(event) {
+  console.log("Entering the closeForm");
+  document.getElementById("calving_form").style.display = "none";
 }
 
 function onDOMLoaded() {
@@ -63,7 +122,7 @@ function onDOMLoaded() {
       event.preventDefault(); // When this is added the default form is not submitted
       console.log("Item 2: Submiting Calf Data");
       submitAnimalFormData(event);
-      console.log("Item 2: Submiting Calf Data");
+      console.log("Item 2a: Submiting Calf Data");
     });
 
   document
@@ -74,10 +133,16 @@ function onDOMLoaded() {
       clearFormData(event);
       console.log("Item 3: Clearing Form Data");
     });
-}
 
-// Create generic functions for the 3 button options in the forms, submit, Clear/Reset
-//  and cancel/close
+  document
+    .querySelector("#close_form")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 4: Closing Form");
+      closeForm(event);
+      console.log("Item 4: Closing Form");
+    });
+}
 
 // function onDOMLoaded() {
 //   document

@@ -49,24 +49,23 @@
           <ul>
             <li>
               <label for="form_cow_tag_nbr">Calf Tag:</label
-              ><input type="text" id="form_cow_tag_nbr" class="textinput" />
+              ><input type="text" id="form_cow_tag_nbr" class="textinput" required/>
             </li>
             <li>
               <label for="form_date_of_birth">Animal Date of Birth:</label
-              ><input type="date" id="form_date_of_birth" class="textinput" />
+              ><input type="date" id="form_date_of_birth" class="textinput" required/>
             </li>
             <li>
               <label for="form_mother_tag">Mother's Tag:</label
-              ><input type="text" id="form_mother_tag" class="textinput" />
+              ><input type="text" id="form_mothers_tag" class="textinput" required/>
             </li>
             <li>
-              <label for="form_mother_tag">Mother's FreezeBand:</label
+              <label for="form_mother_freezeband">Mother's FreezeBand (Optional):</label
               ><input type="text" id="form_mother_freezeband" class="textinput" />
             </li>
             <li>
               <label for="form-text"
-                >Animal:
-                <details></details
+                >Notes(optional):
               ></label>
               <textarea
                 name="form-text"
@@ -82,13 +81,13 @@
                 <ul>
                   <li>
                     <label
-                      ><input type="radio" name="Sex" value="male" />
+                      ><input type="radio" name="Choose" value="male"/>
                       Male</label
                     >
                   </li>
                   <li>
                     <label
-                      ><input type="radio" name="Sex" value="female" />
+                      ><input type="radio" name="Choose" value="female" />
                       Female</label
                     >
                   </li>
@@ -147,15 +146,15 @@
               </select>
             </li>
             <li class="buttons">
-              <input type="submit" id="submit_calf_data" value="Submit Calf Date" />
-              <input type="submit" id="clear_reset_data"value="Clear/Reset Form"/>
-              <input type="submit" class="cancel_data" value="Cancel/Close Form"/>
+              <input type="submit" class=btn_register_cow id="submit_calf_data" value="Submit Calf Date" />
+              <input type="submit" class=btn_register_cow id="clear_reset_data"value="Reset/Next"/>
+              <input type="submit" class=btn_register_cow id="close_form" value="Cancel/Close"/>
             </li>
           </ul>
           <div id="message" style="display: none;">
-          <p class="form_submission_msg">
+          <!-- <p class="form_submission_msg">
             Data submitted successfully!
-          </p>
+          </p> -->
           </div>
         </div>
         </form>
