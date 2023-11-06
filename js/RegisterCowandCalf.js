@@ -39,6 +39,24 @@ function registerBirth(event) {
   //Now change the display to block so Form is Displayed
   formElement.style.display = "block";
   console.log("Display after change", formElementStyleDisplay);
+  let dateFormInput = document.getElementById("form_date_of_birth");
+  let today = getTodayDate();
+  console.log("Today's date", today);
+}
+
+//Function to register animal bought into the farm
+function registerAnimal(event) {
+  console.log("Entering registerAnimal");
+  let FormElementRegisterAnimal = document.getElementById("New Animal Form");
+  let FormElementRegisterAnimalStyle = window.getComputedStyle(
+    FormElementRegisterAnimal
+  );
+  let FormElementRegisterAnimalStyleDisplay =
+    FormElementRegisterAnimalStyle.getPropertyValue("display");
+  console.log("Display", FormElementRegisterAnimalStyleDisplay);
+  //Now change the display to block so Form is Displayed
+  FormElementRegisterAnimal.style.display = "block";
+  console.log("Display after change", FormElementRegisterAnimalStyleDisplay);
   let today = getTodayDate();
   console.log("Today's date", today);
 }
@@ -142,23 +160,18 @@ function onDOMLoaded() {
       closeForm(event);
       console.log("Item 4: Closing Form");
     });
+
+  // For animals bought in to the farm
+
+  document
+    .querySelector("#register_animal")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 5: Register Animal");
+      registerAnimal(event);
+      console.log("Item 4: Closing Form");
+    });
 }
-
-// function onDOMLoaded() {
-//   document
-//     .querySelector("#register_birth")
-//     .addEventListener("click", function (event) {
-//       registerBirth(event);
-//       console.log("Item 1: Register Birth");
-//     });
-
-// Register Amnimal
-// document
-//   .querySelector("#register_animal")
-//   .addEventListener("click", function (event) {
-//     toggleForm(event);
-//     console.log("Item 2: Register Animal");
-//   });
 
 // document
 //   .querySelector("#update_animal_details")
