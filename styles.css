@@ -29,6 +29,10 @@ DEFAULT:1
 2 /4 / 8/ 12 / 16 /24 /32 /48 / 64/ 80/ 96 /128
 
 */
+/*
+MAIN COLOURS : #087f5b
+GREY COLOR : #212529
+*/
 
 /* Makes sizing form elements more consistent. border-box is helpful
 for specifying widthd in percentages. */
@@ -37,6 +41,7 @@ for specifying widthd in percentages. */
 html {
   box-sizing: border-box;
   height: 100%;
+  /* font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5% -> 1rem = 10px;  */
 }
 * {
   box-sizing: inherit;
@@ -48,11 +53,12 @@ html {
 }
 
 body {
-  font-family: 'inter', sans-serif; /* Google Font */
+  font-family: "inter", sans-serif; /* Google Font */
   font-size: 100%;
   margin: 2em 10%;
   line-height: 1.4; /* Advised on HTML/CSS Course */
   height: 100%;
+  color: #212529;
   /* background-color: #eeecec; */
   background-color: #fff;
 }
@@ -64,7 +70,7 @@ body {
   /* padding: 20px 0 10px 0; */
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 /* Smaller Headings */
@@ -87,8 +93,8 @@ h1 {
   font-size: 1.6em;
   margin: 0 0 1.5em 0;
   font-size: 36px;
-  letter-spacing: -1px ;
-  color:#013301;
+  letter-spacing: -1px;
+  color: #013301;
   /* /36  44 / 52 /62 */
 }
 h2 {
@@ -96,7 +102,7 @@ h2 {
   margin: 0 0 1.5em 0;
   font-size: 36px;
   letter-spacing: -2px;
-  color:#013301
+  color: #013301;
   /* 24 / 30/ 36 */
 }
 em {
@@ -120,7 +126,7 @@ h6 {
 }
 
 footer {
-  margin-bottom:48px;
+  margin-bottom: 48px;
   font-size: 14px;
 }
 /* ========= CLEARING OUT LIST STYLES ========= */
@@ -188,9 +194,9 @@ textarea {
   background-color: #fff;
 }
 
-  .secondary-nav {
+.secondary-nav {
   list-style-type: none;
-  display:inline-block;
+  display: inline-block;
   margin: 0;
   padding: 0;
   font-size: 1em;
@@ -210,7 +216,7 @@ textarea {
   /* border: #04699d 1px solid; */
   height: auto;
   background-color: #eeecec;
-  gap:20px;
+  gap: 20px;
 }
 
 .row {
@@ -222,7 +228,7 @@ textarea {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
-  gap:20px;
+  gap: 20px;
 }
 /* ========= Moving nav from vertical to horizonatal ========= */
 nav li {
@@ -250,7 +256,7 @@ form {
   border-radius: 10px;
   background-color: #f2f5d5;
   padding: 1em;
-  display:none;
+  display: none;
 }
 
 /*  ========= FORM WIDGET STYLES  ========= */
@@ -431,18 +437,43 @@ main {
 
 /* #total_silage_required_tonnes {
   padding-bottom: 50px; */
-  /* max-width: 200px; */
+/* max-width: 200px; */
+
+/* Specific style for RegisterCow.html */
+
+.register_button {
+  background-color: #087f5b;
+  color: white;
+  cursor: pointer;
+}
+.register_button:hover {
+  background-color: #75cf89;
+  color: white;
+  cursor: pointer;
+}
+.register_button:active {
+  background-color: #04699d;
+  color: white;
+  cursor: pointer;
+}
+.register_button:focus {
+  background-color: #04699d;
+  color: white;
+  cursor: pointer;
+}
+.register_button:visited {
+  background-color: #04699d;
+  color: white;
+  cursor: pointer;
 }
 
-
-/* Specific style for RegisgerCow.html */
 .buttonfx:hover {
   background-color: #04699d;
-  color:white
+  color: white;
 }
- 
+
 .btn_register_cow:hover {
   background-color: #75cf89;
-  color:white;
+  color: white;
   cursor: pointer;
 }
