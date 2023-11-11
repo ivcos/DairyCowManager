@@ -31,7 +31,7 @@ DEFAULT:1
 */
 /*
 MAIN COLOURS : #087f5b
-MAIN COLOR_1 #2c5f2d HAS A BETTER CONTRAST RATIO
+MAIN COLOR_1  HAS A BETTER CONTRAST RATIO
 GREY COLOR : #212529
 */
 
@@ -123,6 +123,7 @@ h6 {
   margin-right: auto; */
   margin: 0 auto;
   width: 98%;
+  border-bottom: 8px solid #2c5f2d;
   /* height: 100%; */
 }
 
@@ -297,6 +298,14 @@ input[type="submit"] {
 }
 
 /*  ========= Styling Specific to Index.html  ========= */
+
+#herd_management_paragraph {
+  font-size: 1em;
+  /* font-weight: bold; */
+  color: white;
+  background-color: #2c5f2d;
+  margin-bottom: 20px;
+}
 .slurryTankInformation {
   display: list-item;
   margin-left: 50px;
