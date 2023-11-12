@@ -203,15 +203,18 @@ textarea {
 
 .primary-nav {
   list-style-type: none;
-  display: flex;
+  /* display: flex; */
   margin: 0;
   padding: 0px 20px 0px 20px;
   font-size: 1em;
   background-color: #fff;
 }
 
-
-
+.primary-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content:flex-end;
+}
 .primary-nav li {
   padding: 0 1px 0 1px;
  
