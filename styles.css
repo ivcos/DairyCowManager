@@ -102,8 +102,13 @@ h2 {
   margin: 0 0 1.5em 0;
   font-size: 36px;
   letter-spacing: -2px;
-  color: #013301;
+  color: #2c5f2d;
   /* 24 / 30/ 36 */
+}
+
+h3 {
+  color: #2c5f2d;
+
 }
 em {
   font-size: 1.2em;
@@ -339,12 +344,316 @@ input[type="submit"] {
 }
 
 /*  ========= Styling Specific to Index.html  ========= */
+.flex {
+  margin: 0;
+  display: flex;
+  border: 5px solid #333;
+  margin-bottom: 2rem;
+}
+
+.flex div:first-child {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+.flex div:last-child {
+  margin: 2rem;
+  flex: 2;
+}
+.flex h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: 400;
+}
+.flex p {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.flex p:last-of-type {
+  margin-bottom: 0px;
+}
+
+.flex:first-of-type div:first-child {
+  background-image: url("./images/generic_farmer_with_phone.jpg");
+}
+
+ /* Herd Management Styling */
+ .flex-herd-management {
+  margin: 0;
+  display: flex;
+  border: 5px solid #333;
+  margin-bottom: 2rem;
+}
+
+.flex-herd-management div:first-child {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+.flex-herd-management div:last-child {
+  margin: 2rem;
+  flex: 2;
+}
+.flex-herd-management h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: 400;
+}
+.flex-herd-management p {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.flex-herd-management p:last-of-type {
+  margin-bottom: 10px;
+}
+
+.flex-herd-management:first-of-type div:first-child {
+  background-image: url("./images/IMG_20231022_155731_red_1.jpg");
+}
+
+.flex-herd-management a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color:#2c5f2d;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-top: 10px;
+}
+
+/* AgriIoT Styling */
+.agri-iot {
+  margin: 0;
+  display: flex;
+  border: 5px solid #333;
+  margin-bottom: 2rem;
+}
+
+.agri-iot div:first-child {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+.agri-iot div:last-child {
+  margin: 2rem;
+  flex: 2;
+}
+.agri-iot h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: 400;
+}
+.agri-iot p {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.agri-iot p:last-of-type {
+  margin-bottom: 10px;
+}
+
+.agri-iot:first-of-type div:first-child {
+  background-image: url("./images/IMG_20231030_124312_red.jpg");
+}
+.agri-iot a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color:#2c5f2d;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-top: 10px;
+}
+/* Slurry Management Styling */
+.slurry-management {
+  margin: 0;
+  display: flex;
+  border: 5px solid #333;
+  margin-bottom: 2rem;
+}
+
+.slurry-management div:first-child {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+.slurry-management div:last-child {
+  margin: 2rem;
+  flex: 2;
+}
+.slurry-management h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: 400;
+}
+.slurry-management p {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.slurry-management p:last-of-type {
+  margin-bottom: 10px;
+}
+
+.slurry-management:first-of-type div:first-child {
+  background-image: url("./images/IMG_20231030_124453_red.jpg");
+}
+.slurry-management a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color:#2c5f2d;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style for Winter Fodder Management */
+.winter-fodder-management {
+  margin: 0;
+  display: flex;
+  border: 5px solid #333;
+  margin-bottom: 2rem;
+}
+
+.winter-fodder-management div:first-child {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+.winter-fodder-management div:last-child {
+  margin: 2rem;
+  flex: 2;
+}
+.winter-fodder-management h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: 400;
+}
+.winter-fodder-management p {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.winter-fodder-management p:last-of-type {
+  margin-bottom: 10px;
+}
+
+.winter-fodder-management:first-of-type div:first-child {
+  background-image: url("./images/IMG_20231030_124541_red.jpg");
+}
+
+.winter-fodder-management a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color:#2c5f2d;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* Style for Winter Fodder Management */
+.time-management {
+  margin: 0;
+  display: flex;
+  border: 5px solid #333;
+  margin-bottom: 2rem;
+}
+
+.time-management div:first-child {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+.time-management div:last-child {
+  margin: 2rem;
+  flex: 2;
+}
+.time-management h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: 400;
+}
+.time-management p {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.time-management p:last-of-type {
+  margin-bottom: 10px;
+}
+
+.time-management:first-of-type div:first-child {
+  background-image: url("./images/clock-33989_1280.png");
+}
+
+.time-management a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color:#2c5f2d;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* Style for Winter Farm Alerts  */
+.farm-alerts {
+  margin: 0;
+  display: flex;
+  border: 5px solid #333;
+  margin-bottom: 2rem;
+}
+
+.farm-alerts div:first-child {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+.farm-alerts div:last-child {
+  margin: 2rem;
+  flex: 2;
+}
+.farm-alerts h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: 400;
+}
+.farm-alerts p {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.farm-alerts p:last-of-type {
+  margin-bottom: 10px;
+}
+
+/* .farm-alerts:first-of-type div:first-child {
+  background-image: url("./images/clock-33989_1280.png");
+} */
+
+.farm-alerts a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color:#2c5f2d;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+
 .paragraph-intro {
-  font-size: 1.2em;
+  font-size: 1.0em;
   /* font-weight: bold; */
   color: #212529;
   /* background-color: #2c5f2d; */
   margin-bottom: 20px;
+  display: inline;
 }
 
 
@@ -551,4 +860,18 @@ main {
   background-color: #75cf89;
   color: white;
   cursor: pointer;
+}
+
+/* Style Intro FlexBox */
+@media screen and (max-width: 400px) {
+  .flex { flex-direction: column; } 
+  .flex:first-of-type div:first-child {
+    background-image: url("./images/generic_farmer_with_phone.jpg");
+  }
+  }
+
+}
+
+.test{
+  display: flex;
 }
