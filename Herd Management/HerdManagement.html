@@ -4,7 +4,7 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>RegisterCow</title>
-    <link rel="stylesheet" href="../styles.css" >
+    <link rel="stylesheet" href="../styles.css">
     <script src="../js/RegisterCowandCalf.js"></script>
   </head>
   <body>
@@ -30,7 +30,7 @@
         </h2>
         <!-- Add a Button Option here to slect between Registering Birth or new Animal
             Effectively display a different form on the same HTML page! -->
-        <div class="flex-container">
+        <div class="flex-container-herd-mgt">
           <div>
             <button class="register_button" id="register_birth" onclick="registerBirth">
               Register Birth
@@ -56,6 +56,12 @@
               Animal Summary
             </button>
           </div>
+          <div>
+            <button class="register_sale"id=" Animal Sale" onclick="animalSale">
+              Animal Sale
+            </button>
+          </div>
+        </div>
           <!-- //CALVING FORM -->
         <form id="calving_form" action="" method="post" >
           <ul>
@@ -280,7 +286,7 @@
           </ul>
         </form>
         <!-- //AI ANIMAL FORM -->
-        < id="AIForm" 
+        <form id="AIForm" 
           action=""
           method="post"
           style="display: none"

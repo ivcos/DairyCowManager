@@ -791,9 +791,6 @@ input[type="submit"] {
     justify-content: space-evenly;
     /* Have a gap between the two flex-item buttons */
     gap: 10px;
-
-    /* margin: 20px; */
-    /* border: #04699d 1px solid; */
     height: auto;
     background-color: #eeecec;
   }
@@ -801,6 +798,8 @@ input[type="submit"] {
   .flex-container button {
     margin-bottom: 20px;
     padding: 20px;
+    color: red;
+    background-color: #04699d;
   }
 
   .flex-container p {
@@ -858,6 +857,13 @@ input[type="submit"] {
     color: white;
     cursor: pointer;
   }
+}
+
+.flex-container-herd-mgt {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 /* CSS Media Queries for flex */
