@@ -1,4 +1,9 @@
-// Get today's date
+// Validate User Input on Entering the data. Once data is entered correctly, label goes green
+//
+function validateAlphanumeric(input) {
+  const alphanumericRegex = /^[a-zA-Z0-9]+$/;
+  return alphanumericRegex.test(input);
+}
 function formatDate() {
   console.log("Entering formatDate");
   let today = new Date(); //get the current date and time
@@ -42,6 +47,27 @@ function registerBirth(event) {
   let dateFormInput = document.getElementById("form_date_of_birth");
   let today = getTodayDate();
   console.log("Today's date", today);
+  // Add event Listeners to check that valid data is entered into the
+  // three first fields in the Register Birth Form
+  // Create a list of three inputs and check that each are valid alphanumeric
+  // let inputCollection = document.getElementsByTagName("input");
+  // console.log("test", parent);
+
+  // for (i = 0; i < 3; i++) {
+  //   console.log(inputCollection.length);
+  //   console.log(inputCollection[i].id);
+  //   console.log(typeof inputCollection);
+  //   let alphanumericInput = inputCollection[i].id;
+  //   let nextAlphanumericInput = inputCollection[i + 1].id;
+  //   alphanumericInput.addEventListener;
+  // }
+  // let alphanumericInput = document.getElementById("form_cow_tag_nbr");
+  // alphanumericInput.addEventListener("input", function (event) {
+  //   let inputValue = alphanumericInput.value;
+  //   const alphanumericRegex = /^[a-zA-Z0-9]+$/;
+  //   if (alphanumericRegex.test(inputValue));
+  //   // The input only contains alphanumeric characters
+  // });
 }
 
 //Function to register animal bought into the farm
@@ -84,6 +110,7 @@ function submitAnimalFormData(event) {
   // 2.generate a message and also
   //3.clear the form as well after the message is displayed
   //4. Change color of button back to grey
+  //5. Prevent the form from default submission
   console.log("Entering the function submitAnimalFormData");
   // radioBoxChecked = validateRadioButtons();
   // console.log("Radio Box Checked", radioBoxChecked);
@@ -171,6 +198,79 @@ function onDOMLoaded() {
       registerAnimal(event);
       console.log("Item 4: Closing Form");
     });
+  //Check and validate the user input  for first input with id = form_cow_tag_nbr in Register Birth
+  const textInputFormCowTagNbr = document.getElementById("form_cow_tag_nbr");
+  console.log("Calf Tag Number" + textInputFormCowTagNbr);
+
+  // Add an event listener for text input with id form_cow_tag_nbr
+  textInputFormCowTagNbr.addEventListener("input", function () {
+    const textInputFormCowTagNbrtrim = textInputFormCowTagNbr.value.trim();
+    if (textInputFormCowTagNbrtrim == "") {
+      console.log("Input cannot be left blank");
+      document.getElementById("form_cow_tag_nbr_error").style.display =
+        "inline-block";
+    } else if (!validateAlphanumeric(textInputFormCowTagNbrtrim)) {
+      console.log("Only numbers and letters are allowed");
+      document.getElementById("form_cow_tag_nbr_error").style.display =
+        "inline-block";
+      document.getElementById("form_cow_tag_nbr_error").innerHTML =
+        "ERROR:ONLY NUMBERS AND LETTERS ALLOWED";
+      // const errorParagraphError = document.createElement("p");
+      // errorParagraphError.innerText = "Error: Only numbers allowed";
+      // textInputFormCowTagNbr.after(errorParagraphError);
+    } else {
+      console.log("Input is valid");
+      document.getElementById("form_cow_tag_nbr_error").innerHTML = "";
+    }
+  });
+  //Check and validate the user input  for first input with id = form_cow_tag_nbr in Register Birth
+  const textInputFormMothersTagNbr =
+    document.getElementById("form_mothers_tag");
+  console.log("Mothers Tag Number" + textInputFormMothersTagNbr);
+  // Add an event listener for text input with id form_cow_mothers_tag
+  textInputFormMothersTagNbr.addEventListener("input", function () {
+    const textInputFormMothersTagNbrTrim =
+      textInputFormMothersTagNbr.value.trim();
+    if (textInputFormMothersTagNbrTrim == "") {
+      console.log("Mother's tag cannot be let blank");
+      document.getElementById("form_mothers_tag").style.display =
+        "inline-block";
+    } else if (!validateAlphanumeric(textInputFormMothersTagNbrTrim)) {
+      document.getElementById("form_mothers_error_msg").style.display =
+        "inline-block";
+      document.getElementById("form_mothers_error_msg").innerHTML =
+        "ERROR:ONLY NUMBERS AND LETTERS ALLOWED";
+      console.log("Only numbers and letters are allowed");
+    } else {
+      console.log("input is valid");
+      document.getElementById("form_mothers_error_msg").innerHTML = "";
+    }
+  });
+
+  //check and validate the user inputfor the 3rd input in the Register Calf Form. Feeezeband
+  const textInputFormMothersFreezeband = document.getElementById(
+    "form_mother_freezeband"
+  );
+  console.log("Mothers FreezeBand" + textInputFormMothersFreezeband);
+  // Add an event lsitener for for text input with id form_mothersfreezeband
+  textInputFormMothersFreezeband.addEventListener("input", function () {
+    const textInputFormMothersFreezebandTrim =
+      textInputFormMothersFreezeband.value.trim();
+    if (textInputFormMothersFreezebandTrim == "") {
+      console.log("This is ok as this field is optional");
+      console.log(textInputFormMothersFreezebandTrim);
+    } else if (!validateAlphanumeric(textInputFormMothersFreezebandTrim)) {
+      document.getElementById(
+        "form_mothersfreezeband_error_msg"
+      ).style.display = "inline-block";
+      document.getElementById("form_mothersfreezeband_error_msg").innerHTML =
+        "ERROR:ONLY NUMBERS AND LETTERS ALLOWED";
+      console.log("Only letters and numbers allowed");
+    } else {
+      console.log("input is valid");
+      document.getElementById("form_mothersfreezeband_error_msg");
+    }
+  });
 }
 
 // document
@@ -178,13 +278,6 @@ function onDOMLoaded() {
 //   .addEventListener("click", function (event) {
 //     updateAnimalDetails(event);
 //     console.log("Item 3: Update Animal Details");
-//   });
-
-// document
-//   .querySelector("#search_animal_details")
-//   .addEventListener("click", function (event) {
-//     searchAnimalDetails(event);
-//     console.log("Item 4: Search Animal Details");
 //   });
 
 // Attach the onDOMLoaded function to the DOMContentLoaded event

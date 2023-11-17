@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html lang="en">
   <head>
     <meta charset="UTF-8" >
@@ -63,23 +63,26 @@
           </div>
         </div>
           <!-- //CALVING FORM -->
-        <form id="calving_form" action="" method="post" >
+        <form  id="calving_form" action="" method="post" >
           <ul>
             <li>
               <label for="form_cow_tag_nbr">Calf Tag:</label
               ><input type="text" id="form_cow_tag_nbr" class="textinput" required/>
-            </li>
-            <li>
-              <label for="form_date_of_birth">Animal Date of Birth:</label
-              ><input type="date" id="form_date_of_birth" class="textinput" required/>
+              <p class="register_birth_error_msg" id="form_cow_tag_nbr_error"></p>
             </li>
             <li>
               <label for="form_mother_tag">Mother's Tag:</label
               ><input type="text" id="form_mothers_tag" class="textinput" required/>
+              <p class="register_birth_error_msg" id="form_mothers_error_msg"></p>
             </li>
             <li>
               <label for="form_mother_freezeband">Mother's FreezeBand (Optional):</label
               ><input type="text" id="form_mother_freezeband" class="textinput" />
+              <p class="register_birth_error_msg" id="form_mothersfreezeband_error_msg"></p>
+            </li>
+            <li>
+              <label for="form_date_of_birth">Animal Date of Birth:</label
+              ><input type="date" id="form_date_of_birth" class="textinput" required/>
             </li>
             <li>
               <label for="form-text"
