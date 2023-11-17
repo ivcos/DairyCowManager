@@ -119,6 +119,8 @@ function submitAnimalFormData(event) {
   let formCowTagNbr = document.getElementById("form_cow_tag_nbr");
   let formDateBirth = document.getElementById("form_date_of_birth");
   let formCalfTagNbr = document.getElementById("form_mothers_tag");
+  let formMotherFreezeBand = document.getElementById("form_mother_freezeband");
+
   console.log(formCalfTagNbr);
   let message = document.getElementById("message");
   if (
@@ -127,10 +129,17 @@ function submitAnimalFormData(event) {
     formCalfTagNbr.value.trim() === ""
     // radioBoxChecked === false
   ) {
-    message.textContent = "Please enter all the required fields";
+    message.textContent = "PLEASE ENTER ALL THE REQUIRED FIELDS";
+    message.style.display = "block";
+  } else if (
+    !validateAlphanumeric(formCowTagNbr) ||
+    !validateAlphanumeric(formCalfTagNbr) ||
+    !validateAlphanumeric(formMotherFreezeBand)
+  ) {
+    message.textContent = "PLEASE ENTER NUMBERS AND LETTERS";
     message.style.display = "block";
   } else {
-    message.textContent = "Form Submitted Successfully";
+    message.textContent = "DATA ENTERED SUCCESSFULLY";
     message.style.display = "block";
   }
   //Clear the form input data and remove the mesaage again
@@ -175,6 +184,12 @@ function onDOMLoaded() {
     .addEventListener("click", function (event) {
       event.preventDefault(); // When this is added the default form is not submitted
       console.log("Item 3: Clearing Form Data");
+      //Clear the three RED Error messages by setting display:none
+      document.getElementById("form_cow_tag_nbr_error").style.display = "none";
+      document.getElementById("form_mothers_error_msg").style.display = "none";
+      document.getElementById(
+        "form_mothersfreezeband_error_msg"
+      ).style.display = "none";
       clearFormData(event);
       console.log("Item 3: Clearing Form Data");
     });
