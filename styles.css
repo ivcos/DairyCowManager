@@ -1,4 +1,4 @@
-/*
+/* Design System
 ---- 01 TYPOGRAPHY sUYSTEM
 
 - SPACING SYTEM (px) 
@@ -9,25 +9,31 @@
 - FONT-WEIGHTS
 Default: 400
 - LINE HEIGHTS
-DEFAULT:1 
+DEFAULT:1.4
 
 --- 02 COLOURS
+MAIN COLOURS : #087f5b
+MAIN COLOR_1 #2c5f2d HAS A BETTER CONTRAST RATIO
+GREY COLOR : #212529
 
 - Primary:
 - Tints:
 - Shades:
 - Accents
 - Greys:
--# 555
+# 555
 
 
----05 Shadows
+---05 Shadows-------
 
----06 BORDER RADIUS
+---06 BORDER RADIUS-------
 
----07 SPACING SYSTEM
+---07 WHITESPACING SYSTEM--------
 2 /4 / 8/ 12 / 16 /24 /32 /48 / 64/ 80/ 96 /128
 
+---- 08 Images ------------
+unspalsh.com, UIfaces.co
+*/
 */
 /*
 MAIN COLOURS : #087f5b
@@ -42,7 +48,11 @@ for specifying widthd in percentages. */
 html {
   box-sizing: border-box;
   height: 100%;
-  /* font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5% -> 1rem = 10px;  */
+  font-size: 100%;
+  /* 16/16 = 100%, 10/16 = 62.5% */
+  /*  1rem  = 16px;  % of users browsers font-size setting  */
+  /* Specify everything in REM so that then when the screen size shrinks, we can jsut change font-size here
+  and this will be reflected through the pages. Lecture 105. */
 }
 * {
   box-sizing: inherit;
@@ -59,7 +69,9 @@ body {
   margin: 2em 10%;
   line-height: 1.4; /* Advised on HTML/CSS Course */
   height: 100%;
+  font-weight: 400;
   color: #212529;
+  /* color: #555; */
   /* background-color: #eeecec; */
   background-color: #fff;
 }

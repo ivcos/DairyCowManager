@@ -136,7 +136,9 @@ function submitAnimalFormData(event) {
     !validateAlphanumeric(formCalfTagNbr) ||
     !validateAlphanumeric(formMotherFreezeBand)
   ) {
+    console.log(!validateAlphanumeric(formCowTagNbr));
     message.textContent = "PLEASE ENTER NUMBERS AND LETTERS";
+    console.log("PLEASE ENTER NUMBERS AND LETTERS");
     message.style.display = "block";
   } else {
     message.textContent = "DATA ENTERED SUCCESSFULLY";
@@ -283,7 +285,8 @@ function onDOMLoaded() {
       console.log("Only letters and numbers allowed");
     } else {
       console.log("input is valid");
-      document.getElementById("form_mothersfreezeband_error_msg");
+      document.getElementById("form_mothersfreezeband_error_msg").innerHTML =
+        "";
     }
   });
 }
