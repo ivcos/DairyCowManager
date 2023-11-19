@@ -75,9 +75,12 @@ body {
   /* background-color: #eeecec; */
   background-color: #fff;
 }
+/***********************************************/
+/*HEADER SECTION */
+/***********************************************/
 
 .main_header {
-  border: #04699d 1px solid;
+  /* border: #04699d 1px solid; */
   background-color: #f7f7f7;
   color: #666; /* Text color for the header */
   /* padding: 20px 0 10px 0; */
@@ -86,6 +89,19 @@ body {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
+.logo img {
+  max-width: 200px; /* Set the maximum width of the logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.logo {
+  height: 1rem;
+}
+/***********************************************/
+/*Navigation */
+/***********************************************/
+
 /* Smaller Headings */
 p {
   font-size: 1em;
@@ -95,10 +111,6 @@ p {
   overflow: hidden;
   /* Recommended that lines should not be longer than 75 characters */
   max-width: 75ch;
-}
-.logo img {
-  max-width: 200px; /* Set the maximum width of the logo */
-  height: auto; /* Maintain aspect ratio */
 }
 
 /* Basic Font Styling*/
@@ -141,7 +153,7 @@ h6 {
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
-  width: 98%;
+  width: 99%;
   border-bottom: 8px solid #2c5f2d;
   /* height: 100%; */
 }
@@ -229,7 +241,8 @@ textarea {
 .primary-nav ul {
   list-style-type: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
+  align-items: stretch;
 }
 .primary-nav li {
   padding: 0 1px 0 1px;
@@ -241,6 +254,7 @@ textarea {
   padding: 5px 5px 5px 5px;
   border: black 3px solid;
   border-radius: 10px;
+  display: block;
 }
 
 .secondary-nav {
@@ -975,4 +989,86 @@ input[type="submit"] {
   display: flex;
   font-size: 0.8em;
   justify-content: space-between;
+}
+
+/***********************************************/
+/* GENERAL REUSABLE COMPONENTS */
+/***********************************************/
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  /* background-color: #2c5f2d; */
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 9px;
+}
+
+.btn--mainbtn:link,
+.btn--mainbtn:visited {
+  background-color: #2c5f2d;
+  color: #fff;
+}
+.btn--mainbtn:hover,
+.btn--mainbtn:active {
+  background-color: #285629;
+  color: #fff;
+}
+
+.btn--secondarybtn:link,
+.btn--secondarybtn:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--secondarybtn:hover,
+.btn--secondarybtn:active {
+  background-color: #fdf2e9;
+  color: #555;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+/* Helper function */
+.margin-right-sm {
+  margin-right: 1rem !important;
+}
+
+/***********************************************/
+/* HERO SECTION */
+/***********************************************/
+
+/* Testing the index.html page */
+.hero {
+  max-width: 82rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 6rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.section-hero {
+  padding: 10rem 0;
+  background-color: #f7f7f7;
+}
+
+.primary-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-bottom: 2rem;
+}
+
+.hero-img {
+  width: 100%; /* 100% of the parent container which is the "hero-img-box* which is one of the columns of the grid*/
 }
