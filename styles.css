@@ -684,218 +684,217 @@ input[type="submit"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-  .paragraph-intro {
-    font-size: 1em;
-    /* font-weight: bold; */
-    color: #212529;
-    /* background-color: #2c5f2d; */
-    margin-bottom: 20px;
-    display: inline;
-  }
+.paragraph-intro {
+  font-size: 1em;
+  /* font-weight: bold; */
+  color: #212529;
+  /* background-color: #2c5f2d; */
+  margin-bottom: 20px;
+  display: inline;
+}
 
-  .home-page-flexbox {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 10px 0px 20px 0px;
-    border: #04699d 1px solid;
-    height: auto;
-    background-color: #eeecec;
-    gap: 20px;
-  }
+.home-page-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px 0px 20px 0px;
+  border: #04699d 1px solid;
+  height: auto;
+  background-color: #eeecec;
+  gap: 20px;
+}
 
-  #herd_management_paragraph {
-    font-size: 1em;
-    /* font-weight: bold; */
-    color: white;
-    background-color: #2c5f2d;
-    margin-bottom: 20px;
-  }
-  .slurryTankInformation {
-    display: list-item;
-    margin-left: 50px;
-    padding: 0;
-    font-size: 1em;
-    list-style-type: decimal;
-  }
+#herd_management_paragraph {
+  font-size: 1em;
+  /* font-weight: bold; */
+  color: white;
+  background-color: #2c5f2d;
+  margin-bottom: 20px;
+}
+.slurryTankInformation {
+  display: list-item;
+  margin-left: 50px;
+  padding: 0;
+  font-size: 1em;
+  list-style-type: decimal;
+}
 
-  .slurryTankInformationListItem {
-    /* margin-bottom: 10px 0px 10px 0px;
+.slurryTankInformationListItem {
+  /* margin-bottom: 10px 0px 10px 0px;
   padding: 0; */
-    display: list-item;
-    list-style: decimal;
-    margin-bottom: 10px;
-  }
+  display: list-item;
+  list-style: decimal;
+  margin-bottom: 10px;
+}
 
-  .slurryTankInformationListItem:last-child {
-    margin-bottom: 0px;
-  }
-  /*  ========= Styling Specific to Contact Us page  ========= */
-  #registration-page {
-    height: 100%;
-    background: #78a7ba;
-    border: #04699d 1px solid;
-  }
-  main {
-    height: 50%;
-  }
+.slurryTankInformationListItem:last-child {
+  margin-bottom: 0px;
+}
+/*  ========= Styling Specific to Contact Us page  ========= */
+#registration-page {
+  height: 100%;
+  background: #78a7ba;
+  border: #04699d 1px solid;
+}
+main {
+  height: 50%;
+}
 
-  /*  ========= Styling Specific to Winter Fodder Management  ========= */
+/*  ========= Styling Specific to Winter Fodder Management  ========= */
 
-  .silageCalc {
-    /* display: block; */
-    /* flex-wrap: wrap;
+.silageCalc {
+  /* display: block; */
+  /* flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;  */
-    margin: 50px;
-    /* border: #04699d 1px solid; */
-    background-color: #fff;
-    max-width: 600px;
-  }
+  margin: 50px;
+  /* border: #04699d 1px solid; */
+  background-color: #fff;
+  max-width: 600px;
+}
 
-  .Container_Silage {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    /* border: #04699d 1px solid; */
-    height: auto;
-    width: 98%;
-    border-bottom: #04699d 5px solid;
-  }
+.Container_Silage {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  /* border: #04699d 1px solid; */
+  height: auto;
+  width: 98%;
+  border-bottom: #04699d 5px solid;
+}
 
-  .input_silage {
-    max-width: 80px;
-    height: 50px;
-  }
-  .label_silage {
-    max-width: 200px;
-    /* height: 50px; */
-    font-size: 80%;
-    /* padding-bottom: 20px; */
-    font-weight: bold;
-    color: #04699d;
-    /* text-justify: left-align; */
-    /* margin: 10px; */
-  }
-  .span_silage {
-    font-size: 80%;
-    color: #04699d;
-    font-weight: bold;
-  }
+.input_silage {
+  max-width: 80px;
+  height: 50px;
+}
+.label_silage {
+  max-width: 200px;
+  /* height: 50px; */
+  font-size: 80%;
+  /* padding-bottom: 20px; */
+  font-weight: bold;
+  color: #04699d;
+  /* text-justify: left-align; */
+  /* margin: 10px; */
+}
+.span_silage {
+  font-size: 80%;
+  color: #04699d;
+  font-weight: bold;
+}
 
-  .Container_Silage_Calculation button {
-    width: 80%;
-    display: block;
-  }
+.Container_Silage_Calculation button {
+  width: 80%;
+  display: block;
+}
 
-  .Container_Silage_Calculation {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    /* justify-content: space-around;
+.Container_Silage_Calculation {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* justify-content: space-around;
   margin: 20px;
   border: #04699d 1px solid;
   height: auto; */
-  }
+}
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* grid-gap: 10px; */
-    /* width: 200px; */
-    margin-bottom: 20px;
-    border: #04699d 1px solid;
-  }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-gap: 10px; */
+  /* width: 200px; */
+  margin-bottom: 20px;
+  border: #04699d 1px solid;
+}
 
-  .grid-item {
-    background-color: #3498db;
-    color: #fff;
-    text-align: left;
-    padding: 20px;
-    min-width: 0;
-    min-height: 0;
-    overflow: hidden;
-    font-size: 90%;
-  }
+.grid-item {
+  background-color: #3498db;
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  font-size: 90%;
+}
 
-  .flex-container {
-    /* Flexbox */
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    /* Have a gap between the two flex-item buttons */
-    gap: 10px;
-    height: auto;
-    background-color: #eeecec;
-  }
+.flex-container {
+  /* Flexbox */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* Have a gap between the two flex-item buttons */
+  gap: 10px;
+  height: auto;
+  background-color: #eeecec;
+}
 
-  .flex-container button {
-    margin-bottom: 20px;
-    padding: 20px;
-    color: red;
-    background-color: #04699d;
-  }
+.flex-container button {
+  margin-bottom: 20px;
+  padding: 20px;
+  color: red;
+  background-color: #04699d;
+}
 
-  .flex-container p {
-    margin-bottom: 20px;
-    padding: 20px;
-    font-size: 150%;
-  }
+.flex-container p {
+  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 150%;
+}
 
-  .button-silage-calculation {
-    /* Having all the elements expand to fill the emtpy space */
-    flex-grow: 1;
-  }
+.button-silage-calculation {
+  /* Having all the elements expand to fill the emtpy space */
+  flex-grow: 1;
+}
 
-  /* #total_silage_required_tonnes {
+/* #total_silage_required_tonnes {
   padding-bottom: 50px; */
-  /* max-width: 200px; */
+/* max-width: 200px; */
 
-  /* Specific style for RegisterCow.html */
+/* Specific style for RegisterCow.html */
 
-  .register_button {
-    /* background-color: #087f5b; */
-    background-color: #2c5f2d;
-    color: white;
-    cursor: pointer;
-  }
-  .register_button:hover {
-    /* background-color: #75cf89; */
-    background-color: #087f5b;
-    color: white;
-    cursor: pointer;
-  }
-  .register_button:active {
-    background-color: #04699d;
-    color: white;
-    cursor: pointer;
-  }
-  /* .register_button:focus {
+.register_button {
+  /* background-color: #087f5b; */
+  background-color: #2c5f2d;
+  color: white;
+  cursor: pointer;
+}
+.register_button:hover {
+  /* background-color: #75cf89; */
+  background-color: #087f5b;
+  color: white;
+  cursor: pointer;
+}
+.register_button:active {
+  background-color: #04699d;
+  color: white;
+  cursor: pointer;
+}
+/* .register_button:focus {
   background-color: #04699d;
   color: white;
   cursor: pointer;
 } */
-  .register_button:visited {
-    background-color: #04699d;
-    color: white;
-    cursor: pointer;
-  }
+.register_button:visited {
+  background-color: #04699d;
+  color: white;
+  cursor: pointer;
+}
 
-  .buttonfx:hover {
-    background-color: #04699d;
-    color: white;
-  }
+.buttonfx:hover {
+  background-color: #04699d;
+  color: white;
+}
 
-  .btn_register_cow:hover {
-    background-color: #75cf89;
-    color: white;
-    cursor: pointer;
-  }
+.btn_register_cow:hover {
+  background-color: #75cf89;
+  color: white;
+  cursor: pointer;
 }
 
 .flex-container-herd-mgt {
