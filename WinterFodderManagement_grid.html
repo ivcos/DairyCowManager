@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WinterFodderManagement</title>
+    <title>FARMAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <script src="js/WinterFodderManagement.js"></script>
+    <script src="./js/WinterFodderManagement.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -69,7 +74,7 @@
           >
         </p>
 
-        <p>
+        <p id="test100">
           This tool will help you to calculate the amount of fodder you will
           need for the winter period based on the number of cattle being hosued
           over the winter. It will also help you to calculate the amount of
@@ -87,10 +92,13 @@
           <div class="grid-item">Silage Reqd. Tonnes</div>
           <div class="grid-item">Dairy Cows</div>
           <div class="grid-item">
-            <input type="number" id="nbr_dairy_cows" min="0"
-            oninput="validity.valid||(value='');" //
-            <--https://www.tutorialspoint.com/how-to-allow-only-positive-numbers-in-the-input-number-type#:~:text=Using%20the%20HTML%20Input%20%27min%27%20Attribute&text=If%20the%20min%20attribute%20value,only%20positive%20numbers%20are%20allowed.
-            // class="input_silage" />
+            <input
+              type="number"
+              id="nbr_dairy_cows"
+              min="0"
+              oninput="validity.valid||(value='');"
+              class="input_silage"
+            />
           </div>
           <div class="grid-item">
             <input
@@ -112,9 +120,13 @@
           </div> -->
           <div class="grid-item">0-1 year</div>
           <div class="grid-item">
-            <input type="number" id="nbr_calves" min="0"
-            oninput="validity.valid||(value='');" // <-- only allows 0 and
-            positive values// class="input_silage" />
+            <input
+              type="number"
+              id="nbr_calves"
+              min="0"
+              oninput="validity.valid||(value='');"
+              class="input_silage"
+            />
           </div>
           <div class="grid-item">
             <input
@@ -133,9 +145,13 @@
           </div>
           <div class="grid-item">1-2 year</div>
           <div class="grid-item">
-            <input type="number" id="nbr_heifers" min="0"
-            oninput="validity.valid||(value='');" // <-- only allows 0 and
-            positive values// class="input_silage" />
+            <input
+              type="number"
+              id="nbr_heifers"
+              min="0"
+              oninput="validity.valid||(value='');"
+              class="input_silage"
+            />
           </div>
           <div class="grid-item">
             <input
@@ -154,9 +170,13 @@
           </div>
           <div class="grid-item">2+Years</div>
           <div class="grid-item">
-            <input type="number" id="nbr_2YearPlus" min="0"
-            oninput="validity.valid||(value='');" // <-- only allows 0 and
-            positive values// class="input_silage" />
+            <input
+              type="number"
+              id="nbr_2YearPlus"
+              min="0"
+              oninput="validity.valid||(value='');"
+              class="input_silage"
+            />
           </div>
           <div class="grid-item">
             <input

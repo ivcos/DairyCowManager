@@ -34,7 +34,7 @@ GREY COLOR : #212529
 ---- 08 Images ------------
 unspalsh.com, UIfaces.co
 */
-*/
+
 /*
 MAIN COLOURS : #087f5b
 MAIN COLOR_1 #2c5f2d HAS A BETTER CONTRAST RATIO
@@ -683,7 +683,7 @@ input[type="submit"] {
   padding: 5px 5px 5px 5px;
   margin-top: 10px;
   margin-bottom: 10px;
-
+}
   .paragraph-intro {
     font-size: 1em;
     /* font-weight: bold; */
@@ -805,9 +805,10 @@ input[type="submit"] {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    /* grid-gap: 10px; */
     /* width: 200px; */
     margin-bottom: 20px;
+    border: #04699d 1px solid;
   }
 
   .grid-item {
@@ -1074,4 +1075,8 @@ input[type="submit"] {
 
 .hero-img {
   width: 100%; /* 100% of the parent container which is the "hero-img-box* which is one of the columns of the grid*/
+}
+
+#test100 {
+  color: red;
 }
