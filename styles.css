@@ -639,15 +639,15 @@ input[type="submit"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* Style for Winter Farm Alerts  */
+/* Style for Winter Farm Alerts 
 .farm-alerts {
   margin: 0;
   display: flex;
   border: 5px solid #333;
   margin-bottom: 2rem;
-}
+} */
 
-.farm-alerts div:first-child {
+/* .farm-alerts div:first-child {
   flex: 1;
   background-size: cover;
   background-position: center;
@@ -655,8 +655,8 @@ input[type="submit"] {
 .farm-alerts div:last-child {
   margin: 2rem;
   flex: 2;
-}
-.farm-alerts h2 {
+} */
+/* .farm-alerts h2 {
   font-size: 1.5rem;
   margin-top: 0;
   font-weight: bold;
@@ -668,13 +668,13 @@ input[type="submit"] {
 }
 .farm-alerts p:last-of-type {
   margin-bottom: 10px;
-}
+} */
 
 /* .farm-alerts:first-of-type div:first-child {
   background-image: url("./images/clock-33989_1280.png");
 } */
 
-.farm-alerts a {
+/* .farm-alerts a {
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -683,7 +683,7 @@ input[type="submit"] {
   padding: 5px 5px 5px 5px;
   margin-top: 10px;
   margin-bottom: 10px;
-}
+} */
 .paragraph-intro {
   font-size: 1em;
   /* font-weight: bold; */
