@@ -27,36 +27,100 @@
       </nav>
       <main>
         <h2>
-          Register Animal/Register Birth/ Update Animal Information/ Register AI/Search for
-          Animal
+          Herd Management
         </h2>
         <!-- Add a Button Option here to slect between Registering Birth or new Animal
             Effectively display a different form on the same HTML page! -->
-        <section class="title-herd-management-meni">
-          <h2>Record Animal Data</h2>
-        </section>
-        <div class="herd-management-menu">
+        
+        <!-- <div class="herd-management-menu"> -->
           <div class="flex-container-herd-mgt">
-            <div>
+            <!-- <section class="title-herd-management">
+              <h2>Record Animal Data</h2>
+            </section> -->
+            <section class="register">
+              <h3>
+                1
+                <br>
+                Register Birth
+              </h3>
+                <p class="info">
+                Register a new calf onto the system once cow has calved.
+                Record Calf Tag, Mother's Tag, Date of Birth
+                </p>
               <button class="register_button" id="register_birth" onclick="registerBirth">
                 Register Birth
               </button>
-            </div>
-          <div>
+            </section>
+            <section class="register">
+              <h3>
+                2
+                <br>
+                Register Animal
+              </h3>
+                <p class="info">
+                Register a new animal onto the system once animal arrives on farm.
+                Record Animal Tag, Date of Arrival on Farm, Age of Animal, Breed
+                </p>
               <button class="register_button" id="register_animal" onclick="registerAnimal">
                 Register Animal
               </button>
-            </div>
-            <div>
+            </section>
+            <section class="register">
+              <h3>
+                3
+                <br>
+                Register Artificial Insemination
+              </h3>
+                <p class="info">
+                Register AI onto the system once AI has been carried out.
+                Record Cow Tag, AI Date, AI Bull, AI Technician
+                </p>
               <button class="register_button" id="register_AI" onclick="registerAI">
                 Register AI
               </button>
-            </div>
-            <div>
+            </section>
+            <section class="register">
+              <h3>
+                4
+                <br>
+                Register Sale of Animal
+              </h3>
+                <p class="info">
+                Register Sale of Animal onto the system once animal has been sold.
+                Record Animal Tag, Date of Sale, Price of Sale, Buyer, 
+                </p>
               <button class="register_sale"id=" Animal Sale" onclick="animalSale">
                 Animal Sale
               </button>
-            </div>
+            </section>
+            <section class="register">
+              <h3>
+                5
+                <br>
+                Search for Animal
+              </h3>
+                <p class="info">
+                Search for Animal on the system. Provides information on animal. 
+                <em>This feature is available on next release</em>
+                </p>
+              <button class="register_sale"id=" Animal Sale" onclick="animalSale">
+                Animal Search
+              </button>
+            </section>
+            <section class="register">
+              <h3>
+                6
+                <br>
+                Update Animal Information
+              </h3>
+                <p class="info">
+                Update Animal Information on the system. Update if a Tag is lost. 
+                Update if the animal has been sick, vet attended. <em>This feature is available on next release</em>
+                </p>
+              <button class="register_sale"id=" Animal Sale" onclick="animalSale">
+                Animal Update
+              </button>
+            </section>
         </div>
             <!-- //CALVING FORM -->
           <form  id="calving_form" action="" method="post" >
