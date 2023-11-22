@@ -742,7 +742,14 @@ main {
 }
 
 /*  ========= Styling Specific to Winter Fodder Management  ========= */
-
+.grid-001,
+.grid-002,
+.grid-003,
+.grid-004 {
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-weight: bold;
+}
 .silageCalc {
   /* display: block; */
   /* flex-wrap: wrap;
@@ -808,11 +815,11 @@ main {
   /* grid-gap: 10px; */
   /* width: 200px; */
   margin-bottom: 20px;
-  border: #04699d 1px solid;
+  border: #567f57 1px solid;
 }
 
 .grid-item {
-  background-color: #3498db;
+  background-color: #567f57;
   color: #fff;
   text-align: left;
   padding: 20px;
@@ -837,8 +844,8 @@ main {
 .flex-container button {
   margin-bottom: 20px;
   padding: 20px;
-  color: red;
-  background-color: #04699d;
+  color: white;
+  background-color: #2c5f2d;
 }
 
 .flex-container p {
@@ -876,14 +883,14 @@ main {
   display: flex;
   flex-direction: column;
 }
-.info {
-}
+
 /* Specific style for RegisterCow.html */
 .register_button {
   /* background-color: #087f5b; */
   background-color: #2c5f2d;
   color: white;
   cursor: pointer;
+  margin: auto;
 }
 .register_button:hover {
   /* background-color: #75cf89; */
