@@ -1097,6 +1097,9 @@ main {
   width: 100%; /* 100% of the parent container which is the "hero-img-box* which is one of the columns of the grid*/
 }
 
-#test100 {
-  color: red;
+#calf-image {
+  max-width: 100%;
+}
+#cow-image {
+  max-width: 100%;
 }
