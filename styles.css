@@ -937,7 +937,7 @@ main {
   justify-content: space-between;
 }
 
-/*  ========= Styling Specific to Slurry Management  ==*/
+/*  ========= Styling Specific to Slurry Management Web Page ==*/
 .grid-container-slurry {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -961,9 +961,11 @@ main {
   font-weight: bold;
 }
 /* Aligns thevtwo buttons */
-.button-slurry-tank-calculation {
-  grid-column-start: 2;
-  grid-column-end: span 3; /* Having all the elements expand to fill the emtpy space */
+.button-slurry-tank-calculation-clear {
+  grid-column-start: 1;
+  grid-column-end: span 5;
+  /* grid-row-start: 3;
+  grid-column-start: 2; */
   max-width: 200px;
   /* flex-grow: 1; */
 }
@@ -982,11 +984,25 @@ main {
 }
 /* Formats the buttons */
 .input_slurry_tank_metric {
-  max-width: 80px;
-  height: 2rem;
+  max-width: 100px;
+  height: 3rem;
 }
 
-/* CSS Media Queries for flex */
+.input_slurry {
+  max-width: 100px;
+  height: 50px;
+}
+.flex-container-total-slurry-farm-capacity {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* Have a gap between the two flex-item buttons */
+  gap: 10px;
+  height: auto;
+  background-color: #eeecec;
+}
+/* CSS Media Queries for flex 
 @media screen and (max-width: 800px) {
   .flex div {
     flex: 1 !important;

@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="./js/SlurryManagmeent.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -59,17 +60,19 @@
         </ul>
       </nav>
       <main>
-        <h2>Calculate Farm Slurry Storage Capacity</h2>
+        <h2>Calculate On Farm Slurry Storage Capacity</h2>
         <div class="grid-container-slurry">
           <div class="slurry-tank-grid-item slurry-grid-001">TANK/SHED</div>
           <div class="slurry-tank-grid-item slurry-grid-002">WIDTH(m)</div>
           <div class="slurry-tank-grid-item slurry-grid-003">LENGTH(m)</div>
           <div class="slurry-tank-grid-item slurry-grid-004">DEPTH(m)</div>
-          <div class="slurry-tank-grid-item slurry-grid-005">CAPACITY(m3)</div>
+          <div class="slurry-tank-grid-item slurry-grid-005">
+            CAPACITY(Litres)
+          </div>
           <div class="slurry-tank-grid-item">
             <input
               type="text"
-              id="shed-tank-name-001"
+              id="shed-tank-name-1"
               value="Tank 1"
               class="input_slurry_tank_metric"
             />
@@ -79,9 +82,9 @@
             <input
               type="number"
               min="1"
-              oninput="validity.valid||(value='');"
-              id="width-tank-001"
+              id="width-tank-1"
               class="input_slurry_tank_metric"
+              oninput="calculate(1)"
             />
           </div>
 
@@ -89,9 +92,9 @@
             <input
               type="number"
               min="1"
-              id="length-tank-001"
-              oninput="validity.valid||(value='');"
+              id="length-tank-1"
               class="input_slurry_tank_metric"
+              oninput="calculate(1)"
             />
           </div>
 
@@ -99,31 +102,33 @@
             <input
               type="number"
               min="1"
-              id="depth-tank-001"
-              oninput="validity.valid||(value='');"
+              id="depth-tank-1"
               class="input_slurry_tank_metric"
+              oninput="calculate(1)"
             />
           </div>
 
           <div class="slurry-tank-grid-item">
             <input
               type="number"
-              min="1"
-              id="capacity-tank-001"
-              oninput="validity.valid||(value='');"
+              id="capacity-tank-1"
               class="input_slurry_tank_metric"
+              readonly
             />
           </div>
-          <button class="button-slurry-tank-calculation">
+          <!-- <button class="button-slurry-tank-calculation">
             Calculate Slurry
-          </button>
-          <button class="button-slurry-tank-calculation-clear">
+          </button> -->
+          <button
+            class="button-slurry-tank-calculation-clear"
+            onclick="clearTankData(1)"
+          >
             Reset/Clear
           </button>
           <div class="slurry-tank-grid-item">
             <input
               type="text"
-              id="shed-tank-name-001"
+              id="shed-tank-name-2"
               value="Tank 2"
               class="input_slurry_tank_metric"
             />
@@ -133,9 +138,9 @@
             <input
               type="number"
               min="1"
-              oninput="validity.valid||(value='');"
-              id="width-tank-001"
+              id="width-tank-2"
               class="input_slurry_tank_metric"
+              oninput="calculate(2)"
             />
           </div>
 
@@ -143,9 +148,9 @@
             <input
               type="number"
               min="1"
-              oninput="validity.valid||(value='');"
-              id="length-tank-001"
+              id="length-tank-2"
               class="input_slurry_tank_metric"
+              oninput="calculate(2)"
             />
           </div>
 
@@ -153,9 +158,9 @@
             <input
               type="number"
               min="1"
-              oninput="validity.valid||(value='');"
-              id="depth-tank-001"
+              id="depth-tank-2"
               class="input_slurry_tank_metric"
+              oninput="calculate(2)"
             />
           </div>
 
@@ -163,22 +168,25 @@
             <input
               type="number"
               min="1"
-              oninput="validity.valid||(value='');"
-              id="capacity-tank-001"
+              id="capacity-tank-2"
               class="input_slurry_tank_metric"
+              readonly
             />
           </div>
-          <button class="button-slurry-tank-calculation">
+          <!-- <button class="button-slurry-tank-calculation">
             Calculate Slurry
-          </button>
-          <button class="button-slurry-tank-calculation-clear">
+          </button> -->
+          <button
+            class="button-slurry-tank-calculation-clear"
+            onclick="clearTankData(2)"
+          >
             Reset/Clear
           </button>
           <div class="slurry-tank-grid-item">
             <input
               type="text"
               min="1"
-              id="shed-tank-name-001"
+              id="shed-tank-name-3"
               value="Tank 3"
               class="input_slurry_tank_metric"
             />
@@ -188,9 +196,9 @@
             <input
               type="number"
               min="1"
-              oninput="validity.valid||(value='');"
-              id="width-tank-001"
+              id="width-tank-3"
               class="input_slurry_tank_metric"
+              oninput="calculate(3)"
             />
           </div>
 
@@ -198,9 +206,9 @@
             <input
               type="number"
               min="1"
-              oninput="validity.valid||(value='');"
-              id="length-tank-001"
+              id="length-tank-3"
               class="input_slurry_tank_metric"
+              oninput="calculate(3)"
             />
           </div>
 
@@ -208,31 +216,34 @@
             <input
               type="number"
               min="1"
-              oninput="validity.valid||(value='');"
-              id="depth-tank-001"
+              id="depth-tank-3"
               class="input_slurry_tank_metric"
-              min="1"
+              oninput="calculate(3)"
             />
           </div>
           <div class="slurry-tank-grid-item">
             <input
               type="number"
-              id="capacity-tank-001"
+              id="capacity-tank-3"
               class="input_slurry_tank_metric"
               min="1"
+              readonly
             />
           </div>
-          <button class="button-slurry-tank-calculation">
+          <!-- <button class="button-slurry-tank-calculation">
             Calculate Slurry
-          </button>
-          <button class="button-slurry-tank-calculation-clear">
+          </button> -->
+          <button
+            class="button-slurry-tank-calculation-clear"
+            onclick="clearTankData(3)"
+          >
             Reset/Clear
           </button>
           <div class="slurry-tank-grid-item">
             <input
               type="text"
               min="1"
-              id="shed-tank-name-001"
+              id="shed-tank-name-4"
               value="Tank 4"
               class="input_slurry_tank_metric"
             />
@@ -242,9 +253,9 @@
             <input
               type="number"
               min="1"
-              oninput="validity.valid||(value='');"
-              id="width-tank-001"
+              id="width-tank-4"
               class="input_slurry_tank_metric"
+              oninput="calculate(4)"
             />
           </div>
 
@@ -252,9 +263,9 @@
             <input
               type="number"
               min="1"
-              oninput="validity.valid||(value='');"
-              id="length-tank-001"
+              id="length-tank-4"
               class="input_slurry_tank_metric"
+              oninput="calculate(4)"
             />
           </div>
 
@@ -262,25 +273,175 @@
             <input
               type="number"
               min="1"
-              oninput="validity.valid||(value='');"
-              id="depth-tank-001"
+              id="depth-tank-4"
               class="input_slurry_tank_metric"
               min="1"
+              oninput="calculate(4)"
             />
           </div>
           <div class="slurry-tank-grid-item">
             <input
               type="number"
-              id="capacity-tank-001"
+              id="capacity-tank-4"
               class="input_slurry_tank_metric"
               min="1"
+              readonly
             />
           </div>
-          <button class="button-slurry-tank-calculation">
+          <!-- <button class="button-slurry-tank-calculation">
             Calculate Slurry
-          </button>
-          <button class="button-slurry-tank-calculation-clear">
+          </button> -->
+          <button
+            class="button-slurry-tank-calculation-clear"
+            onclick="clearTankData(4)"
+          >
             Reset/Clear
+          </button>
+        </div>
+        <div class="flex-container-total-slurry-farm-capacity">
+          <button
+            id="calculate-slurry-capacity"
+            class="button-slurry-calculation"
+            onclick="calculateTotalSlurryCapacity()"
+          >
+            Total Slurry capacity
+          </button>
+          <button
+            id="calculate-slurry-capacity-clear"
+            class="button-slurry-calculation"
+          >
+            Clear To Reset Values
+          </button>
+        </div>
+        <div class="flex-container">
+          <div>
+            <p id="total-slurry-capacity-paragraph" class="span_slurry">
+              Total Slurry Capacity
+            </p>
+          </div>
+          <div>
+            <input
+              id="total-slurry-capacity-litres"
+              type="number"
+              class="input_slurry"
+            />
+          </div>
+        </div>
+        <h2>Calculate Slurry Storage Required for the Winter</h2>
+        <div class="grid-container">
+          <div class="grid-item grid-001">ANIMAL TYPE</div>
+          <div class="grid-item grid-002">NO. OF STOCK</div>
+          <div class="grid-item grid-003">NO. OF DAYS</div>
+          <div class="grid-item grid-004">Storage.(LITRES)</div>
+          <div class="grid-item">Dairy Cows</div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="nbr-dairy-cows-slurry-calculation"
+              min="0"
+              class="input_slurry"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="nbr-days-dairy-cows-slurry-calculation-days-inside"
+              value="150"
+              class="input_slurry"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="slurry-storage-required-dairy-cows"
+              class="input_slurry"
+            />
+          </div>
+          <!-- <div class="grid-item">
+            <span id="nbr_dairy_cows_message" class="span_silage">1.6</span>
+          </div> -->
+          <div class="grid-item">0-1 year</div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="nbr-calves-slurry-calculation"
+              min="0"
+              class="input_slurry"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="nbr-days-dairy-calves-slurry-calculation-days-inside"
+              value="150"
+              class="input_slurry"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="slurry-storage-required-calves"
+              class="input_slurry"
+            />
+          </div>
+          <div class="grid-item">1-2 year</div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="nbr-heifers-slurry-calculation"
+              min="0"
+              class="input_slurry"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="nbr-days-heifers-slurry-calculation-days-inside"
+              value="150"
+              class="input_slurry"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="slurry-storage-required-heifers"
+              class="input_slurry"
+            />
+          </div>
+          <div class="grid-item">2+Years</div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="nbr-2YearPlus-slurry-calculation"
+              min="0"
+              class="input_slurry"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="nbr-days-2YearPlus-slurry-calculation-days-inside"
+              value="150"
+              class="input_slurry"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="number"
+              id="slurry-storage-required-2YearPlus"
+              class="input_slurry"
+            />
+          </div>
+        </div>
+        <div class="flex-container">
+          <button
+            id="calculate-slurry-storage-required"
+            class="button-silage-calculation"
+          >
+            Calculate Slurry Storage Required
+          </button>
+          <button id="Clear" class="button-silage-calculation">
+            Clear To Reset Values
           </button>
         </div>
       </main>
