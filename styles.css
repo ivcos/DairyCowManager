@@ -818,6 +818,9 @@ main {
   /* width: 200px; */
   margin-bottom: 20px;
   border: #567f57 1px solid;
+  /* background-color: #567f57; */
+  row-gap: 5px;
+  column-gap: 5px;
 }
 
 .grid-item {
@@ -931,9 +934,48 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
+/*  ========= Styling Specific to Slurry Management  ==*/
+.grid-container-slurry {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* width: 50%; */
+  /* grid-gap: 10px; */
+  /* width: 200px; */
+  margin-bottom: 20px;
+  border: #567f57 1px solid;
+  row-gap: 2px;
+  column-gap: 2px;
+  color: #013301;
+}
+.slurry-grid-001,
+.slurry-grid-002,
+.slurry-grid-003,
+.slurry-grid-004,
+.slurry-grid-005 {
+  /* text-transform: capitalize; */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.button-slurry-tank-calculation {
+  grid-column-start: 1;
+  grid-column-end: span 5; /* Having all the elements expand to fill the emtpy space */
+  /* flex-grow: 1; */
+}
+
+.slurry-tank-grid-item {
+  background-color: #567f57;
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  font-size: 90%;
+}
 /* CSS Media Queries for flex */
 @media screen and (max-width: 800px) {
   .flex div {
