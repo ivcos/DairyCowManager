@@ -946,10 +946,11 @@ main {
   /* width: 200px; */
   margin-bottom: 20px;
   border: #567f57 1px solid;
-  row-gap: 2px;
+  row-gap: 10px;
   column-gap: 2px;
   color: #013301;
 }
+/* Format tjhe Headings of the Grid */
 .slurry-grid-001,
 .slurry-grid-002,
 .slurry-grid-003,
@@ -959,13 +960,15 @@ main {
   text-decoration: underline;
   font-weight: bold;
 }
-
+/* Aligns thevtwo buttons */
 .button-slurry-tank-calculation {
-  grid-column-start: 1;
-  grid-column-end: span 5; /* Having all the elements expand to fill the emtpy space */
+  grid-column-start: 2;
+  grid-column-end: span 3; /* Having all the elements expand to fill the emtpy space */
+  max-width: 200px;
   /* flex-grow: 1; */
 }
 
+/*Formatting of the Grid Items */
 .slurry-tank-grid-item {
   background-color: #567f57;
   color: #fff;
@@ -975,7 +978,14 @@ main {
   min-height: 0;
   overflow: hidden;
   font-size: 90%;
+  max-width: 200px;
 }
+/* Formats the buttons */
+.input_slurry_tank_metric {
+  max-width: 80px;
+  height: 2rem;
+}
+
 /* CSS Media Queries for flex */
 @media screen and (max-width: 800px) {
   .flex div {
