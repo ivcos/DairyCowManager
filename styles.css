@@ -8,8 +8,11 @@
 
 - FONT-WEIGHTS
 Default: 400
+
 - LINE HEIGHTS
-DEFAULT:1.4
+DEFAULT:1.4 [Body]
+PARAGRAPHS: 1.5
+ 1.25;
 
 --- 02 COLOURS
 MAIN COLOURS : #087f5b
@@ -39,6 +42,8 @@ unspalsh.com, UIfaces.co
 MAIN COLOURS : #087f5b
 MAIN COLOR_1 #2c5f2d HAS A BETTER CONTRAST RATIO
 GREY COLOR : #212529
+Secondary Color: #416f42
+*/
 */
 
 /* Makes sizing form elements more consistent. border-box is helpful
@@ -236,7 +241,7 @@ textarea {
   /* display: flex; */
   margin: 0;
   padding: 0px 20px 0px 20px;
-  font-size: 1em;
+  /* font-size: 1rem; */
   /* background-color: #2c5f2d; */
 }
 
@@ -259,9 +264,35 @@ textarea {
   /* border: black 3px solid; */
   /* border-radius: 10px; */
   display: block;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
+.primary-nav li a:link,
+.primary-nav li a:visited {
+  color: #fff;
+  display: inline-block;
+  /* background-color: #416f42; */
+  text-decoration: none;
+  padding: 5px 5px 5px 5px;
+  /* border: black 3px solid; */
+  /* border-radius: 10px; */
+  display: block;
+  font-size: 1rem;
+}
+
+.primary-nav li a:hover,
+.primary-nav li a:active {
+  color: #000;
+  display: inline-block;
+  font-weight: bold;
+  /* background-color: #2c5f2d; */
+  text-decoration: none;
+  padding: 5px 5px 5px 5px;
+  /* border: black 3px solid; */
+  /* border-radius: 10px; */
+  display: block;
+  font-size: 1rem;
+}
 .images-box {
   display: flex;
   flex-wrap: wrap;
@@ -979,7 +1010,27 @@ main {
   height: auto;
   background-color: #eeecec;
 }
-CSS Media Queries for flex @media screen and (max-width: 800px) {
+
+/***********************************************/
+/* Contact Us Form */
+/***********************************************/
+
+#form-contact-us {
+  /* border: #04699d 1px solid; */
+  background-color: #f7f7f7;
+  display: block;
+  /* color: #666; /* Text color for the header */
+  /* padding: 20px 0 10px 0; */
+  /* display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  gap: 50px; */
+}
+
+/* CSS Media Queries for flex */
+@media screen and (max-width: 800px) {
   .flex div {
     flex: 1 !important;
   }
