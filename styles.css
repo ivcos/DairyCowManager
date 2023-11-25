@@ -248,9 +248,9 @@ textarea {
   align-items: stretch;
   gap: 2rem;
 }
-.primary-nav li {
+/* .primary-nav li {
   padding: 0 1px 0 1px;
-}
+} */
 .primary-nav li a {
   color: #fff;
   /* background-color: #2c5f2d; */
@@ -262,7 +262,7 @@ textarea {
   font-size: 0.8rem;
 }
 
-.secondary-nav {
+/* .secondary-nav {
   padding-top: 40px;
 }
 .secondary-nav ul {
@@ -283,7 +283,7 @@ textarea {
 .secondary-nav li a {
   color: #fff;
   background-color: #2c5f2d;
-}
+} */
 
 .images-box {
   display: flex;
