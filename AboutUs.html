@@ -1,54 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AboutUS</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div id="wrapper">
-      <header>
-        <div class="logo">
-          <img src="images/FarmAILogo1.png" alt="The FarMAI logo" />
-        </div>
-        <h1>Giving Farmers Control of Their Farm Data</h1>
-      </header>
-      <nav class="primary-nav">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AboutUS</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="./js/AboutUS.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header class="main_header box1">
+      <div class="logo box2">
+        <img src="images/FarmAILogo1.png" alt="The FarMAI logo" width="127" height="54" />
+      </div>
+      <h1>Farmers Controling Their Data</h1>
+      <!-- <nav class="secondary-nav">
+        Add your navigation links here
         <ul>
-          <li class="navbar_item"><a href="index.html">Home</a></li>
-          <li class="navbar_item">
-            <a href="./Herd Management/HerdManagement.html">Herd Mgt</a>
+          <li class="header_nav"><a href="ContactUs.html">Contact Us</a></li>
+          <li class="header_nav"><a href="AboutUs.html">About Us</a></li>
+          <li class="header_nav">
+            <a href="WeatherForecast.html">Weather Forecast</a>
           </li>
-          <li class="navbar_item"><a href="AgriIoT.html">AgriIoT</a></li>
-          <li class="navbar_item">
-            <a href="SlurryManagement.html">Slurry</a>
-          </li>
-          <li class="navbar_item">
-            <a href="WinterFodderManagement_grid.html">Winter Fodder Mgt</a>
-          </li>
-          <li class="navbar_item">
-            <a href="TimeManagement.html">Time Mgt</a>
-          </li>
-          <li class="navbar_item"><a href="AboutUs.html">About Us</a></li>
-          <li class="navbar_item"><a href="ContactUs.html">Contact Us</a></li>
         </ul>
-      </nav>
-      <main>
-        <p>
-          FarMAI is the first Smart Dairy System that does not depend spending
-          money on expensive hardware. Our application is the first that is
-          based on data. Our algorithms are based on the data that is collected
-          from the farmer. So the insights devleoped are on an individual Farm
-          basis not on region or country based. The complete Dairy Management
-          system that provides the farmer with the average running cost per cow
-          and the average income per cow. This application will also provide the
-          farmer with the average profit per cow. Helping the farmer to make
-          better decisions on the farm.
-        </p>
-        <h2>Cow Health</h2>
-      </main>
-      <footer></footer>
-    </div>
-  </body>
+      </nav> -->
+    </header>
+    <nav class="primary-nav">
+      <ul>
+        <li class="navbar_item"><a href="index.html">Home</a></li>
+        <li class="navbar_item"><a href="./Herd Management/HerdManagement.html">Herd Mgt.</a></li>
+        <li class="navbar_item"><a href="AgriIoT.html">AgriIoT</a></li>
+        <li class="navbar_item"><a href="SlurryManagement.html">Slurry</a></li>
+        <li class="navbar_item"><a href="WinterFodderManagement_grid.html">Fodder Mgt.</a></li>
+        <li class="navbar_item"><a href="TimeManagement.html">Time Mgt.</a></li>
+        <li class="navbar_item"><a href="AboutUs.html">About Us</a></li>
+        <li class="navbar_item"><a href="ContactUs.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="contact-us-container">
+        <div class="carousel">
+          <div class="carousel-item">
+            <img src="images/IMG_20231022_155731.jpg" alt="Image 1 Herd of cows grazing" width="500" height="auto" />
+          </div>
+          <!-- <div class="carousel-item">
+            <img src="images/IMG_20231030_124553.jpg" alt="Image 2 Cows in Shed eating fodder" width="500"
+              height="auto" />
+          </div> -->
+          <div class="carousel-item">
+            <img src="images/IMG_20231030_124439.jpg" alt="Image 3 Stack of Winter Fodder Bales" width="500"
+              height="auto" />
+          </div>
+          <div class="carousel-item">
+            <img src="images/IMG_20231030_124312.jpg" alt="Image 4 AgriIoT Weather Station" width="500" height="auto" />
+          </div>
+          <div class="carousel-item">
+            <img src="images/IMG_20231030_124609.jpg" alt="Image 5 Slurry Spreading Machine" width="500"
+              height="auto" />
+          </div>
+          <!-- <div class="carousel-item">
+            <img src="images/phoneApp.jpg" alt="Image 6 Phone App" width="500" height="auto" />
+          </div> -->
+        </div>
+        <!-- <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button> -->
+        <div>
+          <p>
+            At FARMAI we have worked with farmers for over 5 years. One of the frustrations
+            of farmers is that they are overloaded with data and feel tjhat they have lost control
+            of their data. At FARMAI we solve that problem for the farmer.
+
+            FarMAI is the first Smart Dairy System that does not depend spending
+            money on expensive hardware. Our application is the first that is
+            based on data. Our algorithms are based on the data that is collected
+            from the farmer. So the insights devleoped are on an individual Farm
+            basis not on region or country based.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+</body>
+
 </html>

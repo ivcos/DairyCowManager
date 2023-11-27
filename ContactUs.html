@@ -1,147 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div id="wrapper">
-      <header class="main_header box1">
-        <div class="logo box2">
-          <img
-            src="images/FarmAILogo1.png"
-            alt="The FarMAI logo"
-            width="127"
-            height="54"
-          />
-        </div>
-        <h1>Farmers Controling Their Data</h1>
-      </header>
-      <nav class="primary-nav">
-        <ul>
-          <li class="navbar_item"><a href="index.html">Home</a></li>
-          <li class="navbar_item">
-            <a href="./Herd Management/HerdManagement.html">Herd Mgt</a>
-          </li>
-          <li class="navbar_item"><a href="AgriIoT.html">AgriIoT</a></li>
-          <li class="navbar_item">
-            <a href="SlurryManagement.html">Slurry</a>
-          </li>
-          <li class="navbar_item">
-            <a href="WinterFodderManagement_grid.html">Winter Fodder Mgt</a>
-          </li>
-          <li class="navbar_item">
-            <a href="TimeManagement.html">Time Mgt</a>
-          </li>
-          <li class="navbar_item"><a href="AboutUs.html">About Us</a></li>
-          <li class="navbar_item"><a href="ContactUs.html">Contact Us</a></li>
-        </ul>
-      </nav>
-      <main>
-        <form id="form-contact-us" action="" method="post">
-          <h2>Contact Us to Learn More</h2>
-          <p>
-            At FARMAI, we have been working with farmers for the last five years
-            understanding their needs and how we can help them. We would love to
-            hear from you. You can contact us sireclty by phone or email or you
-            can fill in the form below ans we will get back you within 24 hours.
-            Email: info@famrai.com Phone: 1-800-1234-1234
-          </p>
-          <ul>
-            <li>
-              <label for="form-firstname">First Name:</label>
-              <input
-                type="text"
-                name="firstrname"
-                id="form-first-ame"
-                class="textinput"
-              />
-            </li>
-            <li>
-              <label for="form-lastname">Last Name:</label>
-              <input
-                type="text"
-                name="lastname"
-                id="form-last-name"
-                class="textinput"
-              />
-            </li>
-            <li>
-              <label for="form-email">Email:</label>
-              <input
-                type="email"
-                name="emailaddress"
-                id="form-email"
-                class="textinput"
-              />
-            </li>
-            <li>
-              <label for="form-tel">Telephone:</label>
-              <input
-                type="tel"
-                name="telephone"
-                id="form-tel"
-                class="textinput"
-              />
-            </li>
-            <li>
-              <label for="form-story">Tell us about your Farm:</label>
-              <textarea
-                name="story"
-                maxlength="600"
-                id="form-story"
-                placeholder="Tell us about the issues you are having with data.No more than 600 characters long"
-              ></textarea>
-            </li>
-            <li>
-              <label for="Farm type">Farm Type:</label>
-              <select name="size" id="Farm Type">
-                <option>Dairy</option>
-                <option>Beef</option>
-                <option>Suckler</option>
-                <option>Mixed Dairy and Beef</option>
-                <option>Mixed Dairy and Suckler</option>
-                <option>Other</option>
-              </select>
-            </li>
-            <li>
-              <label for="colors">How can we contact You:</label>
-              <fieldset id="contact-famer">
-                <legend>Preferred Method of Contact</legend>
-                <ul>
-                  <li>
-                    <label
-                      ><input
-                        type="radio"
-                        name="Landline Phone"
-                        value="Landline Phone"
-                      />
-                      Landline Phone</label
-                    >
-                  </li>
-                  <li>
-                    <label
-                      ><input type="radio" name="email" value="email" />
-                      email</label
-                    >
-                  </li>
-                  <li>
-                    <label
-                      ><input type="radio" name="mobile" value="mobile" />
-                      mobile</label
-                    >
-                  </li>
-              </fieldset>
-              <li class="buttons"><input type="Submit" value="Submit"></li>
-              <li class="buttons"><input type="Submit" value="Clear"></li>
-            </li>
-          </ul>
-        </form>
-      </main>
 
-      <footer></footer>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <header class="main_header box1">
+      <div class="logo box2">
+        <img src="images/FarmAILogo1.png" alt="The FarMAI logo" width="127" height="54" />
+      </div>
+      <h1>Farmers Controling Their Data</h1>
+    </header>
+    <nav class="primary-nav">
+      <ul>
+        <li class="navbar_item"><a href="index.html">Home</a></li>
+        <li class="navbar_item">
+          <a href="./Herd Management/HerdManagement.html">Herd Mgt</a>
+        </li>
+        <li class="navbar_item"><a href="AgriIoT.html">AgriIoT</a></li>
+        <li class="navbar_item">
+          <a href="SlurryManagement.html">Slurry</a>
+        </li>
+        <li class="navbar_item">
+          <a href="WinterFodderManagement_grid.html">Winter Fodder Mgt</a>
+        </li>
+        <li class="navbar_item">
+          <a href="TimeManagement.html">Time Mgt</a>
+        </li>
+        <li class="navbar_item"><a href="AboutUs.html">About Us</a></li>
+        <li class="navbar_item"><a href="ContactUs.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="home-page-flexbox">
+        <figure class="flex">
+          <div></div>
+          <div>
+            <h2>Contact Us To Learn More</h2>
+            <p>
+              At FARMAI, we have been working with farmers for the last five years
+              understanding their <em>data</em> challenges and how we can help them manage their data and optimise their
+              time. You can contact us directly, by phone or by email or you
+              can fill in the form below ans we will get back you within 24 hours.
+              Email: info@famrai.com Phone: 1-800-1234-1234
+            </p>
+          </div>
+        </figure>
+      </div>
+      <form id="form-contact-us" action="" method="post">
+        <h2>Complete Form</h2>
+        <ul>
+          <li>
+            <label for="form-firstname">First Name:</label>
+            <input type="text" name="firstrname" id="form-first-ame" class="textinput" />
+          </li>
+          <li>
+            <label for="form-lastname">Last Name:</label>
+            <input type="text" name="lastname" id="form-last-name" class="textinput" />
+          </li>
+          <li>
+            <label for="form-email">Email:</label>
+            <input type="email" name="emailaddress" id="form-email" class="textinput" />
+          </li>
+          <li>
+            <label for="form-tel">LandLine Telephone:</label>
+            <input type="tel" name="telephone" id="form-tel" class="textinput" />
+          </li>
+          <li>
+            <label for="form-mobile">Mobile Telephone:</label>
+            <input type="tel" name="mobile-telephone" id="form-mob" class="textinput" />
+          </li>
+          <li>
+            <label for="form-story">Tell us about your Farm:</label>
+            <textarea name="story" maxlength="600" id="form-story"
+              placeholder="Tell us about the issues you are having with data.No more than 600 characters long"></textarea>
+          </li>
+          <li>
+            <label for="Farm type">Farm Type:</label>
+            <select name="size" id="Farm Type">
+              <option>Dairy</option>
+              <option>Beef</option>
+              <option>Suckler</option>
+              <option>Mixed Dairy and Beef</option>
+              <option>Mixed Dairy and Suckler</option>
+              <option>Other</option>
+            </select>
+          </li>
+          <li>
+            <label for="colors">How can we contact You:</label>
+            <fieldset id="contact-famer">
+              <legend>Preferred Method of Contact</legend>
+              <ul>
+                <li>
+                  <label><input type="radio" name="Landline Phone" value="Landline Phone" />
+                    Landline Phone</label>
+                </li>
+                <li>
+                  <label><input type="radio" name="email" value="email" />
+                    email</label>
+                </li>
+                <li>
+                  <label><input type="radio" name="mobile" value="mobile" />
+                    mobile</label>
+                </li>
+            </fieldset>
+          <li class="buttons"><input type="Submit" value="Submit"></li>
+          <li class="buttons"><input type="Submit" value="Clear"></li>
+          </li>
+        </ul>
+      </form>
+    </main>
+
+    <footer></footer>
+  </div>
+</body>
+
 </html>
