@@ -111,6 +111,15 @@ function onDOMLoaded() {
     clearForm(event);
     console.log("Form Cleared");
   }); // <-- added closing parenthesis here//
+
+  // Handling for navigation Burger Bar
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".navbar");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    burger.classList.toggle("toggle");
+  });
 }
 
 // Attach the onDOMLoaded function to the DOMContentLoaded event

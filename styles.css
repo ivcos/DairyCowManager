@@ -1289,7 +1289,7 @@ main {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
+/* CSS Media Queries to NAV for all pages */
 @media (max-width: 768px) {
   .navbar {
     display: none;

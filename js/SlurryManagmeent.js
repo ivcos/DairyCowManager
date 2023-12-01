@@ -99,6 +99,15 @@ function onDOMLoaded() {
       calculateSlurryStorageRequired();
       console.log("Item 1");
     });
+
+  //Handling for Burger Bar
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".navbar");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    burger.classList.toggle("toggle");
+  });
   // document.querySelector("#Clear").addEventListener("click", function (event) {
   //   clearForm(event);
   //   console.log("Form Cleared");

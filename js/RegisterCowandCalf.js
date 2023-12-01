@@ -215,6 +215,14 @@ function onDOMLoaded() {
       registerAnimal(event);
       console.log("Item 4: Closing Form");
     });
+
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".navbar");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    burger.classList.toggle("toggle");
+  });
   //Check and validate the user input  for first input with id = form_cow_tag_nbr in Register Birth
   const textInputFormCowTagNbr = document.getElementById("form_cow_tag_nbr");
   console.log("Calf Tag Number" + textInputFormCowTagNbr);
