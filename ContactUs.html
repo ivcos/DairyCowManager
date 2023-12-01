@@ -92,7 +92,7 @@
               At FARMAI, we have been working with farmers for the last five years
               understanding their <em>data</em> challenges and how we can help them manage their data and optimise their
               time. You can contact us directly, by phone or by email or you
-              can fill in the form below ans we will get back you within 24 hours.
+              can fill in the form below. We will get back you within 24 hours.
               Email: info@famrai.com Phone: 1-800-1234-1234
             </p>
           </div>
@@ -114,11 +114,11 @@
             <input type="email" name="emailaddress" id="form-email" class="textinput" />
           </li>
           <li>
-            <label for="form-tel">LandLine Telephone:</label>
+            <label for="form-tel">LandLine Telephone(Optional):</label>
             <input type="tel" name="telephone" id="form-tel" class="textinput" />
           </li>
           <li>
-            <label for="form-mobile">Mobile Telephone:</label>
+            <label for="form-mobile">Mobile Telephone(Optional):</label>
             <input type="tel" name="mobile-telephone" id="form-mob" class="textinput" />
           </li>
           <li>
@@ -143,18 +143,20 @@
               <legend>Preferred Method of Contact</legend>
               <ul>
                 <li>
-                  <label><input type="radio" name="Landline Phone" value="Landline Phone" />
-                    Landline Phone</label>
+                  <input type="radio" name="Contact" id="Landline Phone" value="Landline" />
+                  <label for id="Landline Phone">Landline Phone</label>
                 </li>
                 <li>
-                  <label><input type="radio" name="email" value="email" />
-                    email</label>
+                  <input type="radio" name="Contact" id="Mobile Phone" value="Mobile Phone" />
+                  <label for id="Mobile Phone">Mobile Phone</label>
                 </li>
                 <li>
-                  <label><input type="radio" name="mobile" value="mobile" />
-                    mobile</label>
+                  <input type="radio" name="Contact" id="Email" value="Email" />
+                  <label for id="Email" /> Email</label>
                 </li>
+              </ul>
             </fieldset>
+          </li>
           <li class="buttons"><input type="Submit" value="Submit"></li>
           <li class="buttons"><input type="Submit" value="Clear"></li>
           </li>
