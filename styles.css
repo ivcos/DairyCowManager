@@ -8,6 +8,7 @@
 
 - FONT-WEIGHTS
 Default: 400
+Footer Font Weight: 800
 
 - LINE HEIGHTS
 DEFAULT:1.4 [Body]
@@ -45,6 +46,7 @@ MAIN COLOURS : #087f5b
 MAIN COLOR_1 #2c5f2d HAS A BETTER CONTRAST RATIO
 GREY COLOR : #212529
 Secondary Color: #416f42
+Foooter: #black
 */
 */
 
@@ -160,14 +162,15 @@ h6 {
   margin-right: auto; */
   margin: 0 auto;
   width: 85%;
-  border-bottom: 8px solid #2c5f2d;
+  /* border-bottom: 8px solid #2c5f2d; */
   /* height: 100%; */
 }
 
 footer {
   margin-bottom: 48px;
   font-size: 14px;
-  color: #495057;
+  color: black;
+  font-weight: 800;
 }
 /* ========= CLEARING OUT LIST STYLES ========= */
 ul {
@@ -750,9 +753,9 @@ input[type="submit"] {
   background: #78a7ba;
   border: #04699d 1px solid;
 }
-main {
+/* main {
   height: 50%;
-}
+} */
 
 /*  ========= Styling Specific to About Us page  ========= */
 .contact-us-container {
