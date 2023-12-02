@@ -31,6 +31,29 @@ function getTodayDate() {
   console.log("Date Form Input", dateFormInput);
 }
 
+// Hides all six flex items when the user has selected one of the six options
+function hideFlexItems() {
+  let classRegister = document.getElementsByClassName("register");
+  console.log(classRegister);
+  for (let i = 0; i < classRegister.length; i++) {
+    console.log(classRegister[i].style.display);
+    classRegister[i].style.display = "none";
+    console.log(classRegister[i].style.display);
+    console.log("test103");
+  }
+}
+// Diesplays all six flex items when the use has closed a Form
+function displayFlexItems() {
+  let classRegister = document.getElementsByClassName("register");
+  console.log(classRegister);
+  for (let i = 0; i < classRegister.length; i++) {
+    console.log(classRegister[i].style.display);
+    classRegister[i].style.display = "";
+    console.log(classRegister[i].style.display);
+    console.log("test104");
+  }
+}
+
 // Function Display Form for Register Birth and also allow user to input data
 function registerBirth(event) {
   console.log("Entering registerBirth");
@@ -44,6 +67,7 @@ function registerBirth(event) {
   //Now change the display to block so Form is Displayed
   formElement.style.display = "block";
   console.log("Display after change", formElementStyleDisplay);
+  hideFlexItems();
   let dateFormInput = document.getElementById("form_date_of_birth");
   let today = getTodayDate();
   console.log("Today's date", today);
@@ -82,6 +106,7 @@ function registerAnimal(event) {
   console.log("Display", FormElementRegisterAnimalStyleDisplay);
   //Now change the display to block so Form is Displayed
   FormElementRegisterAnimal.style.display = "block";
+  hideFlexItems();
   console.log("Display after change", FormElementRegisterAnimalStyleDisplay);
   let today = getTodayDate();
   console.log("Today's date", today);
@@ -161,6 +186,7 @@ function clearFormData(event) {
 function closeForm(event) {
   console.log("Entering the closeForm");
   document.getElementById("calving_form").style.display = "none";
+  displayFlexItems();
 }
 
 function onDOMLoaded() {
