@@ -31,6 +31,24 @@ function getTodayDate() {
   console.log("Date Form Input", dateFormInput);
 }
 
+// Function to get the AI Date and populate in the AI date field in the AIForm
+function getAIDate() {
+  console.log("Getting AI Date + Calving Date");
+  console.log("Entering getTodayDate");
+  let dateFormOfAI = document.getElementById("form_date_of_AI");
+  dateFormOfAI.value = formatDate();
+  console.log("Date Form Input", dateFormOfAI.value);
+  let dateFormOfCalving = new Date(dateFormOfAI.value);
+  console.log("Date of Calving: " + dateFormOfCalving);
+  dateFormOfCalving.setMonth(
+    dateFormOfCalving.getMonth() + 9,
+    dateFormOfCalving.getDate() + 7
+  );
+  console.log(dateFormOfCalving);
+  document.getElementById("form_date_of_Calving").value =
+    dateFormOfCalving.toLocaleDateString();
+}
+
 // Hides all six flex items when the user has selected one of the six options
 function hideFlexItems() {
   let classRegister = document.getElementsByClassName("register");
@@ -70,28 +88,7 @@ function registerBirth(event) {
   hideFlexItems();
   let dateFormInput = document.getElementById("form_date_of_birth");
   let today = getTodayDate();
-  console.log("Today's date", today);
-  // Add event Listeners to check that valid data is entered into the
-  // three first fields in the Register Birth Form
-  // Create a list of three inputs and check that each are valid alphanumeric
-  // let inputCollection = document.getElementsByTagName("input");
-  // console.log("test", parent);
-
-  // for (i = 0; i < 3; i++) {
-  //   console.log(inputCollection.length);
-  //   console.log(inputCollection[i].id);
-  //   console.log(typeof inputCollection);
-  //   let alphanumericInput = inputCollection[i].id;
-  //   let nextAlphanumericInput = inputCollection[i + 1].id;
-  //   alphanumericInput.addEventListener;
-  // }
-  // let alphanumericInput = document.getElementById("form_cow_tag_nbr");
-  // alphanumericInput.addEventListener("input", function (event) {
-  //   let inputValue = alphanumericInput.value;
-  //   const alphanumericRegex = /^[a-zA-Z0-9]+$/;
-  //   if (alphanumericRegex.test(inputValue));
-  //   // The input only contains alphanumeric characters
-  // });
+  console.log("Today's date xx", today);
 }
 
 //Function to register animal bought into the farm
@@ -110,6 +107,22 @@ function registerAnimal(event) {
   console.log("Display after change", FormElementRegisterAnimalStyleDisplay);
   let today = getTodayDate();
   console.log("Today's date", today);
+}
+
+// Add AI Event to the AI Form
+function registerAI() {
+  console.log("Entering AIForm");
+  let formElementRegisterAI = document.getElementById("AIForm");
+  let formElementRegisterAIStyle = window.getComputedStyle(
+    formElementRegisterAI
+  );
+  let formElementRegisterAIStyleDisplay =
+    formElementRegisterAIStyle.getPropertyValue("display");
+  console.log("Dispaly", formElementRegisterAIStyleDisplay);
+  //Now change the display to block so Form is Displayed
+  formElementRegisterAI.style.display = "block";
+  aiDate = getAIDate();
+  hideFlexItems();
 }
 
 // Add a function that checks that at least one of the radio fields is selected
@@ -240,6 +253,16 @@ function onDOMLoaded() {
       console.log("Item 5: Register Animal");
       registerAnimal(event);
       console.log("Item 4: Closing Form");
+    });
+
+  //Event Listener for registerAI Button
+  document
+    .querySelector("#register_AI")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+      console.log("Item 6: Register AI");
+      registerAI(event);
+      console.log("Item 5: Closing Form");
     });
 
   const burger = document.querySelector(".burger");

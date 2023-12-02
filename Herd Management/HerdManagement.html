@@ -36,7 +36,7 @@
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="./Herd Management/HerdManagement.html">Herd Management</a>
+              <a href="HerdManagement.html">Herd Management</a>
               <a href="../SlurryManagement.html">Slurry Management</a>
               <a href="../WinterFodderManagement_grid.html">Winter Fodder Management</a>
             </div>
@@ -158,6 +158,7 @@
       </div>
       <!-- //CALVING FORM -->
       <form id="calving_form" action="" method="post">
+        <h3>Register Birth</h3>
         <ul>
           <li>
             <label for="form_cow_tag_nbr">Calf Tag:</label><input type="text" id="form_cow_tag_nbr" class="textinput"
@@ -266,6 +267,7 @@
       </form>
       <!-- //NEW ANIMAL FORM -->
       <form id="New Animal Form" action="" method="post" style="display: none">
+        <h3>Register New Aninaml omn Farm</h3>
         <ul>
           <li>
             <label for="form_cow_tag_nbr">Animal Tag:</label><input type="text" id="form_cow_tag_nbr"
@@ -346,8 +348,42 @@
               class="textinput" />
           </li>
           <li>
-            <label for="form_date_of_AI">Animal DI Date:</label><input type="date" id="form_date_of_AI"
+            <label for="form_mother_freezeband">FreezeBand (Optional):</label><input type="text"
+              id="form_mother_freezeband" class="textinput" />
+          </li>
+          <li>
+            <label for="form_date_of_AI">1st AI Date:</label><input type="date" id="form_date_of_AI"
               class="textinput" />
+          </li>
+          <li>
+            <label for="form_date_of_AI">Bull Used Code or Name:</label><input type="text" id="form_date_of_AI"
+              class="textinput" />
+          </li>
+          <li>
+            <label for="form_date_of_AI">2nd AI Date:</label><input type="date" id="form_date_of_AI"
+              class="textinput" />
+          </li>
+          <li>
+            <label for="form_date_of_AI">2nd Bull Used Code or Name:</label><input type="text" id="form_date_of_AI"
+              class="textinput" />
+          </li>
+          <li>
+            <label for="form_date_of_AI">3rd AI Date:</label><input type="date" id="form_date_of_AI"
+              class="textinput" />
+          </li>
+          <li>
+            <label for="form_date_of_AI">3rd Bull Used Code or Name:</label><input type="text" id="form_date_of_AI"
+              class="textinput" />
+          </li>
+          <li>
+            <label for="form_date_of_Calving">Calving Date:</label><input type="text" id="form_date_of_Calving"
+              class="textinput" />
+          </li>
+          <li class="buttons">
+            <input type="submit" id="submit_AI_data" value="Submit Animal Data" />
+            <input type="submit" id="clear_calf_data" value="Clear/Reset Form" />
+            <input type="submit" id="cancel_calf_data" value="Cancel/Close Form" />
+          </li>
       </form>
     </main>
 
