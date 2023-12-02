@@ -120,7 +120,7 @@
             Register Sale of Animal onto the system once animal has been sold.
             Record Animal Tag, Date of Sale, Price of Sale, Buyer,
           </p>
-          <button class="register_button" id="Animal Sale" onclick="animalSale">
+          <button class="register_button" id="Animal-Sale" onclick="registerAnimalSale">
             Animal Sale
           </button>
         </section>
@@ -389,6 +389,39 @@
             <input type="submit" id="clear_calf_data" value="Clear/Reset Form" />
             <input type="submit" id="cancel_calf_data" value="Cancel/Close Form" />
           </li>
+        </ul>
+      </form>
+      <!-- //ANIMAL SALE FORM -->
+      <form id="SaleForm" action="" method="post" style="display: none">
+        <ul>
+          <li>
+            <label for="form_cow_tag_nbr_sale">Animal Tag:</label><input type="text" id="form_cow_tag_nbr_sale"
+              class="textinput" />
+          </li>
+          <li>
+            <label for="form_mother_freezeband">FreezeBand (Optional):</label><input type="text"
+              id="form_mother_freezeband" class="textinput" />
+          </li>
+          <li>
+            <label for="form_date_of_sale">Date Animal Sold:</label><input type="date" id="form_date_of_sale"
+              class="textinput" />
+          </li>
+          <li>
+            <label for="Sale">Sale of Animal:</label>
+            <select Sale="Sale" id="Sale">
+              <option>Mart</option>
+              <option>Factory</option>
+              <option>Death</option>
+              <option>TB</option>
+              <option>Brucelossis</option>
+            </select>
+          </li>
+          <li class="buttons">
+            <input type="submit" id="submit_AI_data" value="Submit Animal Data" />
+            <input type="submit" id="clear_calf_data" value="Clear/Reset Form" />
+            <input type="submit" id="cancel_calf_data" value="Cancel/Close Form" />
+          </li>
+        </ul>
       </form>
     </main>
 

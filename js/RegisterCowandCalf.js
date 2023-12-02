@@ -125,6 +125,20 @@ function registerAI() {
   hideFlexItems();
 }
 
+// Function to Register Sale of Animal off Farm
+function registerAnimalSale() {
+  console.log("Entering RegisterSale");
+  let formElementRegisterSale = document.getElementById("SaleForm");
+  let formElementRegisterSaleStyle = window.getComputedStyle(
+    formElementRegisterSale
+  );
+  let formElementRegisterSaleStyleDisplay =
+    formElementRegisterSaleStyle.getPropertyValue("display");
+  console.log("Display:  " + formElementRegisterSaleStyleDisplay);
+  formElementRegisterSale.style.display = "block";
+  hideFlexItems();
+}
+
 // Add a function that checks that at least one of the radio fields is selected
 function validateRadioButtons() {
   console.log("Entering validateRadioButtons");
@@ -263,6 +277,16 @@ function onDOMLoaded() {
       console.log("Item 6: Register AI");
       registerAI(event);
       console.log("Item 5: Closing Form");
+    });
+
+  // Event Listener for register animal Sale
+  document
+    .querySelector("#Animal-Sale")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+      console.log("Item 7: Register animalSale");
+      registerAnimalSale(event);
+      console.log("Item 5: Closing Animal Sale Form");
     });
 
   const burger = document.querySelector(".burger");
