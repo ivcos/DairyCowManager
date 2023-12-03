@@ -19,11 +19,20 @@ function calculate(tankNbr) {
 }
 
 // when clear button is pressed, clear all vlaues for that tank
-function clearTankData(tankNbr) {
-  document.getElementById("width-tank-" + tankNbr).value = "";
-  document.getElementById("length-tank-" + tankNbr).value = "";
-  document.getElementById("depth-tank-" + tankNbr).value = "";
-  document.getElementById("capacity-tank-" + tankNbr).value = "";
+// function clearTankData(tankNbr) {
+//   document.getElementById("width-tank-" + tankNbr).value = "";
+//   document.getElementById("length-tank-" + tankNbr).value = "";
+//   document.getElementById("depth-tank-" + tankNbr).value = "";
+//   document.getElementById("capacity-tank-" + tankNbr).value = "";
+// }
+
+function clearTankData() {
+  for (let i = 1; i < 5; i++) {
+    document.getElementById("width-tank-" + i).value = "";
+    document.getElementById("length-tank-" + i).value = "";
+    document.getElementById("depth-tank-" + i).value = "";
+    document.getElementById("capacity-tank-" + i).value = "";
+  }
 }
 
 function calculateTotalSlurryCapacity() {
@@ -38,18 +47,58 @@ function calculateTotalSlurryCapacity() {
     totalSlurryCapacity;
 }
 
+// Function autocalculates for each animal type as tje information is typed in
+function calculateStorageRequired(animal) {
+  console.log(animal);
+  // Fetch the data that has been entered for the naimal type
+  let nbrAnimals = document.getElementById(
+    "nbr-" + animal + "-slurry-calculation"
+  ).value;
+  console.log(nbrAnimals);
+  let nbrDays = document.getElementById(
+    "nbr-days-" + animal + "-slurry-calculation-days-inside"
+  ).value;
+  console.log(nbrDays);
+  switch (animal) {
+    case "cows":
+      document.getElementById("slurry-storage-required-" + animal).value =
+        nbrAnimals * nbrDays * 0.047 * 1000;
+      document.getAnimations("total-slurry-storage-required");
+      break;
+    case "calves":
+      document.getElementById("slurry-storage-required-" + animal).value =
+        nbrAnimals * nbrDays * 0.012 * 1000;
+      break;
+    case "heifers":
+      document.getElementById("slurry-storage-required-" + animal).value =
+        nbrAnimals * nbrDays * 0.037 * 1000;
+      break;
+    default:
+      document.getElementById("slurry-storage-required-" + animal).value =
+        nbrAnimals * nbrDays * 0.041 * 1000;
+      break;
+  }
+  document.getElementById("total-slurry-storage-required").value =
+    parseInt(document.getElementById("slurry-storage-required-calves").value) +
+    parseInt(document.getElementById("slurry-storage-required-cows").value) +
+    parseInt(document.getElementById("slurry-storage-required-heifers").value) +
+    parseInt(
+      document.getElementById("slurry-storage-required-2YearPlus").value
+    );
+}
+
 function calculateSlurryStorageRequired() {
   //get user entries for Dairy Cows and validate each entry
   //Number of days should not be greater than 365
   let nbrDairyCows = document.getElementById(
-    "nbr-dairy-cows-slurry-calculation"
+    "nbr-cows-slurry-calculation"
   ).value;
   console.log("Number of Dairy Cows: " + nbrDairyCows);
   let nbrDaysSlurryStorageRequired = document.getElementById(
-    "nbr-days-dairy-cows-slurry-calculation-days-inside"
+    "nbr-days-cows-slurry-calculation-days-inside"
   ).value;
   console.log("Number of Days: " + nbrDaysSlurryStorageRequired);
-  document.getElementById("slurry-storage-required-dairy-cows").value =
+  document.getElementById("slurry-storage-required-cows").value =
     nbrDairyCows * nbrDaysSlurryStorageRequired * 0.047 * 1000;
   console.log(
     "Slurry Storage For Dairy Cows: " +
@@ -61,7 +110,7 @@ function calculateSlurryStorageRequired() {
   ).value;
   console.log("Number of Calves: " + nbr01Year);
   let nbrDaysSlurryStorageRequiredCalves = document.getElementById(
-    "nbr-days-dairy-calves-slurry-calculation-days-inside"
+    "nbr-days-calves-slurry-calculation-days-inside"
   ).value;
   console.log(
     "Nrb of Days Calves inside: " + nbrDaysSlurryStorageRequiredCalves
@@ -93,12 +142,12 @@ function calculateSlurryStorageRequired() {
 }
 
 function onDOMLoaded() {
-  document
-    .querySelector("#calculate-slurry-storage-required")
-    .addEventListener("click", function () {
-      calculateSlurryStorageRequired();
-      console.log("Item 1");
-    });
+  // document
+  //   .querySelector("#calculate-slurry-storage-required")
+  //   .addEventListener("click", function () {
+  //     calculateSlurryStorageRequired();
+  //     console.log("Item 1");
+  //   });
 
   //Handling for Burger Bar
   const burger = document.querySelector(".burger");

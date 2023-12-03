@@ -131,10 +131,11 @@ h1 {
 }
 h2 {
   /* font-size: 1.2em; */
-  margin: 0 0 1.5em 0;
+  margin: 0 0 1em 0;
   font-size: 36px;
   letter-spacing: -2px;
   color: #2c5f2d;
+  text-align: center;
   /* 24 / 30/ 36 */
 }
 
@@ -1028,6 +1029,7 @@ input[type="submit"] {
 .input_slurry {
   max-width: 100px;
   height: 50px;
+  text-align: center;
 }
 .flex-container-total-slurry-farm-capacity {
   display: flex;
@@ -1039,7 +1041,30 @@ input[type="submit"] {
   height: auto;
   background-color: #eeecec;
 }
+#total-slurry-storage-required-paragraph {
+  text-align: center;
+  font-weight: bold;
+}
+#final-slurry-required {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bolder;
+  color: #04699d;
+}
 
+#calculate-slurry-capacity {
+  background-color: #2c5f2d;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#calculate-slurry-capacity-clear {
+  background-color: #04699d;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
 /***********************************************/
 /* Contact Us Form */
 /***********************************************/
