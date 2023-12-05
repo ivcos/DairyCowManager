@@ -567,6 +567,20 @@ input[type="submit"] {
   font-weight: bold;
   margin-bottom: 10px;
 }
+.register_new_animal_error_msg {
+  /* display: none; */
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.ai_error_msg {
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 .winter-fodder-management {
   margin: 0;
   display: flex;

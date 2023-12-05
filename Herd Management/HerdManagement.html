@@ -275,8 +275,9 @@
         <h3>Register New Aninaml omn Farm</h3>
         <ul>
           <li>
-            <label for="form_cow_tag_nbr">Animal Tag:</label><input type="text" id="form_cow_tag_nbr"
+            <label for="form_cow_tag_nbr">Animal Tag:</label><input type="text" id="new_animal_form_cow_tag_nbr"
               class="textinput" />
+            <p class="register_new_animal_error_msg" id="new_animal_form_cow_tag_nbr_error"></p>
           </li>
           <li>
             <label for="form_date_of_birth">Animal DOB:</label><input type="date" id="form_date_of_birth"
@@ -332,9 +333,13 @@
               <option>Not Known</option>
             </select>
           </li>
-
+          <div id="message-new-animal" style="display: none;">
+            <!-- <p class="form_submission_msg">
+                Data submitted successfully!
+              </p> -->
+          </div>
           <li class="buttons">
-            <input type="submit" id="submit_calf_data" value="Submit Animal Data" />
+            <input type="submit" id="submit_new_animal_data" value="Submit Animal Data" />
             <input type="submit" id="clear_calf_data" value="Clear/Reset Form" />
             <input type="submit" id="cancel_calf_data" value="Cancel/Close Form" />
           </li>
@@ -349,8 +354,9 @@
       <form id="AIForm" action="" method="post" style="display: none">
         <ul>
           <li>
-            <label for="form_cow_tag_nbr_AI">Animal Tag:</label><input type="text" id="form_cow_tag_nbr_AI"
+            <label for="form_cow_tag_nbr_AI">Animal Tag:</label><input type="text" id="ai_form_cow_tag_nbr_AI"
               class="textinput" />
+            <p class="ai_error_msg" id="ai_form_cow_tag_nbr_error"></p>
           </li>
           <li>
             <label for="form_mother_freezeband">FreezeBand (Optional):</label><input type="text"
@@ -384,6 +390,11 @@
             <label for="form_date_of_Calving">Calving Date:</label><input type="text" id="form_date_of_Calving"
               class="textinput" />
           </li>
+          <div id="message-new-ai" style="display: none;">
+            <!-- <p class="form_submission_msg">
+                Data submitted successfully!
+              </p> -->
+          </div>
           <li class="buttons">
             <input type="submit" id="submit_AI_data" value="Submit Animal Data" />
             <input type="submit" id="clear_calf_data" value="Clear/Reset Form" />

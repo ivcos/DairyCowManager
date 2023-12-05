@@ -184,9 +184,9 @@ function submitAnimalFormData(event) {
     message.textContent = "PLEASE ENTER ALL THE REQUIRED FIELDS";
     message.style.display = "block";
   } else if (
-    !validateAlphanumeric(formCowTagNbr) ||
-    !validateAlphanumeric(formCalfTagNbr) ||
-    !validateAlphanumeric(formMotherFreezeBand)
+    validateAlphanumeric(formCowTagNbr) ||
+    validateAlphanumeric(formCalfTagNbr) ||
+    validateAlphanumeric(formMotherFreezeBand)
   ) {
     console.log(!validateAlphanumeric(formCowTagNbr));
     message.textContent = "PLEASE ENTER NUMBERS AND LETTERS";
@@ -199,6 +199,46 @@ function submitAnimalFormData(event) {
   //Clear the form input data and remove the mesaage again
   // document.getElementById("calving_form").reset();
   // message.textContent = "";
+}
+
+function submitNewAnimalFormData(event) {
+  console.log("Entering the function submitNewAnimalFormData");
+  let formNewAnimalTagNbr = document.getElementById(
+    "new_animal_form_cow_tag_nbr"
+  );
+  console.log(formNewAnimalTagNbr.value);
+  let messageNewAnimal = document.getElementById("message-new-animal");
+  if (formNewAnimalTagNbr.value.trim() === "") {
+    messageNewAnimal.textContent = "PLEASE ENTER ALL THE REQUIRED FIELDS";
+    messageNewAnimal.style.display = "block";
+  } else if (validateAlphanumeric(formNewAnimalTagNbr)) {
+    console.log(!validateAlphanumeric(formNewAnimalTagNbr));
+    messageNewAnimal.textContent = "PLEASE ENTER NUMBERS AND LETTERS";
+    console.log("PLEASE ENTER NUMBERS AND LETTERS");
+    messageNewAnimal.style.display = "block";
+  } else {
+    messageNewAnimal.textContent = "DATA ENTERED SUCCESSFULLY";
+    messageNewAnimal.style.display = "block";
+  }
+}
+
+function submitNewAIFormData(event) {
+  console.log("Entering the submit new AI Data");
+  let formAITagNbr = document.getElementById("ai_form_cow_tag_nbr_AI");
+  console.log(formAITagNbr.value);
+  let messageNewAI = document.getElementById("message-new-ai");
+  if (formAITagNbr.value.trim() === "") {
+    messageNewAI.textContent = "PLEASE ENTER ALL THE REQUIRED FIELDS";
+    messageNewAI.style.display = "block";
+  } else if (validateAlphanumeric(formAITagNbr)) {
+    console.log(!validateAlphanumeric(formAITagNbr));
+    messageNewAI.textContent = "PLEASE ENTER NUMBERS AND LETTERS";
+    console.log("PLEASE ENTER NUMBERS AND LETTERS");
+    messageNewAI.style.display = "block";
+  } else {
+    messageNewAI.textContent = "DATA ENTERED SUCCESSFULLY";
+    messageNewAI.style.display = "block";
+  }
 }
 
 function clearFormData(event) {
@@ -232,6 +272,24 @@ function onDOMLoaded() {
       console.log("Item 2: Submiting Calf Data");
       submitAnimalFormData(event);
       console.log("Item 2a: Submiting Calf Data");
+    });
+  document
+    .querySelector("#submit_new_animal_data")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 2: Submiting new animal Data");
+      submitNewAnimalFormData(event);
+      console.log("Item 2a: Submiting new animal Data");
+    });
+
+  //Function to submit AI Data
+  document
+    .querySelector("#submit_AI_data")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 7: Submiting AI Data");
+      submitNewAIFormData(event);
+      console.log("Item 7a: Submiting new AI Data");
     });
 
   document
@@ -370,8 +428,61 @@ function onDOMLoaded() {
         "";
     }
   });
-}
+  //Check and validate the user input  for first input with id = form_new_animal_tag_nbr in Register New animal
 
+  const textInputNewAnimalFormCowTagNbr = document.getElementById(
+    "new_animal_form_cow_tag_nbr"
+  );
+  console.log("Cow Tag Number" + textInputNewAnimalFormCowTagNbr);
+  //   Add an event listener for text input with id form_cow_tag_nbr
+  textInputNewAnimalFormCowTagNbr.addEventListener("input", function () {
+    const textInputNewAnimalFormCowTagNbrTrim =
+      textInputNewAnimalFormCowTagNbr.value.trim();
+    if (textInputNewAnimalFormCowTagNbrTrim == "") {
+      console.log("1Mother's tag cannot be let blank");
+      document.getElementById(
+        "new_animal_form_cow_tag_nbr_error"
+      ).style.display = "inline-block";
+    } else if (!validateAlphanumeric(textInputNewAnimalFormCowTagNbrTrim)) {
+      document.getElementById(
+        "new_animal_form_cow_tag_nbr_error"
+      ).style.display = "inline-block";
+      document.getElementById("new_animal_form_cow_tag_nbr_error").innerHTML =
+        "ERROR:ONLY NUMBERS AND LETTERS ALLOWED";
+      console.log("Only numbers and letters are allowed");
+    } else {
+      console.log("input is valid");
+      document.getElementById("new_animal_form_cow_tag_nbr_error").innerHTML =
+        "";
+    }
+  });
+
+  // AI FORM
+  //Check and validate the user input for the first input with id= ai_form_cow_tag_nbr_AI
+  const textInputNewAIFormCowTagNbr = document.getElementById(
+    "ai_form_cow_tag_nbr_AI"
+  );
+  console.log("Cow Tag Number" + textInputNewAIFormCowTagNbr);
+  //   Add an event listener for text input with id form_cow_tag_nbr
+  textInputNewAIFormCowTagNbr.addEventListener("input", function () {
+    const textInputNewAIFormCowTagNbrTrim =
+      textInputNewAIFormCowTagNbr.value.trim();
+    if (textInputNewAIFormCowTagNbrTrim == "") {
+      console.log("2Mother's tag cannot be let blank");
+      document.getElementById("new_ai_form_cow_tag_nbr_error").style.display =
+        "inline-block";
+    } else if (!validateAlphanumeric(textInputNewAIFormCowTagNbrTrim)) {
+      document.getElementById("ai_form_cow_tag_nbr_error").style.display =
+        "inline-block";
+      document.getElementById("ai_form_cow_tag_nbr_error").innerHTML =
+        "ERROR:ONLY NUMBERS AND LETTERS ALLOWED";
+      console.log("Only numbers and letters are allowed");
+    } else {
+      console.log("input is valid");
+      document.getElementById("ai_form_cow_tag_nbr_error").innerHTML = "";
+    }
+  });
+}
 // document
 //   .querySelector("#update_animal_details")
 //   .addEventListener("click", function (event) {
