@@ -406,8 +406,9 @@
       <form id="SaleForm" action="" method="post" style="display: none">
         <ul>
           <li>
-            <label for="form_cow_tag_nbr_sale">Animal Tag:</label><input type="text" id="form_cow_tag_nbr_sale"
-              class="textinput" />
+            <label for="form_cow_tag_nbr_sale">Animal Tag:</label><input type="text"
+              id="animal_sale_form_cow_tag_nbr_sale" class="textinput" />
+            <p class="animal_sale_error_msg" id="animal_sale_form_cow_tag_nbr_error"></p>
           </li>
           <li>
             <label for="form_mother_freezeband">FreezeBand (Optional):</label><input type="text"
@@ -427,8 +428,13 @@
               <option>Brucelossis</option>
             </select>
           </li>
+          <div id="message-animal-sale" style="display: none;">
+            <!-- <p class="form_submission_msg">
+                Data submitted successfully!
+              </p> -->
+          </div>
           <li class="buttons">
-            <input type="submit" id="submit_AI_data" value="Submit Animal Data" />
+            <input type="submit" id="submit_animal_sale_data" value="Submit Animal Data" />
             <input type="submit" id="clear_calf_data" value="Clear/Reset Form" />
             <input type="submit" id="cancel_calf_data" value="Cancel/Close Form" />
           </li>

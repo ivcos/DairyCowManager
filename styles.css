@@ -581,6 +581,13 @@ input[type="submit"] {
   margin-bottom: 10px;
 }
 
+.animal_sale_error_msg {
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 .winter-fodder-management {
   margin: 0;
   display: flex;

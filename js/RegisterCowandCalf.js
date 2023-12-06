@@ -240,6 +240,27 @@ function submitNewAIFormData(event) {
     messageNewAI.style.display = "block";
   }
 }
+// Function to Submit Animal Sale Data
+function submitAnimalSaleFormData(event) {
+  console.log("Entering the submit Animal Sale Data");
+  let formAnimalSaleTagNbr = document.getElementById(
+    "animal_sale_form_cow_tag_nbr_sale"
+  );
+  console.log(formAnimalSaleTagNbr.value);
+  let messageNewSale = document.getElementById("message-animal-sale");
+  if (formAnimalSaleTagNbr.value.trim() === "") {
+    messageNewSale.textContent = "PLEASE ENTER ALL THE REQUIRED FIELDS";
+    messageNewSale.style.display = "block";
+  } else if (validateAlphanumeric(formAnimalSaleTagNbr)) {
+    console.log(!validateAlphanumeric(formAnimalSaleTagNbr));
+    messageNewSale.textContent = "PLEASE ENTER NUMBERS AND LETTERS";
+    console.log("PLEASE ENTER NUMBERS AND LETTERS");
+    messageNewSale.style.display = "block";
+  } else {
+    messageNewSale.textContent = "DATA ENTERED SUCCESSFULLY";
+    messageNewSale.style.display = "block";
+  }
+}
 
 function clearFormData(event) {
   console.log("Entering the clearFormData");
@@ -292,6 +313,15 @@ function onDOMLoaded() {
       console.log("Item 7a: Submiting new AI Data");
     });
 
+  // Fucntion to Submit Animal Sale Data
+  document
+    .querySelector("#submit_animal_sale_data")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 7: Submiting Animal Sale Data");
+      submitAnimalSaleFormData(event);
+      console.log("Item 7a: Submiting Animal Sale Data");
+    });
   document
     .querySelector("#clear_reset_data")
     .addEventListener("click", function (event) {
@@ -482,8 +512,34 @@ function onDOMLoaded() {
       document.getElementById("ai_form_cow_tag_nbr_error").innerHTML = "";
     }
   });
+
+  //ANIMAL SALE
+  //Check and validate the user input for the first input with id= ai_form_cow_tag_nbr_AI
+  const textInputAnimalSaleTagNbr = document.getElementById(
+    "animal_sale_form_cow_tag_nbr_sale"
+  );
+  console.log("Cow Tag Number" + textInputAnimalSaleTagNbr);
+  textInputAnimalSaleTagNbr.addEventListener("input", function () {
+    const textInputAnimalSaleTagNbrTrim =
+      textInputAnimalSaleTagNbr.value.trim();
+    if (textInputAnimalSaleTagNbrTrim == "") {
+      console.log("2Mother's tag cannot be let blank");
+      document.getElementById(
+        "animal_sale_form_cow_tag_nbr_error"
+      ).style.display = "inline-block";
+    } else if (!validateAlphanumeric(textInputAnimalSaleTagNbrTrim)) {
+      document.getElementById(
+        "animal_sale_form_cow_tag_nbr_error"
+      ).style.display = "inline-block";
+      document.getElementById("animal_sale_form_cow_tag_nbr_error").innerHTML =
+        "ERROR:ONLY NUMBERS AND LETTERS ALLOWED";
+      console.log("Only numbers and letters are allowed");
+    } else {
+      console.log("input is valid");
+      document.getElementById("animal_form_cow_tag_nbr_error").innerHTML = "";
+    }
+  });
 }
-// document
 //   .querySelector("#update_animal_details")
 //   .addEventListener("click", function (event) {
 //     updateAnimalDetails(event);
