@@ -59,20 +59,20 @@
     </nav>
     <main>
       <h2>Slurry Storage Farm Capacity Calculator</h2>
-      <p> Enter the Width(m), Length(m) and Depth(m) of each tank. Press the button "Calculate Slurry Capacity (Litres)"
-        to
-        calculate the total slurry capacity of the farm.
+      <p> Enter the Width = W(m), Length = L(m) and Depth = D(m) of each tank. Press the button "Slurry
+        Capacity (Litres)"
+        to calculate the total slurry capacity of the farm. Capacity(CAP.) is reported in 1000's of litres.
       </p>
       <div class="grid-container-slurry">
         <div class="slurry-tank-grid-item slurry-grid-001">TANK</div>
-        <div class="slurry-tank-grid-item slurry-grid-002">WIDTH(m)</div>
-        <div class="slurry-tank-grid-item slurry-grid-003">LENGTH(m)</div>
-        <div class="slurry-tank-grid-item slurry-grid-004">DEPTH(m)</div>
+        <div class="slurry-tank-grid-item slurry-grid-002">W(m)</div>
+        <div class="slurry-tank-grid-item slurry-grid-003">L(m)</div>
+        <div class="slurry-tank-grid-item slurry-grid-004">D(m)</div>
         <div class="slurry-tank-grid-item slurry-grid-005">
-          CAPACITY
+          CAP.
         </div>
         <div class="slurry-tank-grid-item">
-          <input type="text" id="shed-tank-name-1" value="Tank 1" class="input_slurry_tank_metric" />
+          <input type="text" id="shed-tank-name-1" value="1" class="input_slurry_tank_metric" />
         </div>
 
         <div class="slurry-tank-grid-item">
@@ -97,7 +97,7 @@
           Reset/Clear
         </button> -->
         <div class="slurry-tank-grid-item">
-          <input type="text" id="shed-tank-name-2" value="Tank 2" class="input_slurry_tank_metric" />
+          <input type="text" id="shed-tank-name-2" value="2" class="input_slurry_tank_metric" />
         </div>
 
         <div class="slurry-tank-grid-item">
@@ -122,7 +122,7 @@
           Reset/Clear
         </button> -->
         <div class="slurry-tank-grid-item">
-          <input type="text" min="1" id="shed-tank-name-3" value="Tank 3" class="input_slurry_tank_metric" />
+          <input type="text" min="1" id="shed-tank-name-3" value="3" class="input_slurry_tank_metric" />
         </div>
 
         <div class="slurry-tank-grid-item">
@@ -146,7 +146,7 @@
           Reset/Clear
         </button> -->
         <div class="slurry-tank-grid-item">
-          <input type="text" min="1" id="shed-tank-name-4" value="Tank 4" class="input_slurry_tank_metric" />
+          <input type="text" min="1" id="shed-tank-name-4" value="4" class="input_slurry_tank_metric" />
         </div>
 
         <div class="slurry-tank-grid-item">
@@ -174,7 +174,7 @@
       <div class="flex-container-total-slurry-farm-capacity">
         <button id="calculate-slurry-capacity" class="button-slurry-calculation"
           onclick="calculateTotalSlurryCapacity()">
-          Calculate Slurry capacity
+          Slurry Capacity
         </button>
         <div>
           <input id="total-slurry-capacity-litres" type="number" class="input_slurry" />

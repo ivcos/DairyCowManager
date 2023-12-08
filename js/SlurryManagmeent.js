@@ -9,10 +9,10 @@ function calculate(tankNbr) {
   let tankDepth = document.getElementById("depth-tank-" + tankNbr).value;
   console.log(tankDepth);
   document.getElementById("capacity-tank-" + tankNbr).value = isNaN(
-    tankWidth * (tankHeight - 0.2) * tankDepth * 1000
+    tankWidth * (tankHeight - 0.2) * tankDepth
   )
     ? ""
-    : Math.floor(tankWidth * (tankHeight - 0.2) * tankDepth * 1000);
+    : Math.floor(tankWidth * (tankHeight - 0.2) * tankDepth);
   // Add safety margin for animal Health which 20cm from top of tank
   document.getElementById("capacity-tank-" + tankNbr).style.fontWeight = "bold";
   document.getElementById("capacity-tank-" + tankNbr).style.fontSize = "1.0rem";

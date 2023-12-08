@@ -1060,7 +1060,9 @@ input[type="submit"] {
   /* Have a gap between the two flex-item buttons */
   gap: 10px;
   height: auto;
-  background-color: #eeecec;
+  padding: 0px 0px 5px 0px;
+  /* background-color: #eeecec; */
+  border-bottom: 5px solid black;
 }
 #total-slurry-storage-required-paragraph {
   text-align: center;
@@ -1081,7 +1083,7 @@ input[type="submit"] {
 }
 
 #calculate-slurry-capacity-clear {
-  background-color: #04699d;
+  background-color: #444;
   color: white;
   border-radius: 10px;
   cursor: pointer;
