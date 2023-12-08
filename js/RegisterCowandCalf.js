@@ -282,6 +282,11 @@ function closeFormNewAnimal(event) {
   document.getElementById("New Animal Form").style.display = "none";
   displayFlexItems();
 }
+function closeFormNewAI(event) {
+  console.log("Entering the closeFormAI");
+  document.getElementById("AIForm").style.display = "none";
+  displayFlexItems();
+}
 
 function onDOMLoaded() {
   document
@@ -359,6 +364,15 @@ function onDOMLoaded() {
       console.log("Item 4: Closing Form for registering new animal");
       closeFormNewAnimal(event);
       console.log("Item 4: Closing Form for new animal");
+    });
+
+  document
+    .querySelector("#close_ai_form_data")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 4: Closing Form for AI");
+      closeFormNewAI(event);
+      console.log("Item 4: Closing Form for AI");
     });
 
   // For animals bought in to the farm
