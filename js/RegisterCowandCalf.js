@@ -277,6 +277,12 @@ function closeForm(event) {
   displayFlexItems();
 }
 
+function closeFormNewAnimal(event) {
+  console.log("Entering the closeFormNewAnimal");
+  document.getElementById("New Animal Form").style.display = "none";
+  displayFlexItems();
+}
+
 function onDOMLoaded() {
   document
     .querySelector("#register_birth")
@@ -336,14 +342,23 @@ function onDOMLoaded() {
       clearFormData(event);
       console.log("Item 3: Clearing Form Data");
     });
-
+  //Closing for all the Forms
   document
     .querySelector("#close_form")
     .addEventListener("click", function (event) {
       event.preventDefault(); // When this is added the default form is not submitted
-      console.log("Item 4: Closing Form");
+      console.log("Item 4: Closing Form for registering Birth");
       closeForm(event);
-      console.log("Item 4: Closing Form");
+      console.log("Item 4: Closing Form for registring birth");
+    });
+
+  document
+    .querySelector("#close_form_new_animal")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 4: Closing Form for registering new animal");
+      closeFormNewAnimal(event);
+      console.log("Item 4: Closing Form for new animal");
     });
 
   // For animals bought in to the farm
