@@ -288,6 +288,12 @@ function closeFormNewAI(event) {
   displayFlexItems();
 }
 
+function closeFormAnimalSale(event) {
+  console.log("Entering the closeFormAnimalSale");
+  document.getElementById("SaleForm").style.display = "none";
+  displayFlexItems();
+}
+
 function onDOMLoaded() {
   document
     .querySelector("#register_birth")
@@ -372,6 +378,15 @@ function onDOMLoaded() {
       event.preventDefault(); // When this is added the default form is not submitted
       console.log("Item 4: Closing Form for AI");
       closeFormNewAI(event);
+      console.log("Item 4: Closing Form for AI");
+    });
+
+  document
+    .querySelector("#close_animal_sale_form")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 4: Closing Form for AI");
+      closeFormAnimalSale(event);
       console.log("Item 4: Closing Form for AI");
     });
 
