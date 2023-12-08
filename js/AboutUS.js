@@ -17,15 +17,15 @@ function showSlides(index) {
 }
 
 function onDOMLoaded() {
-  document.getElementById("prevBtn").addEventListener("click", () => {
-    slideIndex -= 1;
-    showSlides(slideIndex);
-  });
+  // document.getElementById("prevBtn").addEventListener("click", () => {
+  //   slideIndex -= 1;
+  //   showSlides(slideIndex);
+  // });
 
-  document.getElementById("nextBtn").addEventListener("click", () => {
-    slideIndex += 1;
-    showSlides(slideIndex);
-  });
+  // document.getElementById("nextBtn").addEventListener("click", () => {
+  //   slideIndex += 1;
+  //   showSlides(slideIndex);
+  // });
 
   // document.querySelector("#Clear").addEventListener("click", function (event) {
   //   clearForm(event);
