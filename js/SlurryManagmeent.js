@@ -62,20 +62,20 @@ function calculateStorageRequired(animal) {
   switch (animal) {
     case "cows":
       document.getElementById("slurry-storage-required-" + animal).value =
-        nbrAnimals * nbrDays * 0.047 * 1000;
+        nbrAnimals * nbrDays * 0.047;
       document.getAnimations("total-slurry-storage-required");
       break;
     case "calves":
       document.getElementById("slurry-storage-required-" + animal).value =
-        nbrAnimals * nbrDays * 0.012 * 1000;
+        nbrAnimals * nbrDays * 0.012;
       break;
     case "heifers":
       document.getElementById("slurry-storage-required-" + animal).value =
-        nbrAnimals * nbrDays * 0.037 * 1000;
+        nbrAnimals * nbrDays * 0.037;
       break;
     default:
       document.getElementById("slurry-storage-required-" + animal).value =
-        nbrAnimals * nbrDays * 0.041 * 1000;
+        nbrAnimals * nbrDays * 0.041;
       break;
   }
   document.getElementById("total-slurry-storage-required").value =
