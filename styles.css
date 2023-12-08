@@ -1235,6 +1235,39 @@ input[type="submit"] {
   }
 }
 
+/* Slurry Management Screen. Capacity*/
+@media screen and (max-width: 1024px) {
+  /* .input_slurry_tank_metric {
+    max-width: 70px;
+    font: size 70%;
+    text-align: center;
+  } */
+  .grid-item {
+    padding: 20px 0px 20px 20px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .input_slurry {
+    max-width: 60px;
+    font: size 70%;
+    text-align: center;
+  }
+  .grid-item {
+    padding: 20px 0px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .input_slurry {
+    max-width: 40px;
+    font: size 10%;
+    text-align: center;
+  }
+  .grid-item {
+    padding: 5px 0px 5px 5px;
+  }
+}
+
 /***********************************************/
 /* GENERAL REUSABLE COMPONENTS */
 /***********************************************/
