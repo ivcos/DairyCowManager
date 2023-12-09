@@ -557,6 +557,25 @@ input[type="reset"] {
   padding: 5px 5px 5px 5px;
   margin-top: 10px;
 }
+.weather-station-sensor {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #333;
+  margin-bottom: 2rem;
+  counter-reset: item;
+  list-style: none;
+}
+.weather-station-sensor li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+.weather-station-sensor li::before {
+  content: counter(item);
+  margin-right: 5px;
+  /* font-weight: bold; Optionally make the numbers bold */
+}
+
 /* Slurry Management Styling */
 .slurry-management {
   margin: 0;
@@ -1196,11 +1215,11 @@ input[type="reset"] {
   }
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   h2 {
     color: red;
   }
-}
+} */
 
 @media screen and (max-width: 450px) {
   .flex {
