@@ -386,6 +386,18 @@ input[type="submit"] {
   flex: 0 1 8em;
   margin: 0 auto;
 }
+input[type="reset"] {
+  /* I've changed the style of the button and set its side margins to "auto" so it is 
+	always centered in the width of the form */
+  width: 10em;
+  height: 2em;
+  background: white;
+  border: 1px solid #04699d;
+  border-radius: 4px;
+  font-size: inherit;
+  flex: 0 1 8em;
+  margin: 0 auto;
+}
 
 /*  ========= Styling Specific to Index.html  ========= */
 .flex {
@@ -1027,7 +1039,21 @@ input[type="submit"] {
   color: white;
   cursor: pointer;
 }
-
+.btn_new_animal:hover {
+  background-color: #75cf89;
+  color: white;
+  cursor: pointer;
+}
+.btn_ai:hover {
+  background-color: #75cf89;
+  color: white;
+  cursor: pointer;
+}
+.btn_animal_sale:hover {
+  background-color: #75cf89;
+  color: white;
+  cursor: pointer;
+}
 .flex-container-herd-mgt {
   display: flex;
   flex-wrap: wrap;
