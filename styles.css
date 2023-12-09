@@ -505,7 +505,14 @@ input[type="reset"] {
   padding: 5px 5px 5px 5px;
   margin-top: 10px;
 }
-
+.h3-form-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #04699d;
+  text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
 /* AgriIoT Styling */
 .agri-iot {
   margin: 0;
