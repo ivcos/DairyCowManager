@@ -809,6 +809,7 @@ input[type="submit"] {
 /*  ========= Styling Specific to About Us page  ========= */
 .contact-us-container {
   display: flex;
+  flex-direction: row-reverse;
 }
 
 .carousel {
@@ -827,6 +828,17 @@ input[type="submit"] {
 .carousel-item img {
   max-width: 100%;
   height: auto;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 20px;
+  padding: 20px;
+  border: 1px dotted maroon;
+  width: 240px;
+  height: 240px;
 }
 
 /*  ========= Styling Specific to Winter Fodder Management  ========= */
