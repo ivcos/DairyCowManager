@@ -1054,6 +1054,12 @@ input[type="reset"] {
   color: white;
   cursor: pointer;
 }
+.button-contact-form:hover {
+  background-color: #2c5f2d;
+  color: white;
+  cursor: pointer;
+  margin: auto;
+}
 .flex-container-herd-mgt {
   display: flex;
   flex-wrap: wrap;
@@ -1506,5 +1512,15 @@ input[type="reset"] {
     background-color: #000;
     margin: 5px;
     transition: transform 0.4s ease-in-out;
+  }
+}
+
+@media print {
+  img {
+    display: none !important;
+  }
+
+  * {
+    background-image: none !important;
   }
 }
