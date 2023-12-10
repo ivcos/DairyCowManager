@@ -801,9 +801,9 @@ input[type="reset"] {
   flex-direction: row;
   justify-content: space-evenly;
   margin: 10px 0px 20px 0px;
-  border: #04699d 1px solid;
+  /* border: #04699d 1px solid; */
   height: auto;
-  background-color: #eeecec;
+  background-color: #fff;
   gap: 20px;
 }
 
