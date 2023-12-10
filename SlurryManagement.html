@@ -198,6 +198,7 @@
           Slurry Capacity
         </button>
         <div>
+          <label for="total-slurry-capacity-litres" class="label_slurry">Total Slurry Tank Capacity (litres)</label>
           <input id="total-slurry-capacity-litres" type="number" class="input_slurry" />
         </div>
         <button id="calculate-slurry-capacity-clear" class="button-slurry-calculation" onclick="clearTankData()">
@@ -230,7 +231,7 @@
             oninput="calculateStorageRequired('cows')" />
         </div>
         <div class=" grid-item">
-          <label for="nbr-dairy-cows-slurry-calculation" class="label_slurry">Nbr Days
+          <label for="nbr-days-cows-slurry-calculation-days-inside" class="label_slurry">Nbr Days
             Inside</label>
           <input type="number" id="nbr-days-cows-slurry-calculation-days-inside" value="150"
             oninput="calculateStorageRequired('cows')" class="input_slurry" />
@@ -298,6 +299,7 @@
         Total Slurry Storage Required (1000's of litres)
       </p>
       <div id="final-slurry-required">
+        <label for="total-slurry-storage-required" class="label_slurry">Total Slurry Storage Required</label>
         <input type="number" id="total-slurry-storage-required" class="input_slurry" />
       </div>
       <!-- </div> -->
