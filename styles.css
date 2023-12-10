@@ -621,6 +621,9 @@ input[type="reset"] {
   margin-bottom: 10px;
 }
 
+.label_slurry {
+  display: none;
+}
 /* Style for Winter Fodder Management */
 /* Style for Winter Fodder Management */
 /* styling fpr span */
