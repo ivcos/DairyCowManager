@@ -696,6 +696,11 @@ input[type="reset"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.button-silage-calculation:hover {
+  background-color: #75cf89;
+  color: white;
+  cursor: pointer;
+}
 /* Style for Winter Fodder Management */
 .time-management {
   margin: 0;
@@ -980,7 +985,9 @@ input[type="reset"] {
   /* Have a gap between the two flex-item buttons */
   gap: 10px;
   height: auto;
-  background-color: #eeecec;
+  background-color: #fff;
+  border: 2px solid #012406;
+  margin-bottom: 20px;
 }
 
 .flex-container button {
@@ -998,7 +1005,8 @@ input[type="reset"] {
 
 .button-silage-calculation {
   /* Having all the elements expand to fill the emtpy space */
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  border-radius: 4px;
 }
 
 /* #total_silage_required_tonnes {
