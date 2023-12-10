@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta name="description" content="Farmers Controlling Their Data with the FARMAI app" . Herd Management />
+  <meta name="description" content="Farmers Controlling Their Data with the FARMAI app  Herd Management" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RegisterCow</title>
@@ -81,7 +81,7 @@
           </button>
         </section>
         <section class="register">
-          <p class="photo"><img id="cow-image" src="../images/CowImage.png" alt="" /></p>
+          <p class="photo"><img id="cow-imag1" src="../images/CowImage.png" alt="" /></p>
           <h3>
             2
             <br>
@@ -111,7 +111,7 @@
           </button>
         </section>
         <section class="register">
-          <p class="photo"><img id="cow-image" src="../images/cowatmart.jpg" alt="" /></p>
+          <p class="photo"><img id="cow-image1" src="../images/cowatmart.jpg" alt="" /></p>
           <h3>
             4
             <br>
@@ -126,7 +126,7 @@
           </button>
         </section>
         <section class="register">
-          <p class="photo"><img id="cow-image" src="../images/CowImage.png" alt="" /></p>
+          <p class="photo"><img id="cow-image2" src="../images/CowImage.png" alt="" /></p>
           <h3>
             5
             <br>
@@ -135,9 +135,8 @@
           <p class="info">
             Many different elements contribute to herd health including lameness, mastitis,
             fluke, red water. Record Herd Health here.
-          <p>
-            <em style=color:black;text-align:center;font-size:0.8em;>NOT AVAILABLE ON FREE VERSION</em>
           </p>
+          <em style=color:black;text-align:center;font-size:0.8em;>NOT AVAILABLE ON FREE VERSION</em>
           </p>
           <!-- <button class="register_button" id="Animal Sale" onclick="animalSale">
             Herd Health
@@ -155,7 +154,6 @@
             Update if the animal has been sick, vet attended.
           <p>
             <em style=color:black;text-align:center;font-size:0.8em;>NOT AVAILABLE ON FREE VERSION</em>
-          </p>
           </p>
           <!-- <button class="register_button" id="Animal Sale" onclick="animalSale">
             Animal Update & EBI
@@ -219,7 +217,7 @@
           </li>
           <li>
             <label for="AI">AI:</label>
-            <select AI="AI" id="AI">
+            <select id="AI">
               <option>BYZ201</option>
               <option>ABC202</option>
               <option>JZX405</option>
@@ -230,7 +228,7 @@
           </li>
           <li>
             <label for="Sire">Sire:</label>
-            <select Sire="Sire" id="Sire">
+            <select id="Sire">
               <option>Freisin Bull</option>
               <option>Hereford Bull </option>
               <option>N/A</option>
@@ -238,21 +236,20 @@
           </li>
           <li>
             <label for="alive_dead">Alive/Dead:</label>
-            <select Sire="alive_dead" id="alive_dead">
+            <select id="alive_dead">
               <option>Alive</option>
               <option>Dead</option>
             </select>
           <li>
             <label for="Twins">Twin:</label>
-            <select Twins="Twins" id="Twins">
+            <select id="Twins">
               <option>No</option>
               <option>Yes</option>
             </select>
           </li>
-          </li>
           <li>
             <label for="difficult_calving">Difficulty Calving</label>
-            <select Sire="difficult_calving" id="difficult_calving">
+            <select id="difficult_calving">
               <option>Needed Assistance</option>
               <option>Vet Assistancee</option>
               <option>No Trouble Calving</option>
@@ -272,7 +269,7 @@
 
       </form>
       <!-- //NEW ANIMAL FORM -->
-      <form id="New Animal Form" action="" style="display: none">
+      <form id="New-Animal-Form" action="" style="display: none">
         <h3 class="h3-form-heading">Register New Animal on Farm</h3>
         <ul>
           <li>
@@ -281,12 +278,12 @@
             <p class="register_new_animal_error_msg" id="new_animal_form_cow_tag_nbr_error"></p>
           </li>
           <li>
-            <label for="form_date_of_birth">Animal DOB:</label><input type="date" id="form_date_of_birth"
-              class="textinput" />
+            <label for="form_date_of_birth_new_animal">Animal DOB:</label><input type="date"
+              id="form_date_of_birth_new_animal" class="textinput" />
           </li>
           <li>
-            <label for="form_date_of_purchase">Animal Purchase Date:</label><input type="date" id="form_date_of_birth"
-              class="textinput" />
+            <label for="form_date_of_purchase">Animal Purchase Date:</label><input type="date"
+              id="form_date_of_birth_purchase" class="textinput" />
           </li>
           <!-- <li>
                 <label for="form_mother_tag">Mother's Tag:</label
@@ -369,24 +366,24 @@
               class="textinput" />
           </li>
           <li>
-            <label for="form_date_of_AI">Bull Used Code or Name:</label><input type="text" id="form_date_of_AI"
+            <label for="form_date_of_AI_bull_used">Bull Used Code or Name:</label><input type="text"
+              id="form_date_of_AI_bull_used" class="textinput" />
+          </li>
+          <li>
+            <label for="form_date_of_AI_2nd">2nd AI Date:</label><input type="date" id="form_date_of_AI_2nd"
               class="textinput" />
           </li>
           <li>
-            <label for="form_date_of_AI">2nd AI Date:</label><input type="date" id="form_date_of_AI"
+            <label for="form_date_of_AI_2nd_bull">2nd Bull Used Code or Name:</label><input type="text"
+              id="form_date_of_AI_2nd_bull" class="textinput" />
+          </li>
+          <li>
+            <label for="form_date_of_AI_3rd">3rd AI Date:</label><input type="date" id="form_date_of_AI_3rd"
               class="textinput" />
           </li>
           <li>
-            <label for="form_date_of_AI">2nd Bull Used Code or Name:</label><input type="text" id="form_date_of_AI"
-              class="textinput" />
-          </li>
-          <li>
-            <label for="form_date_of_AI">3rd AI Date:</label><input type="date" id="form_date_of_AI"
-              class="textinput" />
-          </li>
-          <li>
-            <label for="form_date_of_AI">3rd Bull Used Code or Name:</label><input type="text" id="form_date_of_AI"
-              class="textinput" />
+            <label for="form_date_of_AI_3rd_bull">3rd Bull Used Code or Name:</label><input type="text"
+              id="form_date_of_AI_3rd_bull" class="textinput" />
           </li>
           <li>
             <label for="form_date_of_Calving">Calving Date:</label><input type="text" id="form_date_of_Calving"

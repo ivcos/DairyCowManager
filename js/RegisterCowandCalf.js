@@ -94,7 +94,7 @@ function registerBirth(event) {
 //Function to register animal bought into the farm
 function registerAnimal(event) {
   console.log("Entering registerAnimal");
-  let FormElementRegisterAnimal = document.getElementById("New Animal Form");
+  let FormElementRegisterAnimal = document.getElementById("New-Animal-Form");
   let FormElementRegisterAnimalStyle = window.getComputedStyle(
     FormElementRegisterAnimal
   );
@@ -279,7 +279,7 @@ function closeForm(event) {
 
 function closeFormNewAnimal(event) {
   console.log("Entering the closeFormNewAnimal");
-  document.getElementById("New Animal Form").style.display = "none";
+  document.getElementById("New-Animal-Form").style.display = "none";
   displayFlexItems();
 }
 function closeFormNewAI(event) {

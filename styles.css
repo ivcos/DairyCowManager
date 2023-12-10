@@ -1484,7 +1484,12 @@ input[type="reset"] {
 #cow-image {
   max-width: 100%;
 }
-
+#cow-image1 {
+  max-width: 100%;
+}
+#cow-image2 {
+  max-width: 100%;
+}
 .dropdown {
   float: left;
   overflow: hidden;
