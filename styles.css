@@ -1172,12 +1172,14 @@ input[type="reset"] {
 .input_slurry_tank_metric {
   max-width: 100px;
   height: 3rem;
+  font-weight: bold;
 }
 
 .input_slurry {
   max-width: 100px;
   height: 50px;
   text-align: center;
+  font-weight: bold;
 }
 .flex-container-total-slurry-farm-capacity {
   display: flex;
