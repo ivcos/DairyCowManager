@@ -900,7 +900,7 @@ input[type="reset"] {
 .grid-003,
 .grid-004 {
   text-transform: capitalize;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-weight: bold;
 }
 .silageCalc {
@@ -1143,7 +1143,7 @@ input[type="reset"] {
 .slurry-grid-004,
 .slurry-grid-005 {
   /* text-transform: capitalize; */
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-weight: bold;
 }
 /* Aligns thevtwo buttons */
