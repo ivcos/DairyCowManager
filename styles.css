@@ -48,7 +48,6 @@ GREY COLOR : #212529
 Secondary Color: #416f42
 Foooter: #black
 */
-*/
 
 /* Makes sizing form elements more consistent. border-box is helpful
 for specifying widthd in percentages. */
@@ -1260,7 +1259,6 @@ input[type="reset"] {
     min-height: 200px;
   }
 }
-*/
 
 /* CSS queries for .flex-herd-management */
 @media screen and (max-width: 800px) {
@@ -1344,7 +1342,7 @@ input[type="reset"] {
 @media screen and (max-width: 960px) {
   .input_slurry_tank_metric {
     max-width: 60px;
-    font: size 70%;
+    font-size: 70%;
     text-align: center;
   }
   .slurry-tank-grid-item {
@@ -1355,7 +1353,7 @@ input[type="reset"] {
 @media screen and (max-width: 600px) {
   .input_slurry_tank_metric {
     max-width: 30px;
-    font: size 10%;
+    font-size: 10%;
     text-align: center;
   }
   .slurry-tank-grid-item {
@@ -1377,7 +1375,7 @@ input[type="reset"] {
 @media screen and (max-width: 960px) {
   .input_slurry {
     max-width: 60px;
-    font: size 70%;
+    font-size: 70%;
     text-align: center;
   }
   .grid-item {
@@ -1388,7 +1386,7 @@ input[type="reset"] {
 @media screen and (max-width: 600px) {
   .input_slurry {
     max-width: 40px;
-    font: size 10%;
+    font-size: 10%;
     text-align: center;
   }
   .grid-item {
