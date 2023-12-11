@@ -271,6 +271,31 @@ function clearFormData(event) {
   console.log("Today's date", today);
 }
 
+function clearNewAnimalFormData(event) {
+  console.log("Entering the clearNewAnimalFormData");
+  //Clear the form input data and remove the mesaage again
+  document.getElementById("New-Animal-Form").reset();
+  // message.style.display = "none";
+  let today = getTodayDate();
+  console.log("Today's date", today);
+}
+function clearNewAIFormData(event) {
+  console.log("Entering the clearNewAIFormData");
+  //Clear the form input data and remove the mesaage again
+  document.getElementById("AIForm").reset();
+  // message.style.display = "none";
+  let today = getTodayDate();
+  console.log("Today's date", today);
+}
+function clearNewSaleFormData(event) {
+  console.log("Entering the clearNewSaleFormData");
+  //Clear the form input data and remove the mesaage again
+  document.getElementById("SaleForm").reset();
+  // message.style.display = "none";
+  let today = getTodayDate();
+  console.log("Today's date", today);
+}
+
 function closeForm(event) {
   console.log("Entering the closeForm");
   document.getElementById("calving_form").style.display = "none";
@@ -352,6 +377,59 @@ function onDOMLoaded() {
       ).style.display = "none";
       clearFormData(event);
       console.log("Item 3: Clearing Form Data");
+    });
+
+  //for Reset/Next forclear_calf_data (New animal)
+  document
+    .querySelector("#clear_calf_data")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 11: Clearing New animal Form Data");
+      //Clear the three RED Error messages by setting display:none
+      document.getElementById(
+        "new_animal_form_cow_tag_nbr_error"
+      ).style.display = "none";
+      document.getElementById("message-new-animal").style.display = "none";
+      // document.getElementById(
+      //   "form_mothersfreezeband_error_msg"
+      // ).style.display = "none";
+      clearNewAnimalFormData(event);
+      console.log("Item 11: Clearing Form Data");
+    });
+
+  // For reset/Next for AI Form
+  document
+    .querySelector("#clear_calf_data_1")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 12: Clearing/Reset New AI Form Data");
+      //Clear the three RED Error messages by setting display:none
+      document.getElementById("ai_form_cow_tag_nbr_error").style.display =
+        "none";
+      document.getElementById("message-new-ai").style.display = "none";
+      // document.getElementById(
+      //   "form_mothersfreezeband_error_msg"
+      // ).style.display = "none";
+      clearNewAIFormData(event);
+      console.log("Item 12: Clearing/Reset New AI Form Data");
+    });
+
+  // For reset/Next for New Animal Sale
+  document
+    .querySelector("#clear_calf_data_2")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // When this is added the default form is not submitted
+      console.log("Item 13: Clearing/Reset New Sale Form Data");
+      //Clear the three RED Error messages by setting display:none
+      document.getElementById(
+        "animal_sale_form_cow_tag_nbr_error"
+      ).style.display = "none";
+      document.getElementById("message-animal-sale").style.display = "none";
+      // document.getElementById(
+      //   "form_mothersfreezeband_error_msg"
+      // ).style.display = "none";
+      clearNewSaleFormData(event);
+      console.log("Item 13: Clearing/Reset New Sale Form Data");
     });
   //Closing for all the Forms
   document

@@ -137,7 +137,6 @@
             fluke, red water. Record Herd Health here.
           </p>
           <em style=color:black;text-align:center;font-size:0.8em;>NOT AVAILABLE ON FREE VERSION</em>
-          </p>
           <!-- <button class="register_button" id="Animal Sale" onclick="animalSale">
             Herd Health
           </button> -->
@@ -170,8 +169,8 @@
             <p class="register_birth_error_msg" id="form_cow_tag_nbr_error"></p>
           </li>
           <li>
-            <label for="form_mother_tag">Mother's Tag:</label><input type="text" id="form_mothers_tag" class="textinput"
-              required />
+            <label for="form_mothers_tag">Mother's Tag:</label><input type="text" id="form_mothers_tag"
+              class="textinput" required />
             <p class="register_birth_error_msg" id="form_mothers_error_msg"></p>
           </li>
           <li>
@@ -190,8 +189,8 @@
               placeholder="Add information on animal over lifetime of animal"></textarea>
           </li>
           <li>
-            <label for="Sex">Sex of Animal:</label>
-            <fieldset id="Sex">
+            <label>Animal Gender:</label>
+            <fieldset id="Gender1">
               <legend>Sex</legend>
               <ul>
                 <li>
@@ -216,8 +215,8 @@
             </select>
           </li>
           <li>
-            <label for="AI">AI:</label>
-            <select id="AI">
+            <label for="AI-1">AI:</label>
+            <select id="AI-1">
               <option>BYZ201</option>
               <option>ABC202</option>
               <option>JZX405</option>
@@ -282,7 +281,7 @@
               id="form_date_of_birth_new_animal" class="textinput" />
           </li>
           <li>
-            <label for="form_date_of_purchase">Animal Purchase Date:</label><input type="date"
+            <label for="form_date_of_birth_purchase">Animal Purchase Date:</label><input type="date"
               id="form_date_of_birth_purchase" class="textinput" />
           </li>
           <!-- <li>
@@ -290,14 +289,14 @@
                 ><input type="text" id="form_mother_tag" class="textinput" />
               </li> -->
           <li>
-            <label for="form-text-1">Animal:
+            <label>Animal Information:
             </label>
             <textarea name="form-tex-1" maxlength="600" id="form-tex-1"
               placeholder="Add information on animal over lifetime of animal"></textarea>
           </li>
           <li>
-            <label for="Sex">Sex of Animal:</label>
-            <fieldset id="Sex">
+            <label>Gender of Animal:</label>
+            <fieldset id="Gender">
               <legend>Sex</legend>
               <ul>
                 <li>
@@ -313,8 +312,8 @@
           </li>
 
           <li>
-            <label for="Breed">Breed:</label>
-            <select name="Breed" id="Breed">
+            <label for="Breed1">Breed:</label>
+            <select name="Breed" id="Breed1">
               <option>Freisin</option>
               <option>Hereford</option>
               <option>Angus</option>
@@ -323,7 +322,7 @@
           </li>
           <li>
             <label for="AI">AI:</label>
-            <select AI="AI" id="AI">
+            <select id="AI">
               <option>BYZ201</option>
               <option>ABC202</option>
               <option>JZX405</option>
@@ -353,12 +352,12 @@
         <h3 class="h3-form-heading">Register AI</h3>
         <ul>
           <li>
-            <label for="form_cow_tag_nbr_AI">Animal Tag:</label><input type="text" id="ai_form_cow_tag_nbr_AI"
+            <label for="ai_form_cow_tag_nbr_AI">Animal Tag:</label><input type="text" id="ai_form_cow_tag_nbr_AI"
               class="textinput" />
             <p class="ai_error_msg" id="ai_form_cow_tag_nbr_error"></p>
           </li>
           <li>
-            <label for="form_mother_freezeban_ai">FreezeBand (Optional):</label><input type="text"
+            <label for="form_mother_freezeband_ai">FreezeBand (Optional):</label><input type="text"
               id="form_mother_freezeband_ai" class="textinput" />
           </li>
           <li>
@@ -396,7 +395,7 @@
           </div>
           <li class="buttons">
             <input type="submit" id="submit_AI_data" class="btn_ai" value="Submit Animal Data" />
-            <input type="reset" id="clear_calf_data" class="btn_ai" value="Reset/Next" />
+            <input type="reset" id="clear_calf_data_1" class="btn_ai" value="Reset/Next" />
             <input type="submit" id="close_ai_form_data" class="btn_ai" value="Close Form" />
           </li>
         </ul>
@@ -406,7 +405,7 @@
         <h3 class="h3-form-heading">Register Sale</h3>
         <ul>
           <li>
-            <label for="form_cow_tag_nbr_sale">Animal Tag:</label><input type="text"
+            <label for="animal_sale_form_cow_tag_nbr_sale">Animal Tag:</label><input type="text"
               id="animal_sale_form_cow_tag_nbr_sale" class="textinput" />
             <p class="animal_sale_error_msg" id="animal_sale_form_cow_tag_nbr_error"></p>
           </li>
@@ -420,7 +419,7 @@
           </li>
           <li>
             <label for="Sale">Sale of Animal:</label>
-            <select Sale="Sale" id="Sale">
+            <select id="Sale">
               <option>Mart</option>
               <option>Factory</option>
               <option>Death</option>
@@ -435,7 +434,7 @@
           </div>
           <li class="buttons">
             <input type="submit" id="submit_animal_sale_data" class="btn_animal_sale" value="Submit Animal Data" />
-            <input type="reset" id="clear_calf_data" class="btn_animal_sale" value="Reset/Next" />
+            <input type="reset" id="clear_calf_data_2" class="btn_animal_sale" value="Reset/Next" />
             <input type="submit" id="close_animal_sale_form" class="btn_animal_sale" value="Close Form" />
           </li>
         </ul>
